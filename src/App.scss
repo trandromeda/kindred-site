@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display');
+
 /*.App {
   text-align: center;
 }
@@ -27,6 +28,7 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }*/
+
 /* ORDER OF ATTRIBUTES 
 1. Width + Height
 2. Padding + Margin
@@ -35,73 +37,104 @@
 5. Fonts
 6. Colours
 */
+
+$nav-height: 8vh;
+$scrim-width: 40vw;
+$bar-height: 10vh;
+$yellow: #F2DC5D;
+
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 40px;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 p {
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 .navbar {
   width: 100vw;
-  height: 8vh;
+  height: $nav-height;;
   position: fixed;
   border-bottom: 1px #FFFFFF solid;
-  z-index: 1000; }
+  z-index: 1000;
+}
 
 .landing {
   width: 100vw;
   height: 90vh;
-  padding-top: 8vh;
+  padding-top: $nav-height;
   position: relative;
   background: #F1F1F1;
-  background-image: url("./images/max_lesson.jpg");
-  background-size: cover; }
-  .landing .landing-scrim {
-    width: 40vw;
+  background-image: url('./images/max_lesson.jpg');
+  background-size: cover;
+
+  .landing-scrim {
+    width: $scrim-width;
     margin: auto;
     padding: 20px;
     position: absolute;
-    bottom: 10vh;
-    left: calc(50% - 20vw);
+    bottom: $bar-height;
+    left: calc(50% - 20vw;
     background: rgba(0, 0, 0, 0.4);
-    box-sizing: border-box; }
-    .landing .landing-scrim h1, .landing .landing-scrim p {
-      color: #FFFFFF; }
-    .landing .landing-scrim h1 {
-      margin-top: 0px; }
+    box-sizing: border-box;
+
+    h1, p {
+      color: #FFFFFF;
+    }
+
+    h1 {
+      margin-top: 0px;
+    }
+  }
+}
 
 .email-bar {
   width: 100vw;
-  height: 10vh;
+  height: $bar-height;
   display: flex;
+  // flex-wrap: wrap;
   position: absolute;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); }
-  .email-bar .left {
+  background: rgba(0, 0, 0, 0.5);
+
+
+  .left {
     width: 30vw;
-    height: 10vh;
+    height: $bar-height;
     order: 1;
-    background: #F2DC5D; }
-  .email-bar .mid-section {
+    background: $yellow;
+  }
+
+  .mid-section {
     display: flex;
     order: 2;
     width: 40vw;
-    flex-direction: column; }
-    .email-bar .mid-section .middle-top {
+    flex-direction: column;
+
+    .middle-top {
       flex-grow: 1;
-      background: #F2DC5D; }
-    .email-bar .mid-section .input-box {
+      background: $yellow;
+    }
+
+    .input-box {
       flex-grow: 2;
-      background: transparent; }
-    .email-bar .mid-section .middle-bottom {
+      background: transparent;
+    }
+
+    .middle-bottom {
       flex-grow: 1;
-      background: #F2DC5D; }
-  .email-bar .right {
+      background: $yellow;
+    }    
+  }
+
+  .right {
     width: 30vw;
-    height: 10vh;
+    height: $bar-height;
     order: 3;
-    background: #F2DC5D; }
+    background: $yellow;
+  }
+}
