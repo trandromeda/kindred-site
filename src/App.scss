@@ -39,9 +39,10 @@
 */
 
 $nav-height: 8vh;
-$scrim-width: 40vw;
+$scrim-width: 550px;
 $bar-height: 10vh;
 $yellow: #F2DC5D;
+$blue: #70D6FF;
 
 h1 {
   font-family: 'Playfair Display', serif;
@@ -78,7 +79,7 @@ p {
     padding: 20px;
     position: absolute;
     bottom: $bar-height;
-    left: calc(50% - 20vw;
+    left: calc(50% - 275px;
     background: rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
 
@@ -96,14 +97,13 @@ p {
   width: 100vw;
   height: $bar-height;
   display: flex;
-  // flex-wrap: wrap;
   position: absolute;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
 
 
   .left {
-    width: 30vw;
+    width: calc((100vw - 550px) / 2);
     height: $bar-height;
     order: 1;
     background: $yellow;
@@ -112,7 +112,7 @@ p {
   .mid-section {
     display: flex;
     order: 2;
-    width: 40vw;
+    width: 550px;;
     flex-direction: column;
 
     .middle-top {
@@ -121,8 +121,17 @@ p {
     }
 
     .input-box {
-      flex-grow: 2;
+      flex-grow: 2.5;
+      position: relative;
       background: transparent;
+
+      .signup-button {
+        width: 25%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        background: $blue;
+      }
     }
 
     .middle-bottom {
@@ -132,7 +141,7 @@ p {
   }
 
   .right {
-    width: 30vw;
+    width: calc((100vw - 550px) / 2);
     height: $bar-height;
     order: 3;
     background: $yellow;

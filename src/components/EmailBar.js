@@ -5,10 +5,13 @@ class EmailBar extends Component {
     return (
         <div className="email-bar">
           <div className="left"></div>
-          
+
           <div className="mid-section">
             <div className="middle-top"></div>
-            <div className="input-box"></div>
+            <div className="input-box">
+              <div className="signup-button">
+              </div>
+            </div>
             <div className="middle-bottom"></div>
           </div>
 

@@ -61,12 +61,12 @@ p {
   background-image: url("./images/max_lesson.jpg");
   background-size: cover; }
   .landing .landing-scrim {
-    width: 40vw;
+    width: 550px;
     margin: auto;
     padding: 20px;
     position: absolute;
     bottom: 10vh;
-    left: calc(50% - 20vw);
+    left: calc(50% - 275px);
     background: rgba(0, 0, 0, 0.4);
     box-sizing: border-box; }
     .landing .landing-scrim h1, .landing .landing-scrim p {
@@ -82,26 +82,33 @@ p {
   bottom: 0;
   background: rgba(0, 0, 0, 0.5); }
   .email-bar .left {
-    width: 30vw;
+    width: calc((100vw - 550px) / 2);
     height: 10vh;
     order: 1;
     background: #F2DC5D; }
   .email-bar .mid-section {
     display: flex;
     order: 2;
-    width: 40vw;
+    width: 550px;
     flex-direction: column; }
     .email-bar .mid-section .middle-top {
       flex-grow: 1;
       background: #F2DC5D; }
     .email-bar .mid-section .input-box {
-      flex-grow: 2;
+      flex-grow: 2.5;
+      position: relative;
       background: transparent; }
+      .email-bar .mid-section .input-box .signup-button {
+        width: 25%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        background: #70D6FF; }
     .email-bar .mid-section .middle-bottom {
       flex-grow: 1;
       background: #F2DC5D; }
   .email-bar .right {
-    width: 30vw;
+    width: calc((100vw - 550px) / 2);
     height: 10vh;
     order: 3;
     background: #F2DC5D; }
