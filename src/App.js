@@ -10,6 +10,10 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <Landing />
+        <div className="user-preference">
+        <h1>Do you want to:</h1>
+        Learn | Mentor
+        </div>
       </div>
     );
   }

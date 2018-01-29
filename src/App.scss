@@ -1,33 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display');
-
-/*.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}*/
+@import "emailbar.scss";
 
 /* ORDER OF ATTRIBUTES 
 1. Width + Height
@@ -38,7 +10,7 @@
 6. Colours
 */
 
-$nav-height: 8vh;
+$nav-height: 60px;
 $scrim-width: 550px;
 $bar-height: 10vh;
 $yellow: #F2DC5D;
@@ -56,12 +28,50 @@ p {
   font-weight: normal;
 }
 
+a {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .navbar {
   width: 100vw;
-  height: $nav-height;;
+  height: $nav-height;
+  display: flex;
   position: fixed;
+  align-items: center;
   border-bottom: 1px #FFFFFF solid;
   z-index: 1000;
+  box-sizing: border-box;
+
+  img.logo {
+    order: 1;
+    margin-left: 10px;
+    display: inline-block;
+  }
+
+  a {
+    margin: 0 25px;
+    display: inline-block;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    vertical-align: middle;
+  }
+
+  a.about {
+    margin-left: auto;
+    order: 2;
+  }
+
+  a.mentor {
+    order: 3;
+  }
+
+  a.browse {
+    order: 4;
+    padding: 5px 10px;
+    background: $blue;
+    box-sizing: border-box;
+  }
 }
 
 .landing {
@@ -76,7 +86,7 @@ p {
   .landing-scrim {
     width: $scrim-width;
     margin: auto;
-    padding: 20px;
+    padding: 25px;
     position: absolute;
     bottom: $bar-height;
     left: calc(50% - 275px;
@@ -90,60 +100,14 @@ p {
     h1 {
       margin-top: 0px;
     }
+
+    p {
+      margin-bottom: 0;
+    }
   }
 }
 
-.email-bar {
-  width: 100vw;
-  height: $bar-height;
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-
-
-  .left {
-    width: calc((100vw - 550px) / 2);
-    height: $bar-height;
-    order: 1;
-    background: $yellow;
-  }
-
-  .mid-section {
-    display: flex;
-    order: 2;
-    width: 550px;;
-    flex-direction: column;
-
-    .middle-top {
-      flex-grow: 1;
-      background: $yellow;
-    }
-
-    .input-box {
-      flex-grow: 2.5;
-      position: relative;
-      background: transparent;
-
-      .signup-button {
-        width: 25%;
-        height: 100%;
-        position: absolute;
-        right: 0;
-        background: $blue;
-      }
-    }
-
-    .middle-bottom {
-      flex-grow: 1;
-      background: $yellow;
-    }    
-  }
-
-  .right {
-    width: calc((100vw - 550px) / 2);
-    height: $bar-height;
-    order: 3;
-    background: $yellow;
-  }
+div.user-preference {
+  margin: auto;
+  width: auto;
 }

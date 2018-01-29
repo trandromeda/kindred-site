@@ -9,8 +9,18 @@ class EmailBar extends Component {
           <div className="mid-section">
             <div className="middle-top"></div>
             <div className="input-box">
-              <div className="signup-button">
-              </div>
+              <form>
+                <input 
+                  type="text" 
+                  name="email" 
+                  placeholder="Your email"
+                />
+                <input 
+                  type="submit" 
+                  value="Sign Up" 
+                  className="signup-button" 
+                />
+              </form>
             </div>
             <div className="middle-bottom"></div>
           </div>
