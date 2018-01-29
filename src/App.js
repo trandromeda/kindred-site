@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import Navbar from './components/Navbar';
@@ -11,6 +10,10 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <Landing />
+        <div className="user-preference">
+        <h1>Do you want to:</h1>
+        Learn | Mentor
+        </div>
       </div>
     );
   }
