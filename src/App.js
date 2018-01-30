@@ -26,7 +26,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="navbar" id="navbar">
-          <Link to="/"><img src={logo} alt="Logo" className="logo" /></Link>
+          <Link to="/"><h1 className="logo">Kindr<span className="yellow">ed</span></h1></Link>
           <Link to="/about" className="about">About</Link>
           <Link to="/coming-soon" className="mentor">Mentor</Link>
           <Link to="/coming-soon" className="browse">Browse Lessons</Link>

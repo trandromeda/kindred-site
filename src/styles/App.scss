@@ -43,6 +43,10 @@ a {
   font-weight: lighter;
 }
 
+span.yellow {
+  color: $yellow;
+}
+
 .navbar {
   width: 100vw;
   height: $bar-height;
@@ -54,10 +58,11 @@ a {
   box-sizing: border-box;
   transition: background 250ms;
 
-  img.logo {
+  h1.logo {
     order: 1;
     margin-left: $left-margin;
-    display: inline-block;
+    color: $green;
+    font-weight: bold;
   }
 
   div.links {

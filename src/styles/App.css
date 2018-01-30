@@ -153,6 +153,9 @@ a {
   font-family: 'Open Sans Light+', sans-serif;
   font-weight: lighter; }
 
+span.yellow {
+  color: #F2DC5D; }
+
 .navbar {
   width: 100vw;
   height: 80px;
@@ -163,10 +166,11 @@ a {
   z-index: 1000;
   box-sizing: border-box;
   transition: background 250ms; }
-  .navbar img.logo {
+  .navbar h1.logo {
     order: 1;
     margin-left: 25px;
-    display: inline-block; }
+    color: #32DBC4;
+    font-weight: bold; }
   .navbar div.links {
     width: 100%;
     display: flex;
