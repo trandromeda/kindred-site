@@ -157,8 +157,8 @@ a {
   width: 100vw;
   height: 60px;
   display: flex;
-  position: fixed;
   align-items: center;
+  position: fixed;
   border-bottom: 1px #FFFFFF solid;
   z-index: 1000;
   box-sizing: border-box;
@@ -167,6 +167,10 @@ a {
     order: 1;
     margin-left: 25px;
     display: inline-block; }
+  .navbar div.links {
+    width: 100%;
+    display: flex;
+    align-items: center; }
   .navbar a {
     margin: 0 30px;
     display: inline-block;
@@ -175,12 +179,8 @@ a {
     color: white;
     vertical-align: middle; }
   .navbar a.about {
-    margin-left: auto;
-    order: 2; }
-  .navbar a.mentor {
-    order: 3; }
+    margin-left: auto; }
   .navbar a.browse {
-    order: 4;
     padding: 7px 12px;
     background: #F2DC5D;
     box-sizing: border-box;
@@ -264,3 +264,10 @@ div.preview-description {
   align-self: center; }
   div.preview-description p {
     font-size: 1em; }
+
+div.about {
+  width: 100vw;
+  height: 500px;
+  position: relative; }
+  div.about h1 {
+    text-align: center; }
