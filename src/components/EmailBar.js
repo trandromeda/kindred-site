@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 class EmailBar extends Component {
+  componentDidMount() {
+    document.getElementById("email").focus();
+  }
+
   render() {
     return (
         <div className="email-bar">
@@ -11,6 +15,7 @@ class EmailBar extends Component {
             <div className="input-box">
               <form>
                 <input 
+                  id="email"
                   type="text" 
                   name="email" 
                   placeholder=" Your email"
