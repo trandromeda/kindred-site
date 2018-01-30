@@ -260,14 +260,14 @@ div.lesson-container {
 
 div.preview-description {
   padding-right: 50px;
-  flex: 1 1 0;
-  align-self: center; }
-  div.preview-description p {
-    font-size: 1em; }
+  flex: 1 1 0; }
+
+div.about, div.coming-soon {
+  padding: 0 100px; }
 
 div.about {
   width: 100vw;
-  padding: 0 100px;
+  margin-bottom: 50px;
   position: relative;
   box-sizing: border-box; }
   div.about h1 {

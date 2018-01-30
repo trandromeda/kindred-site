@@ -19,7 +19,7 @@ class Footer extends Component {
 
           <div className="divider"></div>       
 
-          <p className="copyright">Copyright 2018, Kindred Experiences Inc. All Rights Reserved</p>
+          <p className="copyright">Copyright © 2018, Kindred Experiences Inc. All Rights Reserved</p>
         </div>
       )
   }

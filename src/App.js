@@ -7,6 +7,7 @@ import Landing from './components/Landing';
 import Home from './components/Home';
 import About from './components/About';
 import Footer from './components/Footer';
+import ComingSoon from './components/ComingSoon';
 
 class App extends Component {
 
@@ -27,13 +28,14 @@ class App extends Component {
         <div className="navbar" id="navbar">
           <Link to="/"><img src={logo} alt="Logo" className="logo" /></Link>
           <Link to="/about" className="about">About</Link>
-          <Link to="/teach" className="mentor">Mentor</Link>
-          <Link to="/browse" className="browse">Browse Lessons</Link>
+          <Link to="/coming-soon" className="mentor">Mentor</Link>
+          <Link to="/coming-soon" className="browse">Browse Lessons</Link>
         </div>
         <Landing />
 
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/coming-soon" component={ComingSoon} />
 
         <Footer />
       </div>
