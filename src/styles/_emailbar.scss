@@ -86,7 +86,7 @@ $green: #32DBC4;
 }
 
 %email-bar-template-yellow {
-  @include email-bar-template($green, $yellow);
+  @include email-bar-template($green, $blue);
 }
 
 %email-bar-template-blue {

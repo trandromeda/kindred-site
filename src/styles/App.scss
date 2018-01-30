@@ -80,7 +80,7 @@ a {
   a.browse {
     order: 4;
     padding: 7px 12px;
-    background: $blue;
+    background: $yellow;
     box-sizing: border-box;
     border-radius: 2px;
   }
@@ -156,27 +156,43 @@ a {
 }
 
 div.preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   background: #FAFAFA;
 
   h1 {
-    margin-top: 0;
+    width: 100%;
+    margin: 0 auto;
     padding-top: 20px;
+    display: block;
     text-align: center;
-  }
-}
-
-div.preview-container {
-  div.card-list {
-    height: 750px;
-    width: 200px;
-    background: grey;
   }
 }
 
 div.lesson-container {
   padding: 25px;
-  width: 55vw;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   flex-wrap: wrap;
+  box-sizing: border-box;
+  flex: 1.6 1 0;
+
+  @media (min-width: 1520px) {
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 942px) {
+    width: 15vw;
+  }
+}
+
+div.preview-description {
+  padding-right: 50px;
+  flex: 1 1 0;
+  align-self: center;
+
+  p {
+    font-size: 1em;
+  }
 }

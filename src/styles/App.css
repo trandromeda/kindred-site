@@ -43,7 +43,7 @@
         height: 100%;
         position: absolute;
         right: 0;
-        background: #F2DC5D;
+        background: #70D6FF;
         font-family: 'Open Sans Light', sans-serif;
         font-weight: lighter;
         font-size: 24px;
@@ -182,7 +182,7 @@ a {
   .navbar a.browse {
     order: 4;
     padding: 7px 12px;
-    background: #70D6FF;
+    background: #F2DC5D;
     box-sizing: border-box;
     border-radius: 2px; }
 
@@ -233,20 +233,34 @@ a {
   background: transparent; }
 
 div.preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   background: #FAFAFA; }
   div.preview h1 {
-    margin-top: 0;
+    width: 100%;
+    margin: 0 auto;
     padding-top: 20px;
+    display: block;
     text-align: center; }
-
-div.preview-container div.card-list {
-  height: 750px;
-  width: 200px;
-  background: grey; }
 
 div.lesson-container {
   padding: 25px;
-  width: 55vw;
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap; }
+  justify-content: space-around;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  flex: 1.6 1 0; }
+  @media (min-width: 1520px) {
+    div.lesson-container {
+      justify-content: flex-start; } }
+  @media (max-width: 942px) {
+    div.lesson-container {
+      width: 15vw; } }
+
+div.preview-description {
+  padding-right: 50px;
+  flex: 1 1 0;
+  align-self: center; }
+  div.preview-description p {
+    font-size: 1em; }
