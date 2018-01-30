@@ -69,7 +69,7 @@ a {
   a {
     margin: 0 30px;
     display: inline-block;
-    font-size: 20px;
+    font-size: 24px;
     text-decoration: none;
     color: white;
     vertical-align: middle;
@@ -203,10 +203,17 @@ div.preview-description {
 
 div.about {
   width: 100vw;
-  height: 600px;
+  padding: 0 100px;
   position: relative;
+  box-sizing: border-box;
 
   h1 {
     text-align: center;
+  }
+
+  li {
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 24px;
+    font-weight: lighter;    
   }
 }

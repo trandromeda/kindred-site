@@ -174,7 +174,7 @@ a {
   .navbar a {
     margin: 0 30px;
     display: inline-block;
-    font-size: 20px;
+    font-size: 24px;
     text-decoration: none;
     color: white;
     vertical-align: middle; }
@@ -267,7 +267,12 @@ div.preview-description {
 
 div.about {
   width: 100vw;
-  height: 600px;
-  position: relative; }
+  padding: 0 100px;
+  position: relative;
+  box-sizing: border-box; }
   div.about h1 {
     text-align: center; }
+  div.about li {
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 24px;
+    font-weight: lighter; }
