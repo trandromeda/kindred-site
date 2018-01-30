@@ -1,5 +1,58 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
-.email-bar, .landing .email-bar {
+.landing .email-bar {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900; }
+  .landing .email-bar .left {
+    width: calc((100vw - 550px) / 2);
+    height: 10vh;
+    order: 1;
+    background: #F2DC5D; }
+  .landing .email-bar .mid-section {
+    display: flex;
+    order: 2;
+    width: 550px;
+    flex-direction: column; }
+    .landing .email-bar .mid-section .middle-top {
+      flex-grow: 1;
+      background: #F2DC5D; }
+    .landing .email-bar .mid-section .input-box {
+      flex-grow: 2.5;
+      position: relative;
+      background: transparent; }
+      .landing .email-bar .mid-section .input-box input[type=text] {
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+        position: absolute;
+        background: transparent;
+        border: none;
+        font-size: 20px;
+        line-height: 100%;
+        color: #FFFFFF; }
+      .landing .email-bar .mid-section .input-box input:focus {
+        outline: none; }
+      .landing .email-bar .mid-section .input-box input::placeholder {
+        color: white; }
+      .landing .email-bar .mid-section .input-box .signup-button {
+        width: 25%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        background: #70D6FF;
+        border: none; }
+    .landing .email-bar .mid-section .middle-bottom {
+      flex-grow: 1;
+      background: #F2DC5D; }
+  .landing .email-bar .right {
+    width: calc((100vw - 550px) / 2);
+    height: 10vh;
+    order: 3;
+    background: #F2DC5D; }
+
+.email-bar {
   width: 100vw;
   height: 10vh;
   display: flex;
@@ -9,7 +62,7 @@
     width: calc((100vw - 550px) / 2);
     height: 10vh;
     order: 1;
-    background: #F2DC5D; }
+    background: #70D6FF; }
   .email-bar .mid-section {
     display: flex;
     order: 2;
@@ -17,7 +70,7 @@
     flex-direction: column; }
     .email-bar .mid-section .middle-top {
       flex-grow: 1;
-      background: #F2DC5D; }
+      background: #70D6FF; }
     .email-bar .mid-section .input-box {
       flex-grow: 2.5;
       position: relative;
@@ -41,19 +94,51 @@
         height: 100%;
         position: absolute;
         right: 0;
-        background: #70D6FF; }
+        background: #F2DC5D;
+        border: none; }
     .email-bar .mid-section .middle-bottom {
       flex-grow: 1;
-      background: #F2DC5D; }
+      background: #70D6FF; }
   .email-bar .right {
     width: calc((100vw - 550px) / 2);
     height: 10vh;
     order: 3;
-    background: #F2DC5D; }
+    background: #70D6FF; }
 
 .landing .email-bar {
   position: absolute;
   bottom: 0; }
+
+div.card-container {
+  width: 195px;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+  div.card-container div.photo {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    background: turquoise; }
+    div.card-container div.photo div.caption {
+      width: 100%;
+      align-self: flex-end;
+      background: rgba(0, 0, 0, 0.4); }
+      div.card-container div.photo div.caption p {
+        padding: 5px;
+        margin: 0;
+        font-size: 1em;
+        text-align: right;
+        color: #FFFFFF; }
+  div.card-container div.description {
+    padding: 5px;
+    flex: 1 auto; }
+    div.card-container div.description p {
+      font-size: 1em; }
+    div.card-container div.description div.figures {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75em; }
 
 /* ORDER OF ATTRIBUTES 
 1. Width + Height
@@ -160,33 +245,7 @@ div.lesson-container {
   justify-content: space-between;
   flex-wrap: wrap; }
 
-div.card-container {
-  width: 195px;
-  height: auto;
-  position: relative;
-  display: flex;
-  flex-direction: column; }
-  div.card-container div.photo {
-    width: 100%;
-    height: 130px;
-    display: flex;
-    background: turquoise; }
-    div.card-container div.photo div.caption {
-      width: 100%;
-      align-self: flex-end;
-      background: rgba(0, 0, 0, 0.4); }
-      div.card-container div.photo div.caption p {
-        padding: 5px;
-        margin: 0;
-        font-size: 1em;
-        text-align: right;
-        color: #FFFFFF; }
-  div.card-container div.description {
-    padding: 5px;
-    flex: 1 auto; }
-    div.card-container div.description p {
-      font-size: 1em; }
-    div.card-container div.description div.figures {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75em; }
+.footer {
+  width: 100%;
+  height: 250px;
+  background: #F1F1F1; }

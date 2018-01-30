@@ -4,7 +4,7 @@ $bar-height: 10vh;
 $yellow: #F2DC5D;
 $blue: #70D6FF;
 
-%email-bar-template {
+@mixin email-bar-template($colour, $button-color) {
   width: 100vw;
   height: $bar-height;
   display: flex;
@@ -15,7 +15,7 @@ $blue: #70D6FF;
     width: calc((100vw - 550px) / 2);
     height: $bar-height;
     order: 1;
-    background: $yellow;
+    background: $colour;
   }
 
   .mid-section {
@@ -26,7 +26,7 @@ $blue: #70D6FF;
 
     .middle-top {
       flex-grow: 1;
-      background: $yellow;
+      background: $colour;
     }
 
     .input-box {
@@ -59,13 +59,14 @@ $blue: #70D6FF;
         height: 100%;
         position: absolute;
         right: 0;
-        background: $blue;
+        background: $button-color;
+        border: none;
       }
     }
 
     .middle-bottom {
       flex-grow: 1;
-      background: $yellow;
+      background: $colour;
     }    
   }
 
@@ -73,18 +74,28 @@ $blue: #70D6FF;
     width: calc((100vw - 550px) / 2);
     height: $bar-height;
     order: 3;
-    background: $yellow;
+    background: $colour;
   }
 }
 
+%email-bar-template-yellow {
+  @include email-bar-template($yellow, $blue);
+}
+
+%email-bar-template-blue {
+  @include email-bar-template($blue, $yellow);
+}
+
+
 .email-bar {
-  @extend %email-bar-template;
+  @extend %email-bar-template-blue;
 }
 
 .landing {
   .email-bar {
-    @extend %email-bar-template;
+    @extend %email-bar-template-yellow;
+
     position: absolute;
-    bottom: 0;    
+    bottom: 0;
   }
 }

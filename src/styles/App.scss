@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display');
 @import "emailbar";
+@import "lessoncard";
 
 /* ORDER OF ATTRIBUTES 
 1. Width + Height
@@ -152,47 +153,8 @@ div.lesson-container {
   flex-wrap: wrap;
 }
 
-div.card-container {
-  width: 195px;
-  height: auto;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-
-  div.photo {
-    width: 100%;
-    height: 130px;
-    display: flex;
-    background: turquoise;
-
-    div.caption {
-      width: 100%;
-      align-self: flex-end;
-      background: rgba(0, 0, 0, 0.4);
-
-      p {
-        padding: 5px;
-        margin: 0;
-        font-size: 1em;
-        text-align: right;
-        color: #FFFFFF;
-      }
-    }
-  }
-
-  div.description {
-    padding: 5px;
-    flex: 1 auto;
-
-    p {
-      font-size: 1em;
-    }
-
-    div.figures {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75em;
-    }
-  }
-
+.footer {
+  width: 100%;
+  height: 250px;
+  background: #F1F1F1;
 }

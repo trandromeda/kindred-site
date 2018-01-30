@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Landing from './components/Landing';
 import LessonCard from './components/LessonCard';
 import EmailBar from './components/EmailBar';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -24,6 +25,8 @@ class App extends Component {
         </div>
 
         <EmailBar />
+
+        <Footer />
 
         </div>
       </div>
