@@ -3,6 +3,7 @@ import { Route, Link } from 'react-router-dom'
 import './styles/App.css';
 import logo from './images/colour-logo.png';
 
+import NavBar from './components/NavBar';
 import Landing from './components/Landing';
 import Home from './components/Home';
 import About from './components/About';
@@ -25,12 +26,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="navbar" id="navbar">
-          <Link to="/"><h1 className="logo">Kindr<span className="yellow">ed</span></h1></Link>
-          <Link to="/about" className="about">About</Link>
-          <Link to="/coming-soon" className="mentor">Mentor</Link>
-          <Link to="/coming-soon" className="browse">Browse Lessons</Link>
-        </div>
+        <NavBar />
         <Landing />
 
         <Route exact path="/" component={Home} />
