@@ -13,7 +13,7 @@ class EmailBar extends Component {
                 <input 
                   type="text" 
                   name="email" 
-                  placeholder="Your email"
+                  placeholder=" Your email"
                 />
                 <input 
                   type="submit" 

@@ -3,6 +3,7 @@ $scrim-width: 550px;
 $bar-height: 10vh;
 $yellow: #F2DC5D;
 $blue: #70D6FF;
+$green: #32DBC4;
 
 @mixin email-bar-template($colour, $button-color) {
   width: 100vw;
@@ -37,10 +38,12 @@ $blue: #70D6FF;
       input[type=text] {
         width: 100%;
         height: 100%;
-        padding-left: 10px;
+        padding-left: 27px;
         position: absolute;
         background: transparent;
         border: none;
+        font-family: 'Open Sans Light', sans-serif;
+        font-weight: lighter;
         font-size: 20px;
         line-height: 100%;
         color: #FFFFFF;
@@ -60,6 +63,10 @@ $blue: #70D6FF;
         position: absolute;
         right: 0;
         background: $button-color;
+        font-family: 'Open Sans Light', sans-serif;
+        font-weight: lighter;
+        font-size: 20px;
+        color: white;
         border: none;
       }
     }
@@ -79,7 +86,7 @@ $blue: #70D6FF;
 }
 
 %email-bar-template-yellow {
-  @include email-bar-template($yellow, $blue);
+  @include email-bar-template($green, $yellow);
 }
 
 %email-bar-template-blue {
@@ -88,7 +95,7 @@ $blue: #70D6FF;
 
 
 .email-bar {
-  @extend %email-bar-template-blue;
+  @extend %email-bar-template-yellow;
 }
 
 .landing {

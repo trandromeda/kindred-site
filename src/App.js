@@ -13,7 +13,7 @@ class App extends Component {
     console.log('mounted');
     const nav = document.getElementById("navbar");
     window.onscroll = function() {
-      if (document.body.scrollTop >= 5 || document.documentElement.scrollTop >= 5) {
+      if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200) {
         nav.classList.add('white');
       } else {
         nav.classList.remove('white');
@@ -26,22 +26,22 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <Landing />
-        <div className="user-preference">
+        <div className="preview">
         <h1>Preview</h1>
-        <div className="lesson-container">
-          <LessonCard />
-          <LessonCard />
-          <LessonCard />
-          <LessonCard />
-          <LessonCard />
-          <LessonCard />          
+          <div className="lesson-container">
+            <LessonCard />
+            <LessonCard />
+            <LessonCard />
+            <LessonCard />
+            <LessonCard />
+            <LessonCard />          
+          </div>
         </div>
 
         <EmailBar />
 
         <Footer />
 
-        </div>
       </div>
     );
   }

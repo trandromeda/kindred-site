@@ -16,9 +16,10 @@ $scrim-width: 550px;
 $bar-height: 10vh;
 $yellow: #F2DC5D;
 $blue: #70D6FF;
+$green: #32DBC4;
 
 body {
-  background: #F1F1F1;
+  background: #FAFAFA;
 }
 
 h1 {
@@ -28,13 +29,14 @@ h1 {
 }
 
 p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans Light', sans-serif;
   font-size: 24px;
-  font-weight: normal;
+  font-weight: lighter;
 }
 
 a {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans Light+', sans-serif;
+  font-weight: lighter;
 }
 
 .navbar {
@@ -46,6 +48,7 @@ a {
   border-bottom: 1px #FFFFFF solid;
   z-index: 1000;
   box-sizing: border-box;
+  transition: background 250ms;
 
   img.logo {
     order: 1;
@@ -54,9 +57,9 @@ a {
   }
 
   a {
-    margin: 0 25px;
+    margin: 0 30px;
     display: inline-block;
-    font-size: 24px;
+    font-size: 20px;
     text-decoration: none;
     color: white;
     vertical-align: middle;
@@ -73,15 +76,16 @@ a {
 
   a.browse {
     order: 4;
-    padding: 5px 10px;
+    padding: 7px 12px;
     background: $blue;
     box-sizing: border-box;
+    border-radius: 2px;
   }
 }
 
 .navbar.white {
   background: #FFFFFF;
-
+  box-shadow: 0px 4px 4px -5px rgba(0,0,0,0.9);
 
   a {
     color: #000000;
@@ -103,17 +107,17 @@ a {
   }
 
   .first {
-    background-image: url('../images/max_lesson.jpg');
+    background-image: url('../images/painting.jpg');
     background-size: cover;    
   }
 
   .second {
-    background-image: url('../images/pan_lesson.jpg');
+    background-image: url('../images/max_lesson.jpg');
     background-size: cover;    
   }
 
   .third {
-    background-image: url('../images/mom_lesson.jpg');
+    background-image: url('../images/terrarium.jpg');
     background-size: cover;    
   }
 
@@ -148,8 +152,12 @@ a {
   background: transparent;
 }
 
-div.user-preference {
+div.preview {
+  background: #FAFAFA;
+
   h1 {
+    margin-top: 0;
+    padding-top: 20px;
     text-align: center;
   }
 }
@@ -173,5 +181,5 @@ div.lesson-container {
 .footer {
   width: 100%;
   height: 250px;
-  background: #F1F1F1;
+  background: $blue;
 }

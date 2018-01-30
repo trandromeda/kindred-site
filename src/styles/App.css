@@ -1,58 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
-.landing .email-bar {
-  width: 100vw;
-  height: 10vh;
-  display: flex;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 900; }
-  .landing .email-bar .left {
-    width: calc((100vw - 550px) / 2);
-    height: 10vh;
-    order: 1;
-    background: #F2DC5D; }
-  .landing .email-bar .mid-section {
-    display: flex;
-    order: 2;
-    width: 550px;
-    flex-direction: column; }
-    .landing .email-bar .mid-section .middle-top {
-      flex-grow: 1;
-      background: #F2DC5D; }
-    .landing .email-bar .mid-section .input-box {
-      flex-grow: 2.5;
-      position: relative;
-      background: transparent; }
-      .landing .email-bar .mid-section .input-box input[type=text] {
-        width: 100%;
-        height: 100%;
-        padding-left: 10px;
-        position: absolute;
-        background: transparent;
-        border: none;
-        font-size: 20px;
-        line-height: 100%;
-        color: #FFFFFF; }
-      .landing .email-bar .mid-section .input-box input:focus {
-        outline: none; }
-      .landing .email-bar .mid-section .input-box input::placeholder {
-        color: white; }
-      .landing .email-bar .mid-section .input-box .signup-button {
-        width: 25%;
-        height: 100%;
-        position: absolute;
-        right: 0;
-        background: #70D6FF;
-        border: none; }
-    .landing .email-bar .mid-section .middle-bottom {
-      flex-grow: 1;
-      background: #F2DC5D; }
-  .landing .email-bar .right {
-    width: calc((100vw - 550px) / 2);
-    height: 10vh;
-    order: 3;
-    background: #F2DC5D; }
-
-.email-bar {
+.email-bar, .landing .email-bar {
   width: 100vw;
   height: 10vh;
   display: flex;
@@ -62,7 +9,7 @@
     width: calc((100vw - 550px) / 2);
     height: 10vh;
     order: 1;
-    background: #70D6FF; }
+    background: #32DBC4; }
   .email-bar .mid-section {
     display: flex;
     order: 2;
@@ -70,7 +17,7 @@
     flex-direction: column; }
     .email-bar .mid-section .middle-top {
       flex-grow: 1;
-      background: #70D6FF; }
+      background: #32DBC4; }
     .email-bar .mid-section .input-box {
       flex-grow: 2.5;
       position: relative;
@@ -78,10 +25,12 @@
       .email-bar .mid-section .input-box input[type=text] {
         width: 100%;
         height: 100%;
-        padding-left: 10px;
+        padding-left: 27px;
         position: absolute;
         background: transparent;
         border: none;
+        font-family: 'Open Sans Light', sans-serif;
+        font-weight: lighter;
         font-size: 20px;
         line-height: 100%;
         color: #FFFFFF; }
@@ -95,15 +44,19 @@
         position: absolute;
         right: 0;
         background: #F2DC5D;
+        font-family: 'Open Sans Light', sans-serif;
+        font-weight: lighter;
+        font-size: 20px;
+        color: white;
         border: none; }
     .email-bar .mid-section .middle-bottom {
       flex-grow: 1;
-      background: #70D6FF; }
+      background: #32DBC4; }
   .email-bar .right {
     width: calc((100vw - 550px) / 2);
     height: 10vh;
     order: 3;
-    background: #70D6FF; }
+    background: #32DBC4; }
 
 .landing .email-bar {
   position: absolute;
@@ -119,7 +72,7 @@ div.card-container {
     width: 100%;
     height: 130px;
     display: flex;
-    background: turquoise; }
+    background: white; }
     div.card-container div.photo div.caption {
       width: 100%;
       align-self: flex-end;
@@ -149,7 +102,7 @@ div.card-container {
 6. Colours
 */
 body {
-  background: #F1F1F1; }
+  background: #FAFAFA; }
 
 h1 {
   font-family: 'Playfair Display', serif;
@@ -157,12 +110,13 @@ h1 {
   font-weight: normal; }
 
 p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans Light', sans-serif;
   font-size: 24px;
-  font-weight: normal; }
+  font-weight: lighter; }
 
 a {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans Light+', sans-serif;
+  font-weight: lighter; }
 
 .navbar {
   width: 100vw;
@@ -172,15 +126,16 @@ a {
   align-items: center;
   border-bottom: 1px #FFFFFF solid;
   z-index: 1000;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  transition: background 250ms; }
   .navbar img.logo {
     order: 1;
     margin-left: 20px;
     display: inline-block; }
   .navbar a {
-    margin: 0 25px;
+    margin: 0 30px;
     display: inline-block;
-    font-size: 24px;
+    font-size: 20px;
     text-decoration: none;
     color: white;
     vertical-align: middle; }
@@ -191,12 +146,14 @@ a {
     order: 3; }
   .navbar a.browse {
     order: 4;
-    padding: 5px 10px;
+    padding: 7px 12px;
     background: #70D6FF;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    border-radius: 2px; }
 
 .navbar.white {
-  background: #FFFFFF; }
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px -5px rgba(0, 0, 0, 0.9); }
   .navbar.white a {
     color: #000000; }
   .navbar.white a.browse {
@@ -210,13 +167,13 @@ a {
     width: 100%;
     height: 90vh; }
   .landing .first {
-    background-image: url("../images/max_lesson.jpg");
+    background-image: url("../images/painting.jpg");
     background-size: cover; }
   .landing .second {
-    background-image: url("../images/pan_lesson.jpg");
+    background-image: url("../images/max_lesson.jpg");
     background-size: cover; }
   .landing .third {
-    background-image: url("../images/mom_lesson.jpg");
+    background-image: url("../images/terrarium.jpg");
     background-size: cover; }
   .landing .landing-scrim {
     width: 550px;
@@ -240,8 +197,12 @@ a {
   height: 100px;
   background: transparent; }
 
-div.user-preference h1 {
-  text-align: center; }
+div.preview {
+  background: #FAFAFA; }
+  div.preview h1 {
+    margin-top: 0;
+    padding-top: 20px;
+    text-align: center; }
 
 div.preview-container div.card-list {
   height: 750px;
@@ -258,4 +219,4 @@ div.lesson-container {
 .footer {
   width: 100%;
   height: 250px;
-  background: #F1F1F1; }
+  background: #70D6FF; }
