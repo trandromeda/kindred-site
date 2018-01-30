@@ -1,11 +1,28 @@
 import React, { Component } from 'react';
 import EmailBar from './EmailBar';
+import Flickity from 'flickity';
 
 
 class Landing extends Component {
+  componentDidMount() {
+    this.flkty = new Flickity('.landing', {
+      cellAlign: 'left',
+      contain: true,
+      cellSelector: '.carousel-cell',
+      autoPlay: 6500,
+      pauseAutoPlayOnHover: false,
+      wrapAround: true,
+      pageDots: false,
+      fiction: 0.25
+    })
+  }
+
   render() {
     return (
         <div className="landing">
+          <div className="carousel-cell first"></div>
+          <div className="carousel-cell second"></div>
+          <div className="carousel-cell third"></div>
         
           <div className="landing-scrim">
             <h1>Learn from your neighbour</h1>

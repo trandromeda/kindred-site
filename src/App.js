@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
+import './styles/App.css';
 
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
+import LessonCard from './components/LessonCard';
+import EmailBar from './components/EmailBar';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -11,8 +14,20 @@ class App extends Component {
         <Navbar />
         <Landing />
         <div className="user-preference">
-        <h1>Do you want to:</h1>
-        Learn | Mentor
+        <h1>Preview</h1>
+        <div className="lesson-container">
+          <LessonCard />
+          <LessonCard />
+          <LessonCard />
+          <LessonCard />
+          <LessonCard />
+          <LessonCard />          
+        </div>
+
+        <EmailBar />
+
+        <Footer />
+
         </div>
       </div>
     );

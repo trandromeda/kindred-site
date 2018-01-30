@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
+.landing .email-bar {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900; }
+  .landing .email-bar .left {
+    width: calc((100vw - 550px) / 2);
+    height: 10vh;
+    order: 1;
+    background: #F2DC5D; }
+  .landing .email-bar .mid-section {
+    display: flex;
+    order: 2;
+    width: 550px;
+    flex-direction: column; }
+    .landing .email-bar .mid-section .middle-top {
+      flex-grow: 1;
+      background: #F2DC5D; }
+    .landing .email-bar .mid-section .input-box {
+      flex-grow: 2.5;
+      position: relative;
+      background: transparent; }
+      .landing .email-bar .mid-section .input-box input[type=text] {
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+        position: absolute;
+        background: transparent;
+        border: none;
+        font-size: 20px;
+        line-height: 100%;
+        color: #FFFFFF; }
+      .landing .email-bar .mid-section .input-box input:focus {
+        outline: none; }
+      .landing .email-bar .mid-section .input-box input::placeholder {
+        color: white; }
+      .landing .email-bar .mid-section .input-box .signup-button {
+        width: 25%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        background: #70D6FF;
+        border: none; }
+    .landing .email-bar .mid-section .middle-bottom {
+      flex-grow: 1;
+      background: #F2DC5D; }
+  .landing .email-bar .right {
+    width: calc((100vw - 550px) / 2);
+    height: 10vh;
+    order: 3;
+    background: #F2DC5D; }
+
+.email-bar {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900; }
+  .email-bar .left {
+    width: calc((100vw - 550px) / 2);
+    height: 10vh;
+    order: 1;
+    background: #70D6FF; }
+  .email-bar .mid-section {
+    display: flex;
+    order: 2;
+    width: 550px;
+    flex-direction: column; }
+    .email-bar .mid-section .middle-top {
+      flex-grow: 1;
+      background: #70D6FF; }
+    .email-bar .mid-section .input-box {
+      flex-grow: 2.5;
+      position: relative;
+      background: transparent; }
+      .email-bar .mid-section .input-box input[type=text] {
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+        position: absolute;
+        background: transparent;
+        border: none;
+        font-size: 20px;
+        line-height: 100%;
+        color: #FFFFFF; }
+      .email-bar .mid-section .input-box input:focus {
+        outline: none; }
+      .email-bar .mid-section .input-box input::placeholder {
+        color: white; }
+      .email-bar .mid-section .input-box .signup-button {
+        width: 25%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        background: #F2DC5D;
+        border: none; }
+    .email-bar .mid-section .middle-bottom {
+      flex-grow: 1;
+      background: #70D6FF; }
+  .email-bar .right {
+    width: calc((100vw - 550px) / 2);
+    height: 10vh;
+    order: 3;
+    background: #70D6FF; }
+
+.landing .email-bar {
+  position: absolute;
+  bottom: 0; }
+
+div.card-container {
+  width: 195px;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+  div.card-container div.photo {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    background: turquoise; }
+    div.card-container div.photo div.caption {
+      width: 100%;
+      align-self: flex-end;
+      background: rgba(0, 0, 0, 0.4); }
+      div.card-container div.photo div.caption p {
+        padding: 5px;
+        margin: 0;
+        font-size: 1em;
+        text-align: right;
+        color: #FFFFFF; }
+  div.card-container div.description {
+    padding: 5px;
+    flex: 1 auto; }
+    div.card-container div.description p {
+      font-size: 1em; }
+    div.card-container div.description div.figures {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75em; }
+
+/* ORDER OF ATTRIBUTES 
+1. Width + Height
+2. Padding + Margin
+3. Positioning
+4. Background
+5. Fonts
+6. Colours
+*/
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: normal; }
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: normal; }
+
+a {
+  font-family: 'Open Sans', sans-serif; }
+
+.navbar {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  border-bottom: 1px #FFFFFF solid;
+  z-index: 1000;
+  box-sizing: border-box; }
+  .navbar img.logo {
+    order: 1;
+    margin-left: 10px;
+    display: inline-block; }
+  .navbar a {
+    margin: 0 25px;
+    display: inline-block;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    vertical-align: middle; }
+  .navbar a.about {
+    margin-left: auto;
+    order: 2; }
+  .navbar a.mentor {
+    order: 3; }
+  .navbar a.browse {
+    order: 4;
+    padding: 5px 10px;
+    background: #70D6FF;
+    box-sizing: border-box; }
+
+.landing {
+  width: 100vw;
+  height: 90vh;
+  position: relative; }
+  .landing .carousel-cell {
+    width: 100%;
+    height: 90vh; }
+  .landing .first {
+    background-image: url("../images/max_lesson.jpg");
+    background-size: cover; }
+  .landing .second {
+    background-image: url("../images/pan_lesson.jpg");
+    background-size: cover; }
+  .landing .third {
+    background-image: url("../images/mom_lesson.jpg");
+    background-size: cover; }
+  .landing .landing-scrim {
+    width: 550px;
+    margin: auto;
+    padding: 25px;
+    position: absolute;
+    bottom: 10vh;
+    left: calc(50% - 275px);
+    background: rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    z-index: 1000; }
+    .landing .landing-scrim h1, .landing .landing-scrim p {
+      color: #FFFFFF; }
+    .landing .landing-scrim h1 {
+      margin-top: 0px; }
+    .landing .landing-scrim p {
+      margin-bottom: 0; }
+
+.flickity-prev-next-button {
+  width: 100px;
+  height: 100px;
+  background: transparent; }
+
+div.user-preference h1 {
+  text-align: center; }
+
+div.preview-container div.card-list {
+  height: 750px;
+  width: 200px;
+  background: grey; }
+
+div.lesson-container {
+  padding: 25px;
+  width: 650px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.footer {
+  width: 100%;
+  height: 250px;
+  background: #F1F1F1; }

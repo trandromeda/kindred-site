@@ -5,7 +5,8 @@
   display: flex;
   position: absolute;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); }
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000; }
   .email-bar .left {
     width: calc((100vw - 550px) / 2);
     height: 10vh;
@@ -103,11 +104,19 @@ a {
 .landing {
   width: 100vw;
   height: 90vh;
-  padding-top: 60px;
-  position: relative;
-  background: #F1F1F1;
-  background-image: url("./images/max_lesson.jpg");
-  background-size: cover; }
+  position: relative; }
+  .landing .carousel-cell {
+    width: 100%;
+    height: 90vh; }
+  .landing .first {
+    background-image: url("./images/max_lesson.jpg");
+    background-size: cover; }
+  .landing .second {
+    background-image: url("./images/pan_lesson.jpg");
+    background-size: cover; }
+  .landing .third {
+    background-image: url("./images/mom_lesson.jpg");
+    background-size: cover; }
   .landing .landing-scrim {
     width: 550px;
     margin: auto;
@@ -116,13 +125,19 @@ a {
     bottom: 10vh;
     left: calc(50% - 275px);
     background: rgba(0, 0, 0, 0.4);
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    z-index: 1000; }
     .landing .landing-scrim h1, .landing .landing-scrim p {
       color: #FFFFFF; }
     .landing .landing-scrim h1 {
       margin-top: 0px; }
     .landing .landing-scrim p {
       margin-bottom: 0; }
+
+.flickity-prev-next-button {
+  width: 100px;
+  height: 100px;
+  background: transparent; }
 
 div.user-preference {
   margin: auto;

@@ -1,0 +1,101 @@
+$nav-height: 60px;
+$scrim-width: 550px;
+$bar-height: 10vh;
+$yellow: #F2DC5D;
+$blue: #70D6FF;
+
+@mixin email-bar-template($colour, $button-color) {
+  width: 100vw;
+  height: $bar-height;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+
+  .left {
+    width: calc((100vw - 550px) / 2);
+    height: $bar-height;
+    order: 1;
+    background: $colour;
+  }
+
+  .mid-section {
+    display: flex;
+    order: 2;
+    width: 550px;;
+    flex-direction: column;
+
+    .middle-top {
+      flex-grow: 1;
+      background: $colour;
+    }
+
+    .input-box {
+      flex-grow: 2.5;
+      position: relative;
+      background: transparent;
+
+      input[type=text] {
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+        position: absolute;
+        background: transparent;
+        border: none;
+        font-size: 20px;
+        line-height: 100%;
+        color: #FFFFFF;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      input::placeholder {
+        color: white;
+      }
+
+      .signup-button {
+        width: 25%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        background: $button-color;
+        border: none;
+      }
+    }
+
+    .middle-bottom {
+      flex-grow: 1;
+      background: $colour;
+    }    
+  }
+
+  .right {
+    width: calc((100vw - 550px) / 2);
+    height: $bar-height;
+    order: 3;
+    background: $colour;
+  }
+}
+
+%email-bar-template-yellow {
+  @include email-bar-template($yellow, $blue);
+}
+
+%email-bar-template-blue {
+  @include email-bar-template($blue, $yellow);
+}
+
+
+.email-bar {
+  @extend %email-bar-template-blue;
+}
+
+.landing {
+  .email-bar {
+    @extend %email-bar-template-yellow;
+
+    position: absolute;
+    bottom: 0;
+  }
+}

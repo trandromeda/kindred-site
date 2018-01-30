@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display');
+@import "emailbar";
+@import "lessoncard";
+
+/* ORDER OF ATTRIBUTES 
+1. Width + Height
+2. Padding + Margin
+3. Positioning
+4. Background
+5. Fonts
+6. Colours
+*/
+
+$nav-height: 60px;
+$scrim-width: 550px;
+$bar-height: 10vh;
+$yellow: #F2DC5D;
+$blue: #70D6FF;
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: normal;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+a {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+  width: 100vw;
+  height: $nav-height;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  border-bottom: 1px #FFFFFF solid;
+  z-index: 1000;
+  box-sizing: border-box;
+
+  img.logo {
+    order: 1;
+    margin-left: 10px;
+    display: inline-block;
+  }
+
+  a {
+    margin: 0 25px;
+    display: inline-block;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    vertical-align: middle;
+  }
+
+  a.about {
+    margin-left: auto;
+    order: 2;
+  }
+
+  a.mentor {
+    order: 3;
+  }
+
+  a.browse {
+    order: 4;
+    padding: 5px 10px;
+    background: $blue;
+    box-sizing: border-box;
+  }
+}
+
+.landing {
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+
+  .carousel-cell {
+    width: 100%;
+    height: 90vh;
+  }
+
+  .first {
+    background-image: url('../images/max_lesson.jpg');
+    background-size: cover;    
+  }
+
+  .second {
+    background-image: url('../images/pan_lesson.jpg');
+    background-size: cover;    
+  }
+
+  .third {
+    background-image: url('../images/mom_lesson.jpg');
+    background-size: cover;    
+  }
+
+  .landing-scrim {
+    width: $scrim-width;
+    margin: auto;
+    padding: 25px;
+    position: absolute;
+    bottom: $bar-height;
+    left: calc(50% - 275px;
+    background: rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    z-index: 1000;
+
+    h1, p {
+      color: #FFFFFF;
+    }
+
+    h1 {
+      margin-top: 0px;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.flickity-prev-next-button {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+}
+
+div.user-preference {
+  h1 {
+    text-align: center;
+  }
+}
+
+div.preview-container {
+  div.card-list {
+    height: 750px;
+    width: 200px;
+    background: grey;
+  }
+}
+
+div.lesson-container {
+  padding: 25px;
+  width: 650px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer {
+  width: 100%;
+  height: 250px;
+  background: #F1F1F1;
+}
