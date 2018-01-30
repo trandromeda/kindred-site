@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
 .email-bar, .landing .email-bar {
   width: 100vw;
-  height: 10vh;
+  height: 80px;
   display: flex;
   background: rgba(0, 0, 0, 0.5);
   z-index: 900; }
   .email-bar .left {
     width: calc((100vw - 550px) / 2);
-    height: 10vh;
+    height: 80px;
     order: 1;
     background: #32DBC4; }
   .email-bar .mid-section {
@@ -54,7 +54,7 @@
       background: #32DBC4; }
   .email-bar .right {
     width: calc((100vw - 550px) / 2);
-    height: 10vh;
+    height: 80px;
     order: 3;
     background: #32DBC4; }
 
@@ -155,7 +155,7 @@ a {
 
 .navbar {
   width: 100vw;
-  height: 60px;
+  height: 80px;
   display: flex;
   align-items: center;
   position: fixed;
@@ -215,7 +215,7 @@ a {
     margin: auto;
     padding: 25px;
     position: absolute;
-    bottom: 10vh;
+    bottom: 80px;
     left: calc(50% - 275px);
     background: rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
@@ -267,7 +267,7 @@ div.preview-description {
 
 div.about {
   width: 100vw;
-  height: 500px;
+  height: 600px;
   position: relative; }
   div.about h1 {
     text-align: center; }

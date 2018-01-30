@@ -14,7 +14,7 @@
 
 $nav-height: 60px;
 $scrim-width: 550px;
-$bar-height: 10vh;
+$bar-height: 80px;
 $yellow: #F2DC5D;
 $blue: #70D6FF;
 $green: #32DBC4;
@@ -45,7 +45,7 @@ a {
 
 .navbar {
   width: 100vw;
-  height: $nav-height;
+  height: $bar-height;
   display: flex;
   align-items: center;
   position: fixed;
@@ -203,7 +203,7 @@ div.preview-description {
 
 div.about {
   width: 100vw;
-  height: 500px;
+  height: 600px;
   position: relative;
 
   h1 {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 import './styles/App.css';
 import logo from './images/colour-logo.png';
 
@@ -31,8 +31,10 @@ class App extends Component {
           <Link to="/browse" className="browse">Browse Lessons</Link>
         </div>
         <Landing />
+
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
+
         <Footer />
       </div>
     );

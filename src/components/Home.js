@@ -6,7 +6,7 @@ import EmailBar from './EmailBar';
 class Home extends Component {
   render() {
     return (
-        <div className="home">
+        <div className="home" id="main">
           <div className="preview">
             <h1>Preview</h1>
             <div className="lesson-container">
