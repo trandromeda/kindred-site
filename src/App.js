@@ -3,7 +3,8 @@ import './styles/App.css';
 
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
-import Preview from './components/Preview';
+import LessonCard from './components/LessonCard';
+import EmailBar from './components/EmailBar';
 
 class App extends Component {
   render() {
@@ -13,7 +14,17 @@ class App extends Component {
         <Landing />
         <div className="user-preference">
         <h1>Preview</h1>
-        <Preview />
+        <div className="lesson-container">
+          <LessonCard />
+          <LessonCard />
+          <LessonCard />
+          <LessonCard />
+          <LessonCard />
+          <LessonCard />          
+        </div>
+
+        <EmailBar />
+
         </div>
       </div>
     );

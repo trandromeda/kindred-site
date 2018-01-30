@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
-.email-bar {
+.email-bar, .landing .email-bar {
   width: 100vw;
   height: 10vh;
   display: flex;
-  position: absolute;
-  bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 1000; }
+  z-index: 900; }
   .email-bar .left {
     width: calc((100vw - 550px) / 2);
     height: 10vh;
@@ -52,6 +50,10 @@
     height: 10vh;
     order: 3;
     background: #F2DC5D; }
+
+.landing .email-bar {
+  position: absolute;
+  bottom: 0; }
 
 /* ORDER OF ATTRIBUTES 
 1. Width + Height
@@ -150,3 +152,41 @@ div.preview-container div.card-list {
   height: 750px;
   width: 200px;
   background: grey; }
+
+div.lesson-container {
+  padding: 25px;
+  width: 650px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+div.card-container {
+  width: 195px;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+  div.card-container div.photo {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    background: turquoise; }
+    div.card-container div.photo div.caption {
+      width: 100%;
+      align-self: flex-end;
+      background: rgba(0, 0, 0, 0.4); }
+      div.card-container div.photo div.caption p {
+        padding: 5px;
+        margin: 0;
+        font-size: 1em;
+        text-align: right;
+        color: #FFFFFF; }
+  div.card-container div.description {
+    padding: 5px;
+    flex: 1 auto; }
+    div.card-container div.description p {
+      font-size: 1em; }
+    div.card-container div.description div.figures {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75em; }

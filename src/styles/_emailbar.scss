@@ -4,14 +4,12 @@ $bar-height: 10vh;
 $yellow: #F2DC5D;
 $blue: #70D6FF;
 
-.email-bar {
+%email-bar-template {
   width: 100vw;
   height: $bar-height;
   display: flex;
-  position: absolute;
-  bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  z-index: 900;
 
   .left {
     width: calc((100vw - 550px) / 2);
@@ -76,5 +74,17 @@ $blue: #70D6FF;
     height: $bar-height;
     order: 3;
     background: $yellow;
+  }
+}
+
+.email-bar {
+  @extend %email-bar-template;
+}
+
+.landing {
+  .email-bar {
+    @extend %email-bar-template;
+    position: absolute;
+    bottom: 0;    
   }
 }
