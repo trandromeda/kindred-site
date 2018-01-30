@@ -1,0 +1,58 @@
+$left-margin: 25px;
+$black: #14080E;
+
+.footer {
+  width: 100%;
+  padding: 40px 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: $yellow;
+  box-sizing: border-box;
+
+  p {
+    color: $black;
+  }
+
+  h1 {
+    margin-top: 0px;
+    display: inline-block;
+    flex: 2 1 auto;
+    text-align: center;
+    font-weight: bold;
+    color: $black;
+  }
+
+  %column {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 auto;
+
+    a {
+      margin: 2px 0;
+      text-decoration: none;
+      color: $black;
+    }
+  }
+
+  .column-1 {
+    @extend %column;
+  }
+
+  .column-2 {
+    @extend %column;
+  }
+
+  .divider {
+    width: 95%;
+    height: 1px;
+    margin: 17px auto;
+    background: black;
+  }
+
+  p.copyright {
+    font-size: 1em;
+  }
+
+}

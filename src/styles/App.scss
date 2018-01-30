@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display');
-@import "emailbar";
-@import "lessoncard";
+@import 'emailbar';
+@import 'lessoncard';
+@import 'footer';
 
 /* ORDER OF ATTRIBUTES 
 1. Width + Height
@@ -17,6 +18,8 @@ $bar-height: 10vh;
 $yellow: #F2DC5D;
 $blue: #70D6FF;
 $green: #32DBC4;
+
+$left-margin: 25px;
 
 body {
   background: #FAFAFA;
@@ -52,7 +55,7 @@ a {
 
   img.logo {
     order: 1;
-    margin-left: 20px;
+    margin-left: $left-margin;
     display: inline-block;
   }
 
@@ -172,14 +175,8 @@ div.preview-container {
 
 div.lesson-container {
   padding: 25px;
-  width: 650px;
+  width: 55vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
-}
-
-.footer {
-  width: 100%;
-  height: 250px;
-  background: $blue;
 }
