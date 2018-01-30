@@ -7,7 +7,7 @@ class EmailBar extends Component {
 
   render() {
     return (
-        <div className="email-bar">
+        <div className="email-bar" id="email-bar">
           <div className="left"></div>
 
           <div className="mid-section">

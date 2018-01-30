@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
 .email-bar, .landing .email-bar {
   width: 100vw;
-  height: 10vh;
+  height: 80px;
   display: flex;
   background: rgba(0, 0, 0, 0.5);
   z-index: 900; }
   .email-bar .left {
     width: calc((100vw - 550px) / 2);
-    height: 10vh;
+    height: 80px;
     order: 1;
     background: #32DBC4; }
   .email-bar .mid-section {
@@ -54,7 +54,7 @@
       background: #32DBC4; }
   .email-bar .right {
     width: calc((100vw - 550px) / 2);
-    height: 10vh;
+    height: 80px;
     order: 3;
     background: #32DBC4; }
 
@@ -153,34 +153,38 @@ a {
   font-family: 'Open Sans Light+', sans-serif;
   font-weight: lighter; }
 
+span.yellow {
+  color: #F2DC5D; }
+
 .navbar {
   width: 100vw;
-  height: 60px;
+  height: 80px;
   display: flex;
-  position: fixed;
   align-items: center;
+  position: fixed;
   border-bottom: 1px #FFFFFF solid;
   z-index: 1000;
   box-sizing: border-box;
   transition: background 250ms; }
-  .navbar img.logo {
+  .navbar h1.logo {
     order: 1;
     margin-left: 25px;
-    display: inline-block; }
+    color: #32DBC4;
+    font-weight: bold; }
+  .navbar div.links {
+    width: 100%;
+    display: flex;
+    align-items: center; }
   .navbar a {
     margin: 0 30px;
     display: inline-block;
-    font-size: 20px;
+    font-size: 24px;
     text-decoration: none;
     color: white;
     vertical-align: middle; }
   .navbar a.about {
-    margin-left: auto;
-    order: 2; }
-  .navbar a.mentor {
-    order: 3; }
+    margin-left: auto; }
   .navbar a.browse {
-    order: 4;
     padding: 7px 12px;
     background: #F2DC5D;
     box-sizing: border-box;
@@ -215,7 +219,7 @@ a {
     margin: auto;
     padding: 25px;
     position: absolute;
-    bottom: 10vh;
+    bottom: 80px;
     left: calc(50% - 275px);
     background: rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
@@ -260,7 +264,19 @@ div.lesson-container {
 
 div.preview-description {
   padding-right: 50px;
-  flex: 1 1 0;
-  align-self: center; }
-  div.preview-description p {
-    font-size: 1em; }
+  flex: 1 1 0; }
+
+div.about, div.coming-soon {
+  padding: 0 100px; }
+
+div.about {
+  width: 100vw;
+  margin-bottom: 50px;
+  position: relative;
+  box-sizing: border-box; }
+  div.about h1 {
+    text-align: center; }
+  div.about li {
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 24px;
+    font-weight: lighter; }

@@ -13,8 +13,11 @@
 */
 
 $nav-height: 60px;
+$landing-height: 90vh;
+$bar-height: 80px;
+
 $scrim-width: 550px;
-$bar-height: 10vh;
+
 $yellow: #F2DC5D;
 $blue: #70D6FF;
 $green: #32DBC4;
@@ -24,6 +27,7 @@ $left-margin: 25px;
 body {
   background: #FAFAFA;
 }
+
 
 h1 {
   font-family: 'Playfair Display', serif;
@@ -42,27 +46,38 @@ a {
   font-weight: lighter;
 }
 
+span.yellow {
+  color: $yellow;
+}
+
 .navbar {
   width: 100vw;
-  height: $nav-height;
+  height: $bar-height;
   display: flex;
-  position: fixed;
   align-items: center;
+  position: fixed;
   border-bottom: 1px #FFFFFF solid;
   z-index: 1000;
   box-sizing: border-box;
   transition: background 250ms;
 
-  img.logo {
+  h1.logo {
     order: 1;
     margin-left: $left-margin;
-    display: inline-block;
+    color: $green;
+    font-weight: bold;
+  }
+
+  div.links {
+    width: 100%;
+    display: flex;
+    align-items: center;
   }
 
   a {
     margin: 0 30px;
     display: inline-block;
-    font-size: 20px;
+    font-size: 24px;
     text-decoration: none;
     color: white;
     vertical-align: middle;
@@ -70,15 +85,12 @@ a {
 
   a.about {
     margin-left: auto;
-    order: 2;
   }
 
-  a.mentor {
-    order: 3;
+  p.mentor {
   }
 
   a.browse {
-    order: 4;
     padding: 7px 12px;
     background: $yellow;
     box-sizing: border-box;
@@ -101,12 +113,12 @@ a {
 
 .landing {
   width: 100vw;
-  height: 90vh;
+  height: $landing-height;
   position: relative;
 
   .carousel-cell {
     width: 100%;
-    height: 90vh;
+    height: $landing-height;
   }
 
   .first {
@@ -130,7 +142,7 @@ a {
     padding: 25px;
     position: absolute;
     bottom: $bar-height;
-    left: calc(50% - 275px;
+    left: calc(50% - 275px);
     background: rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
     z-index: 900;
@@ -190,9 +202,31 @@ div.lesson-container {
 div.preview-description {
   padding-right: 50px;
   flex: 1 1 0;
-  align-self: center;
+  // align-self: center;
+}
 
-  p {
-    font-size: 1em;
+%main {
+  padding: 0 100px;
+}
+
+div.about {
+  @extend %main;
+  width: 100vw;
+  margin-bottom: 50px;
+  position: relative;
+  box-sizing: border-box;
+
+  h1 {
+    text-align: center;
   }
+
+  li {
+    font-family: 'Open Sans Light', sans-serif;
+    font-size: 24px;
+    font-weight: lighter;    
+  }
+}
+
+div.coming-soon {
+  @extend %main;
 }
