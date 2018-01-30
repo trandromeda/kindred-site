@@ -13,8 +13,11 @@
 */
 
 $nav-height: 60px;
-$scrim-width: 550px;
+$landing-height: 90vh;
 $bar-height: 80px;
+
+$scrim-width: 550px;
+
 $yellow: #F2DC5D;
 $blue: #70D6FF;
 $green: #32DBC4;
@@ -107,8 +110,6 @@ span.yellow {
     color: white;
   }
 }
-
-$landing-height: 90vh;
 
 .landing {
   width: 100vw;
