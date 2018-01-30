@@ -1,12 +1,14 @@
 div.card-container {
   width: 195px;
   height: auto;
+  margin: 0 10px;
   position: relative;
   display: flex;
   flex-direction: column;
+  // flex: 1 1 auto;
 
   div.photo {
-    width: 100%;
+    width: 195px;
     height: 130px;
     display: flex;
     background: white;;
@@ -27,8 +29,8 @@ div.card-container {
   }
 
   div.description {
+    width: 195px;
     padding: 5px;
-    flex: 1 auto;
 
     p {
       font-size: 1em;
