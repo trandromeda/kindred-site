@@ -148,6 +148,9 @@ div.card-container {
 5. Fonts
 6. Colours
 */
+body {
+  background: #F1F1F1; }
+
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 40px;
@@ -172,7 +175,7 @@ a {
   box-sizing: border-box; }
   .navbar img.logo {
     order: 1;
-    margin-left: 10px;
+    margin-left: 20px;
     display: inline-block; }
   .navbar a {
     margin: 0 25px;
@@ -191,6 +194,13 @@ a {
     padding: 5px 10px;
     background: #70D6FF;
     box-sizing: border-box; }
+
+.navbar.white {
+  background: #FFFFFF; }
+  .navbar.white a {
+    color: #000000; }
+  .navbar.white a.browse {
+    color: white; }
 
 .landing {
   width: 100vw;
@@ -217,7 +227,7 @@ a {
     left: calc(50% - 275px);
     background: rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
-    z-index: 1000; }
+    z-index: 900; }
     .landing .landing-scrim h1, .landing .landing-scrim p {
       color: #FFFFFF; }
     .landing .landing-scrim h1 {

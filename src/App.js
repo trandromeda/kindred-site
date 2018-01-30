@@ -8,6 +8,19 @@ import EmailBar from './components/EmailBar';
 import Footer from './components/Footer';
 
 class App extends Component {
+
+  componentDidMount() {
+    console.log('mounted');
+    const nav = document.getElementById("navbar");
+    window.onscroll = function() {
+      if (document.body.scrollTop >= 5 || document.documentElement.scrollTop >= 5) {
+        nav.classList.add('white');
+      } else {
+        nav.classList.remove('white');
+      }
+    }
+  }
+
   render() {
     return (
       <div className="App">

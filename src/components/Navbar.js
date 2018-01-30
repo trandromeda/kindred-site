@@ -4,7 +4,7 @@ import logo from '../images/colour-logo.png';
 class Navbar extends Component {
   render() {
     return (
-        <div className="navbar">
+        <div className="navbar" id="navbar">
           <img src={logo} alt="Logo" className="logo" />
 
           <a href="#" className="about">About</a>

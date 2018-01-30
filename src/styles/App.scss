@@ -17,6 +17,10 @@ $bar-height: 10vh;
 $yellow: #F2DC5D;
 $blue: #70D6FF;
 
+body {
+  background: #F1F1F1;
+}
+
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 40px;
@@ -45,7 +49,7 @@ a {
 
   img.logo {
     order: 1;
-    margin-left: 10px;
+    margin-left: 20px;
     display: inline-block;
   }
 
@@ -72,6 +76,19 @@ a {
     padding: 5px 10px;
     background: $blue;
     box-sizing: border-box;
+  }
+}
+
+.navbar.white {
+  background: #FFFFFF;
+
+
+  a {
+    color: #000000;
+  }
+
+  a.browse {
+    color: white;
   }
 }
 
@@ -109,7 +126,7 @@ a {
     left: calc(50% - 275px;
     background: rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
-    z-index: 1000;
+    z-index: 900;
 
     h1, p {
       color: #FFFFFF;
