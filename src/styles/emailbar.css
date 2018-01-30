@@ -32,6 +32,10 @@
         border: none;
         font-size: 20px;
         line-height: 100%;
+        color: #FFFFFF; }
+      .email-bar .mid-section .input-box input:focus {
+        outline: none; }
+      .email-bar .mid-section .input-box input::placeholder {
         color: white; }
       .email-bar .mid-section .input-box .signup-button {
         width: 25%;

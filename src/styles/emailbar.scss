@@ -11,7 +11,7 @@ $blue: #70D6FF;
   position: absolute;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-
+  z-index: 1000;
 
   .left {
     width: calc((100vw - 550px) / 2);
@@ -45,6 +45,14 @@ $blue: #70D6FF;
         border: none;
         font-size: 20px;
         line-height: 100%;
+        color: #FFFFFF;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      input::placeholder {
         color: white;
       }
 
