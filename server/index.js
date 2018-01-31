@@ -24,16 +24,22 @@ app.get('/api/memberList', (req, res) => {
 });
 
 app.post('/api/subscribe', (req, res) => {
-  console.log(req.body);
-  res.send(req.body);
+  const subscriber = {
+    "email_address": req.body.email,
+    "status": "pending",
+    "merge_fields": {
+      "FNAME": req.body.firstname,
+      "LNAME": req.body.lastname
+    }
+  }
 
-  // mailchimp.post('/lists/$(list_id)/members/')
-  // .then(function (data) {
-  //   res.send(data)
-  // })
-  // .catch(fundtion (err) {
-  //   res.send(err);
-  // })
+  mailchimp.post(`lists/${list_id}/members/`, subscriber)
+  .then(function (data) {
+    res.send(data)
+  })
+  .catch(function (err) {
+    res.status(err.status || 500).send(err)
+  })
 })
 
 

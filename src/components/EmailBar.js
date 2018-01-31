@@ -25,7 +25,7 @@ class EmailBar extends Component {
   handleSubmit = (event) => {
     event.preventDefault();  
 
-    // Increment inputLevel, this will control which input we display
+    //~ Increment inputLevel, this will control which input we display ~//
     this.setState((prevState, props) => {
       if (prevState.inputLevel < 4) {
         return {inputLevel: prevState.inputLevel + 1};
@@ -52,20 +52,19 @@ class EmailBar extends Component {
         'Content-Type': 'application/json'
       }
     })
-    .then(this.checkStatus)
+    .then(function(response) {
+      console.log(response);
+      if (response.status >= 200 && response.status < 300) {
+        return response
+      } else {
+        var error = new Error(response.statusText)
+        error.response = response
+        throw error
+      }      
+    })
     .catch((err) => {
       console.log("error", err);
     });    
-  }
-
-  checkStatus = (response) => {
-    if (response.status >= 200 && response.status < 300) {
-      return response
-    } else {
-      var error = new Error(response.statusText)
-      error.response = response
-      throw error
-    }
   }
 
   renderInput = (level) => {
@@ -77,7 +76,7 @@ class EmailBar extends Component {
           name="email"
           value={this.state.email}
           onChange={this.handleChange}
-          placeholder=" Enter your email for early access"
+          placeholder=" Your email"
         />   
       case 2:
         return <input 
@@ -105,12 +104,10 @@ class EmailBar extends Component {
           onChange={this.handleChange}
           placeholder=" Thank you!"
         /> 
-      break;      
     }
   }
 
   render() {
-
     return (
         <div className="email-bar" id="email-bar">
           <div className="left"></div>
