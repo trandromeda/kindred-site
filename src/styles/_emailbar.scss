@@ -4,6 +4,7 @@ $bar-height: 80px;
 $yellow: #F2DC5D;
 $blue: #70D6FF;
 $green: #32DBC4;
+$black: #14080E;
 
 @mixin email-bar-template($colour, $button-color) {
   width: 100vw;
@@ -31,15 +32,15 @@ $green: #32DBC4;
     }
 
     .input-box {
-      flex-grow: 2.5;
+      height: 60%;
+      display: flex;
       position: relative;
       background: transparent;
 
       input[type=text] {
-        width: 100%;
+        flex: 3 1 auto;
         height: 100%;
         padding-left: 20px;
-        position: absolute;
         background: transparent;
         border: none;
         font-family: 'Open Sans Light', sans-serif;
@@ -57,11 +58,14 @@ $green: #32DBC4;
         color: white;
       }
 
+      input:-webkit-autofill {
+          -webkit-box-shadow: 0 0 0 30px $black inset;
+          -webkit-text-fill-color: #FFFFFF !important;
+      }
+
       .signup-button {
-        width: 25%;
+        flex: 1 1 auto;
         height: 100%;
-        position: absolute;
-        right: 0;
         background: $button-color;
         font-family: 'Open Sans Light', sans-serif;
         font-weight: lighter;
