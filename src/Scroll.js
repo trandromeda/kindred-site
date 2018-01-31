@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, withRouter } from 'react-router-dom'
+import { Component } from 'react';
+import { withRouter } from 'react-router-dom'
 
-class Scroll extends React.Component {
+class Scroll extends Component {
   componentDidUpdate(prevProps) {
     const nav = document.getElementById("email-bar");
     if (this.props.location !== prevProps.location) {
