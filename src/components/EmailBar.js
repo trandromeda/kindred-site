@@ -4,7 +4,11 @@ class EmailBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ''
+      inputLevel: 1,
+      submitText: 'Enter',
+      email: '',
+      firstname: '',
+      lastname: ''
     }
   }
 
@@ -13,19 +17,21 @@ class EmailBar extends Component {
   }
 
   handleChange = (event) => {
-    this.setState({value: event.target.value});
+    this.setState({
+      [event.target.name]: event.target.value
+    });
   }
 
-  handleSubscribe = (event) => {
-    console.log('handle subscribe event');
-    console.log(this.state.value);
-
+  handleSubmit = (event) => {
+    event.preventDefault();    
     const data = {
       email: this.state.value
     }
+    this.subscribe(data);
+  }
 
-    event.preventDefault();
-    return fetch('/api/subscribe', {
+  subscribe = (data) => {
+    fetch('/api/subscribe', {
       method: 'post',
       body: JSON.stringify(data),
       headers: {
@@ -34,10 +40,9 @@ class EmailBar extends Component {
       }
     })
     .then(this.checkStatus)
-    .then(console.log('yas'))
     .catch((err) => {
       console.log("error", err);
-    });
+    });    
   }
 
   checkStatus = (response) => {
@@ -58,18 +63,36 @@ class EmailBar extends Component {
           <div className="mid-section">
             <div className="middle-top"></div>
             <div className="input-box">
-              <form onSubmit={this.handleSubscribe}>
+              <form onSubmit={this.handleSubmit}>
                 <input 
                   id="email"
                   type="text" 
                   name="email"
-                  value={this.state.value}
+                  value={this.state.email}
+                  onChange={this.handleChange}
+                  placeholder=" Your email"
+                />
+                {/*}
+                <input 
+                  type="text" 
+                  name="firstname"
+                  className="first-name"
+                  value={this.state.firstname}
                   onChange={this.handleChange}
                   placeholder=" Your email"
                 />
                 <input 
+                  type="text" 
+                  name="lastname"
+                  className="last-name"
+                  value={this.state.lastname}
+                  onChange={this.handleChange}
+                  placeholder=" Your email"
+                />     
+                */}                           
+                <input 
                   type="submit" 
-                  value="Sign Up" 
+                  value={this.state.submitText}
                   className="signup-button" 
                 />
               </form>
