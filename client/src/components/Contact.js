@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
+import { ReactTypeformEmbed } from 'react-typeform-embed';
 
 class Contact extends Component {
+  shouldComponentUpdate () {
+    console.log('should');
+  }
+  
+  componentDidMount () {
+    console.log('mount');
+  }
 
   render() {
     return (
         <div className="contact">
-          <div 
-            className="typeform-widget" 
-            data-url="https://andytran.typeform.com/to/n1v2bS" 
-            data-transparency="50" 
-            data-hide-headers={true}
-            data-hide-footer={true} 
-            style={{
-              width: '100%',
-              height: '500px'
-            }}>
-          </div>         
+          <ReactTypeformEmbed 
+          url={'https://andytran.typeform.com/to/n1v2bS'} 
+          hideHeaders={true}
+          hideFooter={true}
+          style={{
+            width: "100%",
+            height: "500px",
+            position: "relative"
+          }}
+          />
         </div>
       )
   }
 }
 
 export default Contact;
-
-
