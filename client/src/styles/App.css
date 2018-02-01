@@ -1,13 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
+/* NOTE: The menu transform has a different breakpoint, 900px */
+.email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+  height: 15vh; }
+  @media (min-width: 600px) {
+    .email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+      height: 80px; } }
+
 .email-bar, .landing .email-bar {
   width: 100vw;
-  height: 80px;
   display: flex;
   background: rgba(0, 0, 0, 0.5);
   z-index: 900; }
   .email-bar .left {
     width: calc((100vw - 550px) / 2);
-    height: 80px;
     order: 1;
     background: #32DBC4; }
   .email-bar .mid-section {
@@ -18,8 +23,15 @@
     .email-bar .mid-section .middle-top {
       flex-grow: 1;
       background: #32DBC4; }
+    .email-bar .mid-section .middle-middle {
+      height: 50%;
+      position: relative;
+      background: transparent; }
+      @media (min-width: 600px) {
+        .email-bar .mid-section .middle-middle {
+          height: 60%; } }
     .email-bar .mid-section .input-box {
-      height: 60%;
+      height: 100%;
       display: flex;
       position: relative;
       background: transparent; }
@@ -55,13 +67,19 @@
       background: #32DBC4; }
   .email-bar .right {
     width: calc((100vw - 550px) / 2);
-    height: 80px;
     order: 3;
     background: #32DBC4; }
 
 .landing .email-bar {
   position: absolute;
   bottom: 0; }
+
+/* NOTE: The menu transform has a different breakpoint, 900px */
+.email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+  height: 15vh; }
+  @media (min-width: 600px) {
+    .email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+      height: 80px; } }
 
 div.card-container {
   width: 195px;
@@ -95,23 +113,37 @@ div.card-container {
       justify-content: space-between;
       font-size: 0.75em; }
 
+/* NOTE: The menu transform has a different breakpoint, 900px */
+.email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+  height: 15vh; }
+  @media (min-width: 600px) {
+    .email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+      height: 80px; } }
+
 .footer {
   width: 100%;
-  padding: 40px 25px;
+  padding: 4vh 4vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   background: #F2DC5D;
   box-sizing: border-box; }
+  @media (min-width: 600px) {
+    .footer {
+      padding: 40px 25px; } }
   .footer p {
     color: #14080E; }
   .footer h1 {
+    width: 100%;
     margin-top: 0px;
     display: inline-block;
-    flex: 2 1 auto;
     text-align: center;
     font-weight: bold;
     color: #14080E; }
+    @media (min-width: 600px) {
+      .footer h1 {
+        width: auto;
+        flex: 2 1 auto; } }
   .footer .column-1, .footer .column-2 {
     padding: 0 10px;
     display: flex;
@@ -128,11 +160,18 @@ div.card-container {
     margin: 17px auto;
     background: black; }
   .footer p.copyright {
+    text-align: center;
     font-size: 1em; }
+
+/* NOTE: The menu transform has a different breakpoint, 900px */
+.email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+  height: 15vh; }
+  @media (min-width: 600px) {
+    .email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+      height: 80px; } }
 
 .navbar {
   width: 100vw;
-  height: 80px;
   display: flex;
   align-items: center;
   position: fixed;
@@ -141,30 +180,30 @@ div.card-container {
   box-sizing: border-box;
   transition: background 300ms; }
   .navbar h1.logo {
-    padding-left: 3vw;
+    padding-left: 4vw;
     order: 1;
     color: #32DBC4;
     font-weight: bold; }
-    @media (min-width: 900px) {
+    @media (min-width: 600px) {
       .navbar h1.logo {
         padding-left: 25px; } }
-  .navbar span.bars {
-    display: block;
-    margin-left: auto;
-    padding-right: 3vw;
-    font-size: 2em;
-    color: white; }
+  .navbar div.bars {
+    margin-left: auto; }
+    .navbar div.bars .fa-bars {
+      display: block;
+      margin-left: auto;
+      padding-right: 3vw;
+      font-size: 2em;
+      color: white; }
   .navbar div.links {
-    width: 100%;
-    display: flex;
-    align-items: center; }
+    margin-left: auto; }
   .navbar a {
     display: inline-block;
     font-size: 24px;
     text-decoration: none;
     color: white;
     vertical-align: middle; }
-    @media (min-width: 900px) {
+    @media (min-width: 600px) {
       .navbar a {
         margin: 0 30px; } }
   .navbar a.about {
@@ -178,12 +217,19 @@ div.card-container {
 .navbar.scroll {
   background: #FFFFFF;
   box-shadow: 0px 4px 4px -5px rgba(0, 0, 0, 0.9); }
-  .navbar.scroll span.bars {
+  .navbar.scroll div.bars .fa-bars {
     color: #14080E; }
   .navbar.scroll a {
     color: #000000; }
   .navbar.scroll a.browse {
     color: white; }
+
+/* NOTE: The menu transform has a different breakpoint, 900px */
+.email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+  height: 15vh; }
+  @media (min-width: 600px) {
+    .email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+      height: 80px; } }
 
 /*
 NOTE ABOUT RESPONSIVENESS:
@@ -203,18 +249,27 @@ body {
 
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 40px;
+  font-size: 2em;
   font-weight: normal; }
+  @media (min-width: 600px) {
+    h1 {
+      font-size: 40px; } }
 
 h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 32px;
+  font-size: 1.6em;
   font-weight: normal; }
+  @media (min-width: 600px) {
+    h2 {
+      font-size: 32px; } }
 
 p {
   font-family: 'Open Sans Light', sans-serif;
-  font-size: 24px;
+  font-size: 1.4em;
   font-weight: lighter; }
+  @media (min-width: 600px) {
+    p {
+      font-size: 24px; } }
 
 a {
   font-family: 'Open Sans Light+', sans-serif;
@@ -242,17 +297,18 @@ span.yellow {
   .landing .landing-scrim {
     width: 100%;
     margin: auto;
-    padding: 1vh 1vw;
+    padding: 3vh 4vw;
     position: absolute;
-    bottom: 80px;
+    bottom: 15vh;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 5px 5px 0 0;
     box-sizing: border-box;
     z-index: 900; }
-    @media (min-width: 900px) {
+    @media (min-width: 600px) {
       .landing .landing-scrim {
         width: 550px;
         padding: 25px;
+        bottom: 80px;
         left: calc(50% - 275px); } }
     .landing .landing-scrim h1, .landing .landing-scrim p {
       color: #FFFFFF; }
@@ -262,13 +318,13 @@ span.yellow {
       margin-bottom: 0; }
 
 .flickity-prev-next-button {
-  width: 2vw;
-  height: 2vh;
-  background: transparent; }
-  @media (min-width: 900px) {
+  display: none; }
+  @media (min-width: 600px) {
     .flickity-prev-next-button {
       width: 100px;
-      height: 100px; } }
+      height: 100px;
+      display: block;
+      background: transparent; } }
 
 div.preview {
   display: flex;
@@ -302,7 +358,7 @@ div.preview-description {
 
 div.about, div.coming-soon {
   padding: 0 5vw; }
-  @media (min-width: 900px) {
+  @media (min-width: 600px) {
     div.about, div.coming-soon {
       padding: 0 100px; } }
 
@@ -315,8 +371,11 @@ div.about {
     text-align: center; }
   div.about li {
     font-family: 'Open Sans Light', sans-serif;
-    font-size: 24px;
+    font-size: 1.3em;
     font-weight: lighter; }
+    @media (min-width: 600px) {
+      div.about li {
+        font-size: 24px; } }
 
 div.trio-benefits {
   width: 100%;
@@ -326,25 +385,27 @@ div.trio-benefits {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center; }
-  @media (min-width: 900px) {
+  @media (min-width: 600px) {
     div.trio-benefits {
+      flex-wrap: nowrap;
       flex-direction: row; } }
   div.trio-benefits h2, div.trio-benefits p {
     margin: 1vh 0; }
   div.trio-benefits svg[class*='fa'] {
     font-size: 4em; }
-    @media (min-width: 900px) {
+    @media (min-width: 600px) {
       div.trio-benefits svg[class*='fa'] {
         font-size: 50px; } }
   div.trio-benefits div.benefit {
-    width: 25vw;
-    flex: 1 1 auto;
+    margin: 1vh 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center; }
-    @media (min-width: 900px) {
+    @media (min-width: 600px) {
       div.trio-benefits div.benefit {
-        margin: 0 5px; } }
+        width: 25vw;
+        padding: 20px; } }
     div.trio-benefits div.benefit p {
       font-size: 20px;
       text-align: center; }

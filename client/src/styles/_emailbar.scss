@@ -2,14 +2,14 @@
 
 @mixin email-bar-template($colour, $button-color) {
   width: 100vw;
-  height: $bar-height;
+  @extend %bar-height;
   display: flex;
   background: rgba(0, 0, 0, 0.5);
   z-index: 900;
 
   .left {
     width: calc((100vw - 550px) / 2);
-    height: $bar-height;
+    @extend %bar-height;
     order: 1;
     background: $colour;
   }
@@ -25,8 +25,18 @@
       background: $colour;
     }
 
+    .middle-middle {
+      height: 50%;
+      position: relative;
+      background: transparent;
+
+      @include desktop {
+        height: 60%;
+      }
+    }
+
     .input-box {
-      height: 60%;
+      height: 100%;
       display: flex;
       position: relative;
       background: transparent;
@@ -77,7 +87,7 @@
 
   .right {
     width: calc((100vw - 550px) / 2);
-    height: $bar-height;
+    @extend %bar-height;
     order: 3;
     background: $colour;
   }

@@ -2,24 +2,33 @@
 
 .footer {
   width: 100%;
-  padding: 40px 25px;
+  padding: 4vh $mobile-horizontal-padding;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   background: $yellow;
   box-sizing: border-box;
 
+  @include desktop {
+    padding: 40px 25px;
+  }
+
   p {
     color: $black;
   }
 
   h1 {
+    width: 100%;
     margin-top: 0px;
     display: inline-block;
-    flex: 2 1 auto;
     text-align: center;
     font-weight: bold;
     color: $black;
+
+    @include desktop {
+      width: auto;
+      flex: 2 1 auto;
+    }
   }
 
   %column {
@@ -31,6 +40,7 @@
 
     a {
       margin: 2px 0;
+      // @include font-size(1.5em, 24px);
       text-decoration: none;
       color: $black;
     }
@@ -52,6 +62,7 @@
   }
 
   p.copyright {
+    text-align: center;
     font-size: 1em;
   }
 

@@ -114,16 +114,16 @@ class EmailBar extends Component {
 
           <div className="mid-section">
             <div className="middle-top"></div>
-
-              <form className="input-box" onSubmit={this.handleSubmit}>
-                  {this.renderInput(this.state.inputLevel)}                         
-                  <input 
-                    type="submit" 
-                    value={this.state.submitText}
-                    className="signup-button" 
-                  />
-              </form>
-
+              <div className="middle-middle">
+                <form className="input-box" onSubmit={this.handleSubmit}>
+                    {this.renderInput(this.state.inputLevel)}                         
+                    <input 
+                      type="submit" 
+                      value={this.state.submitText}
+                      className="signup-button" 
+                    />
+                </form>
+              </div>
             <div className="middle-bottom"></div>
           </div>
 

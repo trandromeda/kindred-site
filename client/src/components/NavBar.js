@@ -10,14 +10,14 @@ class NavBar extends Component {
           <Media query="(min-width: 900px)">
           {matches =>
             matches ? (
-              <div>
+              <div className="links">
                 <Link to="/about" className="about">About</Link>
                 <Link to="/coming-soon" className="mentor">Mentor</Link>
                 <Link to="/coming-soon" className="browse">Browse Lessons</Link>
               </div>
             ) : (
-              <div>
-              <span className='bars'>BBB</span>
+              <div className='bars'>
+              <i className="fas fa-bars"></i>
               </div>
             )
           }
