@@ -2,6 +2,7 @@
 @import 'emailbar';
 @import 'lessoncard';
 @import 'footer';
+@import 'navbar';
 
 @import 'utilities/variables';
 
@@ -40,67 +41,6 @@ span.yellow {
   color: $yellow;
 }
 
-.navbar {
-  width: 100vw;
-  height: $bar-height;
-  display: flex;
-  align-items: center;
-  position: fixed;
-  border-bottom: 1px #FFFFFF solid;
-  z-index: 1000;
-  box-sizing: border-box;
-  transition: background 250ms;
-
-  h1.logo {
-    order: 1;
-    margin-left: $left-margin;
-    color: $green;
-    font-weight: bold;
-  }
-
-  div.links {
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
-
-  a {
-    margin: 0 30px;
-    display: inline-block;
-    font-size: 24px;
-    text-decoration: none;
-    color: white;
-    vertical-align: middle;
-  }
-
-  a.about {
-    margin-left: auto;
-  }
-
-  p.mentor {
-  }
-
-  a.browse {
-    padding: 7px 12px;
-    background: $blue;
-    box-sizing: border-box;
-    border-radius: 2px;
-  }
-}
-
-.navbar.white {
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px -5px rgba(0,0,0,0.9);
-
-  a {
-    color: #000000;
-  }
-
-  a.browse {
-    color: white;
-  }
-}
-
 .landing {
   width: 100vw;
   height: $landing-height;
@@ -134,6 +74,7 @@ span.yellow {
     bottom: $bar-height;
     left: calc(50% - 275px);
     background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px 5px 0 0;
     box-sizing: border-box;
     z-index: 900;
 
