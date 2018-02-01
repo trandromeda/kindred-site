@@ -1,10 +1,4 @@
-$nav-height: 60px;
-$scrim-width: 550px;
-$bar-height: 80px;
-$yellow: #F2DC5D;
-$blue: #70D6FF;
-$green: #32DBC4;
-$black: #14080E;
+@import 'utilities/variables';
 
 @mixin email-bar-template($colour, $button-color) {
   width: 100vw;
@@ -90,7 +84,7 @@ $black: #14080E;
 }
 
 %email-bar-template-yellow {
-  @include email-bar-template($green, $blue);
+  @include email-bar-template($green, $yellow);
 }
 
 %email-bar-template-blue {

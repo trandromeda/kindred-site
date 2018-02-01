@@ -3,6 +3,8 @@
 @import 'lessoncard';
 @import 'footer';
 
+@import 'utilities/variables';
+
 /* ORDER OF ATTRIBUTES 
 1. Width + Height
 2. Padding + Margin
@@ -11,19 +13,6 @@
 5. Fonts
 6. Colours
 */
-
-$nav-height: 60px;
-$landing-height: 90vh;
-$bar-height: 80px;
-
-$scrim-width: 550px;
-
-$yellow: #F2DC5D;
-$blue: #70D6FF;
-$green: #32DBC4;
-$black: #14080E;
-
-$left-margin: 25px;
 
 body {
   background: #FAFAFA;
@@ -93,7 +82,7 @@ span.yellow {
 
   a.browse {
     padding: 7px 12px;
-    background: $yellow;
+    background: $blue;
     box-sizing: border-box;
     border-radius: 2px;
   }
