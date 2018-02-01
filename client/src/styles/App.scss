@@ -6,6 +6,12 @@
 
 @import 'utilities/variables';
 
+/*
+NOTE ABOUT RESPONSIVENESS:
+All dimensions are by default in responsive units e.g. vw, vh, %, em
+Use the desktop mixin to override these for wider screen ie desktop settings
+*/
+
 /* ORDER OF ATTRIBUTES 
 1. Width + Height
 2. Padding + Margin
@@ -24,6 +30,12 @@ h1 {
   font-family: 'Playfair Display', serif;
   font-size: 40px;
   font-weight: normal;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: normal;  
 }
 
 p {
@@ -67,16 +79,21 @@ span.yellow {
   }
 
   .landing-scrim {
-    width: $scrim-width;
+    width: 100%;
     margin: auto;
-    padding: 25px;
+    padding: 1vh 1vw;
     position: absolute;
     bottom: $bar-height;
-    left: calc(50% - 275px);
     background: rgba(0, 0, 0, 0.4);
     border-radius: 5px 5px 0 0;
     box-sizing: border-box;
     z-index: 900;
+
+    @include desktop {
+      width: $scrim-width;
+      padding: 25px;
+      left: calc(50% - 275px);
+    }
 
     h1, p {
       color: #FFFFFF;
@@ -93,9 +110,14 @@ span.yellow {
 }
 
 .flickity-prev-next-button {
-  width: 100px;
-  height: 100px;
+  width: 2vw;
+  height: 2vh;
   background: transparent;
+
+  @include desktop {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 div.preview {
@@ -137,7 +159,11 @@ div.preview-description {
 }
 
 %main {
-  padding: 0 100px;
+  padding: 0 5vw;
+
+  @include desktop {
+    padding: 0 100px;
+  }
 }
 
 div.about {
@@ -160,4 +186,44 @@ div.about {
 
 div.coming-soon {
   @extend %main;
+}
+
+div.trio-benefits {
+  width: 100%;
+  margin: 5vw 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop {
+    flex-direction: row;
+  }
+
+  h2, p {
+    margin: 1vh 0;
+  }
+
+  svg[class*='fa'] {
+    @include font-size(4em, 50px);
+  }
+
+  div.benefit {
+    width: 25vw;
+    // margin: 0 2vw;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop {
+      margin: 0 5px;
+    }
+
+    p {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
 }

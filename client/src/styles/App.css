@@ -172,6 +172,11 @@ div.card-container {
   .navbar.scroll a.browse {
     color: white; }
 
+/*
+NOTE ABOUT RESPONSIVENESS:
+All dimensions are by default in responsive units e.g. vw, vh, %, em
+Use the desktop mixin to override these for wider screen ie desktop settings
+*/
 /* ORDER OF ATTRIBUTES 
 1. Width + Height
 2. Padding + Margin
@@ -186,6 +191,11 @@ body {
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 40px;
+  font-weight: normal; }
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
   font-weight: normal; }
 
 p {
@@ -217,16 +227,20 @@ span.yellow {
     background-image: url("../images/terrarium.jpg");
     background-size: cover; }
   .landing .landing-scrim {
-    width: 550px;
+    width: 100%;
     margin: auto;
-    padding: 25px;
+    padding: 1vh 1vw;
     position: absolute;
     bottom: 80px;
-    left: calc(50% - 275px);
     background: rgba(0, 0, 0, 0.4);
     border-radius: 5px 5px 0 0;
     box-sizing: border-box;
     z-index: 900; }
+    @media (min-width: 900px) {
+      .landing .landing-scrim {
+        width: 550px;
+        padding: 25px;
+        left: calc(50% - 275px); } }
     .landing .landing-scrim h1, .landing .landing-scrim p {
       color: #FFFFFF; }
     .landing .landing-scrim h1 {
@@ -235,9 +249,13 @@ span.yellow {
       margin-bottom: 0; }
 
 .flickity-prev-next-button {
-  width: 100px;
-  height: 100px;
+  width: 2vw;
+  height: 2vh;
   background: transparent; }
+  @media (min-width: 900px) {
+    .flickity-prev-next-button {
+      width: 100px;
+      height: 100px; } }
 
 div.preview {
   display: flex;
@@ -270,7 +288,10 @@ div.preview-description {
   flex: 1 1 0; }
 
 div.about, div.coming-soon {
-  padding: 0 100px; }
+  padding: 0 5vw; }
+  @media (min-width: 900px) {
+    div.about, div.coming-soon {
+      padding: 0 100px; } }
 
 div.about {
   width: 100vw;
@@ -283,3 +304,34 @@ div.about {
     font-family: 'Open Sans Light', sans-serif;
     font-size: 24px;
     font-weight: lighter; }
+
+div.trio-benefits {
+  width: 100%;
+  margin: 5vw 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center; }
+  @media (min-width: 900px) {
+    div.trio-benefits {
+      flex-direction: row; } }
+  div.trio-benefits h2, div.trio-benefits p {
+    margin: 1vh 0; }
+  div.trio-benefits svg[class*='fa'] {
+    font-size: 4em; }
+    @media (min-width: 900px) {
+      div.trio-benefits svg[class*='fa'] {
+        font-size: 50px; } }
+  div.trio-benefits div.benefit {
+    width: 25vw;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    @media (min-width: 900px) {
+      div.trio-benefits div.benefit {
+        margin: 0 5px; } }
+    div.trio-benefits div.benefit p {
+      font-size: 20px;
+      text-align: center; }

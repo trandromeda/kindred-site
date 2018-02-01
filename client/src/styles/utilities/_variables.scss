@@ -16,10 +16,10 @@ $left-margin: 25px;
   }
 }
 
-@mixin font-size($mobile-vw, $desktop-px:false) {
-  font-size: $mobile-vw;
+@mixin font-size($mobile-em, $desktop-px:false) {
+  font-size: $mobile-em;
 
-  @if $desktop-px {
+  @include desktop {
     font-size: $desktop-px;
   }
 }

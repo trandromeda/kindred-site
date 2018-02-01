@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FontAwesome from 'react-fontawesome';
 
 class About extends Component {
   render() {
@@ -9,6 +10,25 @@ class About extends Component {
             <p>
             Kindred is a community for people to learn valuable life skills from retirees via small, in-person group lessons. Meet interesting folks, share stories and laughter with friendly faces from your neighbourhood, and come away with unforgettable new memories.
             </p>
+
+            <div className="trio-benefits">
+              <div className="benefit">
+                <i class="fas fa-map"></i>
+                <h2>Connect</h2>
+                <p>with people from different walks of life</p>
+              </div>
+              <div className="benefit">
+                <i class="far fa-user-circle"></i>
+                <h2>Share</h2>
+                <p>stories collected gained over a lifetime</p>
+              </div>
+              <div className="benefit">
+                <i class="far fa-heart"></i>
+                <h2>Cherish</h2>
+                <p>new friends, new skills and new memories</p>
+              </div>
+
+            </div>
 
             <p>
             Founded in 2017 and based in Toronto, Kindred connects you with individuals from all walks of life to learn from one another while having fun, whether it's making Maria's secret spaghetti sauce, practicing Hubert's six easy steps to tie a tie, or packing colourful bento boxes with Hisami.
