@@ -44,7 +44,7 @@
       .email-bar .mid-section .input-box .signup-button {
         flex: 1 1 auto;
         height: 100%;
-        background: #70D6FF;
+        background: #F2DC5D;
         font-family: 'Open Sans Light', sans-serif;
         font-weight: lighter;
         font-size: 24px;
@@ -116,6 +116,7 @@ div.card-container {
     padding: 0 10px;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     flex: 1 auto; }
     .footer .column-1 a, .footer .column-2 a {
       margin: 2px 0;
@@ -128,6 +129,48 @@ div.card-container {
     background: black; }
   .footer p.copyright {
     font-size: 1em; }
+
+.navbar {
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  box-sizing: border-box;
+  transition: background 300ms; }
+  .navbar h1.logo {
+    order: 1;
+    margin-left: 25px;
+    color: #32DBC4;
+    font-weight: bold; }
+  .navbar div.links {
+    width: 100%;
+    display: flex;
+    align-items: center; }
+  .navbar a {
+    margin: 0 30px;
+    display: inline-block;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    vertical-align: middle; }
+  .navbar a.about {
+    margin-left: auto; }
+  .navbar a.browse {
+    padding: 7px 12px;
+    background: #70D6FF;
+    box-sizing: border-box;
+    border-radius: 2px; }
+
+.navbar.scroll {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px -5px rgba(0, 0, 0, 0.9); }
+  .navbar.scroll a {
+    color: #000000; }
+  .navbar.scroll a.browse {
+    color: white; }
 
 /* ORDER OF ATTRIBUTES 
 1. Width + Height
@@ -157,48 +200,6 @@ a {
 span.yellow {
   color: #F2DC5D; }
 
-.navbar {
-  width: 100vw;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  position: fixed;
-  border-bottom: 1px #FFFFFF solid;
-  z-index: 1000;
-  box-sizing: border-box;
-  transition: background 250ms; }
-  .navbar h1.logo {
-    order: 1;
-    margin-left: 25px;
-    color: #32DBC4;
-    font-weight: bold; }
-  .navbar div.links {
-    width: 100%;
-    display: flex;
-    align-items: center; }
-  .navbar a {
-    margin: 0 30px;
-    display: inline-block;
-    font-size: 24px;
-    text-decoration: none;
-    color: white;
-    vertical-align: middle; }
-  .navbar a.about {
-    margin-left: auto; }
-  .navbar a.browse {
-    padding: 7px 12px;
-    background: #F2DC5D;
-    box-sizing: border-box;
-    border-radius: 2px; }
-
-.navbar.white {
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px -5px rgba(0, 0, 0, 0.9); }
-  .navbar.white a {
-    color: #000000; }
-  .navbar.white a.browse {
-    color: white; }
-
 .landing {
   width: 100vw;
   height: 90vh;
@@ -223,6 +224,7 @@ span.yellow {
     bottom: 80px;
     left: calc(50% - 275px);
     background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px 5px 0 0;
     box-sizing: border-box;
     z-index: 900; }
     .landing .landing-scrim h1, .landing .landing-scrim p {

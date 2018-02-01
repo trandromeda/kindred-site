@@ -1,0 +1,63 @@
+@import 'utilities/variables';
+
+.navbar {
+  width: 100vw;
+  height: $bar-height;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  // border-bottom: 1px #FFFFFF solid;
+  z-index: 1000;
+  box-sizing: border-box;
+  transition: background 300ms;
+
+  h1.logo {
+    order: 1;
+    margin-left: $left-margin;
+    color: $green;
+    font-weight: bold;
+  }
+
+  div.links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    margin: 0 30px;
+    display: inline-block;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    vertical-align: middle;
+  }
+
+  a.about {
+    margin-left: auto;
+  }
+
+  p.mentor {
+  }
+
+  a.browse {
+    padding: 7px 12px;
+    background: $blue;
+    box-sizing: border-box;
+    border-radius: 2px;
+  }
+}
+
+.navbar.scroll {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px -5px rgba(0,0,0,0.9);
+
+  a {
+    color: #000000;
+  }
+
+  a.browse {
+    color: white;
+  }
+}

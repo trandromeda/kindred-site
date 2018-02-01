@@ -8,6 +8,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Footer from './components/Footer';
 import ComingSoon from './components/ComingSoon';
+import Contact from './components/Contact';
 
 class App extends Component {
 
@@ -15,9 +16,9 @@ class App extends Component {
     const nav = document.getElementById("navbar");
     window.onscroll = function() {
       if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200) {
-        nav.classList.add('white');
+        nav.classList.add('scroll');
       } else {
-        nav.classList.remove('white');
+        nav.classList.remove('scroll');
       }
     }
   }
@@ -30,7 +31,7 @@ class App extends Component {
 
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
-        <Route path="/coming-soon" component={ComingSoon} />
+        <Route path="/coming-soon" component={Contact} />
 
         <Footer />
       </div>

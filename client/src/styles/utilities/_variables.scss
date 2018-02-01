@@ -1,0 +1,25 @@
+$nav-height: 60px;
+$landing-height: 90vh;
+$bar-height: 80px;
+$scrim-width: 550px;
+
+$yellow: #F2DC5D;
+$blue: #70D6FF;
+$green: #32DBC4;
+$black: #14080E;
+
+$left-margin: 25px;
+
+@mixin desktop {
+  @media (min-width: 900px) { 
+    @content; 
+  }
+}
+
+@mixin font-size($mobile-vw, $desktop-px:false) {
+  font-size: $mobile-vw;
+
+  @if $desktop-px {
+    font-size: $desktop-px;
+  }
+}
