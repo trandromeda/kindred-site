@@ -141,21 +141,32 @@ div.card-container {
   box-sizing: border-box;
   transition: background 300ms; }
   .navbar h1.logo {
+    padding-left: 3vw;
     order: 1;
-    margin-left: 25px;
     color: #32DBC4;
     font-weight: bold; }
+    @media (min-width: 900px) {
+      .navbar h1.logo {
+        padding-left: 25px; } }
+  .navbar span.bars {
+    display: block;
+    margin-left: auto;
+    padding-right: 3vw;
+    font-size: 2em;
+    color: white; }
   .navbar div.links {
     width: 100%;
     display: flex;
     align-items: center; }
   .navbar a {
-    margin: 0 30px;
     display: inline-block;
     font-size: 24px;
     text-decoration: none;
     color: white;
     vertical-align: middle; }
+    @media (min-width: 900px) {
+      .navbar a {
+        margin: 0 30px; } }
   .navbar a.about {
     margin-left: auto; }
   .navbar a.browse {
@@ -167,6 +178,8 @@ div.card-container {
 .navbar.scroll {
   background: #FFFFFF;
   box-shadow: 0px 4px 4px -5px rgba(0, 0, 0, 0.9); }
+  .navbar.scroll span.bars {
+    color: #14080E; }
   .navbar.scroll a {
     color: #000000; }
   .navbar.scroll a.browse {

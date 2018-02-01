@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import FontAwesome from 'react-fontawesome';
 
 class About extends Component {
   render() {
@@ -13,17 +12,17 @@ class About extends Component {
 
             <div className="trio-benefits">
               <div className="benefit">
-                <i class="fas fa-map"></i>
+                <i className="fas fa-map"></i>
                 <h2>Connect</h2>
                 <p>with people from different walks of life</p>
               </div>
               <div className="benefit">
-                <i class="far fa-user-circle"></i>
+                <i className="far fa-user-circle"></i>
                 <h2>Share</h2>
                 <p>stories collected gained over a lifetime</p>
               </div>
               <div className="benefit">
-                <i class="far fa-heart"></i>
+                <i className="far fa-heart"></i>
                 <h2>Cherish</h2>
                 <p>new friends, new skills and new memories</p>
               </div>
