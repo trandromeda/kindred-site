@@ -30,7 +30,13 @@ h1 {
   font-family: 'Playfair Display', serif;
   @include font-size(2em, 40px);
   font-weight: normal;
+
+  &.title {
+    text-align: center;
+  }
 }
+
+
 
 h2 {
   font-family: 'Playfair Display', serif;
@@ -133,7 +139,6 @@ div.preview {
     margin: 0 auto;
     padding-top: 20px;
     display: block;
-    text-align: center;
   }
 }
 
@@ -174,10 +179,6 @@ div.about {
   margin-bottom: 50px;
   position: relative;
   box-sizing: border-box;
-
-  h1 {
-    text-align: center;
-  }
 
   li {
     font-family: 'Open Sans Light', sans-serif;
@@ -227,6 +228,37 @@ div.trio-benefits {
     p {
       font-size: 20px;
       text-align: center;
+    }
+  }
+}
+
+div.how-it-works {
+  padding: 0 25px;
+  width: 100%;
+  // height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-sizing: border-box;
+
+  h1.title {
+    width: 100%;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  div.step {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include desktop {
+      width: 25%;
     }
   }
 }

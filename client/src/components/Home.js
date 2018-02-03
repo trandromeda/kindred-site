@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 
 import LessonCard from './LessonCard';
 import EmailBar from './EmailBar';
+import HowItWorks from './HowItWorks';
 
 class Home extends Component {
   render() {
     return (
         <div className="home">
           <div className="preview">
-            <h1>Preview</h1>
+            <h1 className="title">Preview</h1>
             <div className="lesson-container">
               <LessonCard />
               <LessonCard />
@@ -24,6 +25,8 @@ class Home extends Component {
             </div>
           </div>
           <EmailBar />
+
+          <HowItWorks />
         </div>
       )
   }

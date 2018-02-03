@@ -254,6 +254,8 @@ h1 {
   @media (min-width: 600px) {
     h1 {
       font-size: 40px; } }
+  h1.title {
+    text-align: center; }
 
 h2 {
   font-family: 'Playfair Display', serif;
@@ -335,8 +337,7 @@ div.preview {
     width: 100%;
     margin: 0 auto;
     padding-top: 20px;
-    display: block;
-    text-align: center; }
+    display: block; }
 
 div.lesson-container {
   padding: 25px;
@@ -367,8 +368,6 @@ div.about {
   margin-bottom: 50px;
   position: relative;
   box-sizing: border-box; }
-  div.about h1 {
-    text-align: center; }
   div.about li {
     font-family: 'Open Sans Light', sans-serif;
     font-size: 1.3em;
@@ -409,3 +408,25 @@ div.trio-benefits {
     div.trio-benefits div.benefit p {
       font-size: 20px;
       text-align: center; }
+
+div.how-it-works {
+  padding: 0 25px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-sizing: border-box; }
+  div.how-it-works h1.title {
+    width: 100%; }
+  div.how-it-works h2 {
+    margin: 0; }
+  div.how-it-works div.step {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; }
+    @media (min-width: 600px) {
+      div.how-it-works div.step {
+        width: 25%; } }
