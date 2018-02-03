@@ -82,17 +82,24 @@
       height: 80px; } }
 
 div.card-container {
-  width: 195px;
+  width: 44vw;
   height: auto;
-  margin: 0 10px;
   position: relative;
   display: flex;
   flex-direction: column; }
+  @media (min-width: 600px) {
+    div.card-container {
+      width: 195px;
+      margin: 0 10px; } }
   div.card-container div.photo {
-    width: 195px;
-    height: 130px;
+    width: 100%;
+    height: 20vh;
     display: flex;
     background: white; }
+    @media (min-width: 600px) {
+      div.card-container div.photo {
+        width: 195px;
+        height: 130px; } }
     div.card-container div.photo div.caption {
       width: 100%;
       align-self: flex-end;
@@ -104,8 +111,11 @@ div.card-container {
         text-align: right;
         color: #FFFFFF; }
   div.card-container div.description {
-    width: 195px;
-    padding: 5px; }
+    width: 100%; }
+    @media (min-width: 600px) {
+      div.card-container div.description {
+        width: 195px;
+        padding: 5px; } }
     div.card-container div.description p {
       font-size: 1em; }
     div.card-container div.description div.figures {
@@ -328,34 +338,41 @@ span.yellow {
       display: block;
       background: transparent; } }
 
-div.preview {
+div.preview-container {
+  padding: 1vh 4vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   background: #FAFAFA; }
-  div.preview h1 {
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 20px;
-    display: block; }
+  @media (min-width: 600px) {
+    div.preview-container {
+      padding: 0 25px; } }
+  div.preview-container h1 {
+    width: 100%; }
 
 div.lesson-container {
-  padding: 25px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   box-sizing: border-box;
-  flex: 1.6 1 0; }
+  flex: 1.6 1 0;
+  box-sizing: border-box; }
   @media (min-width: 1520px) {
     div.lesson-container {
       justify-content: flex-start; } }
-  @media (max-width: 942px) {
+  @media (min-width: 600px) {
     div.lesson-container {
-      width: 15vw; } }
+      padding: 25px; } }
 
 div.preview-description {
-  padding-right: 50px;
-  flex: 1 1 0; }
+  padding: 4vw;
+  width: 100%; }
+  @media (min-width: 600px) {
+    div.preview-description {
+      width: auto;
+      padding: 0;
+      padding-right: 50px;
+      flex: 1 1 0; } }
 
 div.about, div.coming-soon {
   padding: 0 5vw; }

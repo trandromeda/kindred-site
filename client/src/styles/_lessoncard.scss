@@ -1,19 +1,28 @@
 @import 'utilities/variables';
 
 div.card-container {
-  width: 195px;
+  width: 44vw;
   height: auto;
-  margin: 0 10px;
   position: relative;
   display: flex;
   flex-direction: column;
-  // flex: 1 1 auto;
+
+  @include desktop {
+    width: 195px;
+    margin: 0 10px;
+  }
 
   div.photo {
-    width: 195px;
-    height: 130px;
+    width: 100%;
+    // height is temporary
+    height: 20vh;
     display: flex;
     background: white;;
+
+    @include desktop {
+      width: 195px;
+      height: 130px;
+    }
 
     div.caption {
       width: 100%;
@@ -31,8 +40,12 @@ div.card-container {
   }
 
   div.description {
-    width: 195px;
-    padding: 5px;
+    width: 100%;
+    
+    @include desktop {
+      width: 195px;
+      padding: 5px;
+    }
 
     p {
       font-size: 1em;

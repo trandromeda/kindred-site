@@ -8,7 +8,7 @@ class Home extends Component {
   render() {
     return (
         <div className="home">
-          <div className="preview">
+          <div className="preview-container">
             <h1 className="title">Preview</h1>
             <div className="lesson-container">
               <LessonCard />

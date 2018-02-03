@@ -128,41 +128,49 @@ span.yellow {
   }
 }
 
-div.preview {
+div.preview-container {
+  padding: 1vh 4vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   background: #FAFAFA;
 
+  @include desktop {
+    padding: 0 25px;
+  }
+
   h1 {
     width: 100%;
-    margin: 0 auto;
-    padding-top: 20px;
-    display: block;
   }
 }
 
 div.lesson-container {
-  padding: 25px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   box-sizing: border-box;
   flex: 1.6 1 0;
+  box-sizing: border-box;
 
   @media (min-width: 1520px) {
     justify-content: flex-start;
   }
 
-  @media (max-width: 942px) {
-    width: 15vw;
+  @include desktop {
+    padding: 25px;
   }
 }
 
 div.preview-description {
-  padding-right: 50px;
-  flex: 1 1 0;
-  // align-self: center;
+  padding: 4vw;
+  width: 100%;
+
+  @include desktop {
+    width: auto;
+    padding: 0;
+    padding-right: 50px;
+    flex: 1 1 0;
+  }
 }
 
 %main {
