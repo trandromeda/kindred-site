@@ -149,14 +149,15 @@ div.lesson-container {
   justify-content: space-around;
   flex-wrap: wrap;
   box-sizing: border-box;
-  flex: 1.6 1 0;
   box-sizing: border-box;
+  // flex: 1.6 1;
 
   @media (min-width: 1520px) {
     justify-content: flex-start;
   }
 
   @include desktop {
+    width: 65%;
     padding: 25px;
   }
 }

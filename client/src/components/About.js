@@ -4,7 +4,7 @@ class About extends Component {
   render() {
     return (
         <div className="about">
-            <h1>About</h1>
+            <h1 className="title">About</h1>
 
             <p>
             Kindred is a community for people to learn valuable life skills from retirees via small, in-person group lessons. Meet interesting folks, share stories and laughter with friendly faces from your neighbourhood, and come away with unforgettable new memories.

@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
 /* NOTE: The menu transform has a different breakpoint, 900px */
-.email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+.email-bar, .email-bar .left, .email-bar .right, .navbar {
   height: 15vh; }
   @media (min-width: 600px) {
-    .email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+    .email-bar, .email-bar .left, .email-bar .right, .navbar {
       height: 80px; } }
 
-.email-bar, .landing .email-bar {
+.email-bar {
   width: 100vw;
   display: flex;
   background: rgba(0, 0, 0, 0.5);
@@ -75,10 +75,10 @@
   bottom: 0; }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
-.email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+.email-bar, .email-bar .left, .email-bar .right, .navbar {
   height: 15vh; }
   @media (min-width: 600px) {
-    .email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+    .email-bar, .email-bar .left, .email-bar .right, .navbar {
       height: 80px; } }
 
 div.card-container {
@@ -124,10 +124,10 @@ div.card-container {
       font-size: 0.75em; }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
-.email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+.email-bar, .email-bar .left, .email-bar .right, .navbar {
   height: 15vh; }
   @media (min-width: 600px) {
-    .email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+    .email-bar, .email-bar .left, .email-bar .right, .navbar {
       height: 80px; } }
 
 .footer {
@@ -174,10 +174,10 @@ div.card-container {
     font-size: 1em; }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
-.email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+.email-bar, .email-bar .left, .email-bar .right, .navbar {
   height: 15vh; }
   @media (min-width: 600px) {
-    .email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+    .email-bar, .email-bar .left, .email-bar .right, .navbar {
       height: 80px; } }
 
 .navbar {
@@ -235,10 +235,10 @@ div.card-container {
     color: white; }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
-.email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+.email-bar, .email-bar .left, .email-bar .right, .navbar {
   height: 15vh; }
   @media (min-width: 600px) {
-    .email-bar, .landing .email-bar, .email-bar .left, .email-bar .right, .navbar {
+    .email-bar, .email-bar .left, .email-bar .right, .navbar {
       height: 80px; } }
 
 /*
@@ -355,13 +355,13 @@ div.lesson-container {
   justify-content: space-around;
   flex-wrap: wrap;
   box-sizing: border-box;
-  flex: 1.6 1 0;
   box-sizing: border-box; }
   @media (min-width: 1520px) {
     div.lesson-container {
       justify-content: flex-start; } }
   @media (min-width: 600px) {
     div.lesson-container {
+      width: 65%;
       padding: 25px; } }
 
 div.preview-description {

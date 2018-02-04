@@ -93,23 +93,17 @@
   }
 }
 
-%email-bar-template-yellow {
-  @include email-bar-template($green, $yellow);
-}
-
-%email-bar-template-blue {
-  @include email-bar-template($blue, $yellow);
-}
-
+// Absolute, but leaving it for reference for using this technique
+// %email-bar-template-yellow {
+//   @include email-bar-template($green, $yellow);
+// }
 
 .email-bar {
-  @extend %email-bar-template-yellow;
+  @include email-bar-template($green, $yellow);
 }
 
 .landing {
   .email-bar {
-    @extend %email-bar-template-yellow;
-
     position: absolute;
     bottom: 0;
   }
