@@ -6,6 +6,7 @@
   display: flex;
   background: rgba(0, 0, 0, 0.5);
   z-index: 900;
+  box-shadow: 0px 4px 4px -5px rgba(0,0,0,0.9);
 
   .left {
     width: calc((100vw - 550px) / 2);
@@ -72,7 +73,7 @@
         height: 100%;
         background: $button-color;
         font-family: 'Open Sans Light', sans-serif;
-        font-weight: lighter;
+        font-weight: lighter; 
         font-size: 24px;
         color: white;
         border: none;

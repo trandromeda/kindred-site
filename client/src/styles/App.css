@@ -10,7 +10,8 @@
   width: 100vw;
   display: flex;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 900; }
+  z-index: 900;
+  box-shadow: 0px 4px 4px -5px rgba(0, 0, 0, 0.9); }
   .email-bar .left {
     width: calc((100vw - 550px) / 2);
     order: 1;
@@ -454,3 +455,5 @@ div.how-it-works {
     @media (min-width: 600px) {
       div.how-it-works div.step {
         width: 25%; } }
+    div.how-it-works div.step img {
+      width: 65%; }

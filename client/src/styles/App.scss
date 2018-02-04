@@ -278,5 +278,9 @@ div.how-it-works {
     @include desktop {
       width: 25%;
     }
+
+    img {
+      width: 65%;
+    }
   }
 }
