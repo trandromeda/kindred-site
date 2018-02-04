@@ -136,7 +136,7 @@ div.preview-container {
   background: #FAFAFA;
 
   @include desktop {
-    padding: 0 25px;
+    padding: 0 50px;
   }
 
   h1 {
@@ -160,6 +160,10 @@ div.lesson-container {
     width: 65%;
     padding: 25px;
   }
+
+  @media (max-width: 838px) {
+    width: 100%;
+  }   
 }
 
 div.preview-description {
@@ -169,9 +173,14 @@ div.preview-description {
   @include desktop {
     width: auto;
     padding: 0;
-    padding-right: 50px;
+    padding: 0;
     flex: 1 1 0;
   }
+
+  @media (max-width: 838px) {
+    width: 100%;
+    flex: 1 1 auto;
+  } 
 }
 
 %main {
