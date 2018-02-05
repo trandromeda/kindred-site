@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300|Playfair+Display:400,700");
 /* NOTE: The menu transform has a different breakpoint, 900px */
 .email-bar, .email-bar .left, .email-bar .right, .navbar {
   height: 15vh; }
@@ -149,7 +149,6 @@ div.card-container {
     margin-top: 0px;
     display: inline-block;
     text-align: center;
-    font-weight: bold;
     color: #14080E; }
     @media (min-width: 600px) {
       .footer h1 {
@@ -193,8 +192,7 @@ div.card-container {
   .navbar h1.logo {
     padding-left: 4vw;
     order: 1;
-    color: #32DBC4;
-    font-weight: bold; }
+    color: #32DBC4; }
     @media (min-width: 600px) {
       .navbar h1.logo {
         padding-left: 25px; } }
@@ -277,27 +275,27 @@ h2 {
       font-size: 32px; } }
 
 p {
-  font-family: 'Open Sans Light', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.4em;
-  font-weight: lighter; }
+  font-weight: 300; }
   @media (min-width: 600px) {
     p {
       font-size: 24px; } }
 
 a {
-  font-family: 'Open Sans Light+', sans-serif;
-  font-weight: lighter; }
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300; }
 
 span.yellow {
   color: #F2DC5D; }
 
 .landing {
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   position: relative; }
   .landing .carousel-cell {
     width: 100%;
-    height: 90vh; }
+    height: 100vh; }
   .landing .first {
     background-image: url("../images/painting.jpg");
     background-size: cover; }

@@ -9,7 +9,6 @@ class Home extends Component {
     return (
         <div className="home">
           <div className="preview-container">
-            <h1 className="title">Preview</h1>
             <div className="lesson-container">
               <LessonCard />
               <LessonCard />

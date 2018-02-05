@@ -7,7 +7,7 @@ class HowItWorks extends Component {
   render() {
     return (
         <div className='how-it-works'>
-          <h1 className='title'>How It Works</h1>
+          <h1 className='title'>How It'll Work</h1>
           <div className='step'>
             <h2>Setup</h2>
             <img src={SignupSVG} />
