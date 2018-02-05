@@ -12,9 +12,14 @@ class EmailBar extends Component {
     }
   }
 
-  componentDidMount() {
-    document.getElementById("email").focus();
+  focusTextInput = () => {
+    // Explicitly focus the text input using the raw DOM API
+    this.textInput.focus();
   }
+
+  // componentDidMount() {
+  //   document.getElementById("email").focus();
+  // }
 
   handleChange = (event) => {
     this.setState({
@@ -77,6 +82,7 @@ class EmailBar extends Component {
           value={this.state.email}
           onChange={this.handleChange}
           placeholder=" Your email"
+          ref={(input) => { this.textInput = input; }}
         />   
       case 2:
         return <input 
@@ -109,21 +115,21 @@ class EmailBar extends Component {
 
   render() {
     return (
-        <div className="email-bar" id="email-bar">
+        <div className="email-bar" id="email-bar" onClick={this.focusTextInput}>
           <div className="left"></div>
 
           <div className="mid-section">
             <div className="middle-top"></div>
-
-              <form className="input-box" onSubmit={this.handleSubmit}>
-                  {this.renderInput(this.state.inputLevel)}                         
-                  <input 
-                    type="submit" 
-                    value={this.state.submitText}
-                    className="signup-button" 
-                  />
-              </form>
-
+              <div className="middle-middle">
+                <form className="input-box" onSubmit={this.handleSubmit}>
+                    {this.renderInput(this.state.inputLevel)}                         
+                    <input 
+                      type="submit" 
+                      value={this.state.submitText}
+                      className="signup-button" 
+                    />
+                </form>
+              </div>
             <div className="middle-bottom"></div>
           </div>
 

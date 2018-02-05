@@ -2,14 +2,15 @@
 
 @mixin email-bar-template($colour, $button-color) {
   width: 100vw;
-  height: $bar-height;
+  @extend %bar-height;
   display: flex;
   background: rgba(0, 0, 0, 0.5);
   z-index: 900;
+  box-shadow: 0px 4px 4px -5px rgba(0,0,0,0.9);
 
   .left {
     width: calc((100vw - 550px) / 2);
-    height: $bar-height;
+    @extend %bar-height;
     order: 1;
     background: $colour;
   }
@@ -25,8 +26,18 @@
       background: $colour;
     }
 
+    .middle-middle {
+      height: 50%;
+      position: relative;
+      background: transparent;
+
+      @include desktop {
+        height: 60%;
+      }
+    }
+
     .input-box {
-      height: 60%;
+      height: 100%;
       display: flex;
       position: relative;
       background: transparent;
@@ -62,7 +73,7 @@
         height: 100%;
         background: $button-color;
         font-family: 'Open Sans Light', sans-serif;
-        font-weight: lighter;
+        font-weight: lighter; 
         font-size: 24px;
         color: white;
         border: none;
@@ -77,29 +88,23 @@
 
   .right {
     width: calc((100vw - 550px) / 2);
-    height: $bar-height;
+    @extend %bar-height;
     order: 3;
     background: $colour;
   }
 }
 
-%email-bar-template-yellow {
-  @include email-bar-template($green, $yellow);
-}
-
-%email-bar-template-blue {
-  @include email-bar-template($blue, $yellow);
-}
-
+// Absolute, but leaving it for reference for using this technique
+// %email-bar-template-yellow {
+//   @include email-bar-template($green, $yellow);
+// }
 
 .email-bar {
-  @extend %email-bar-template-yellow;
+  @include email-bar-template($yellow, $blue);
 }
 
 .landing {
   .email-bar {
-    @extend %email-bar-template-yellow;
-
     position: absolute;
     bottom: 0;
   }

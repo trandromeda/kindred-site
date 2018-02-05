@@ -2,7 +2,7 @@
 
 .navbar {
   width: 100vw;
-  height: $bar-height;
+  @extend %bar-height;
   display: flex;
   align-items: center;
   position: fixed;
@@ -13,32 +13,46 @@
   transition: background 300ms;
 
   h1.logo {
+    padding-left: $mobile-horizontal-padding;
     order: 1;
-    margin-left: $left-margin;
     color: $green;
     font-weight: bold;
+
+    @include desktop {
+      padding-left: $left-margin;
+    }
+  }
+
+  div.bars {
+    margin-left: auto;
+
+    .fa-bars {
+      display: block;
+      margin-left: auto;
+      padding-right: 3vw;
+      font-size: 2em;
+      color: white;
+    }    
   }
 
   div.links {
-    width: 100%;
-    display: flex;
-    align-items: center;
+    margin-left: auto;
   }
 
   a {
-    margin: 0 30px;
     display: inline-block;
     font-size: 24px;
     text-decoration: none;
     color: white;
     vertical-align: middle;
+
+    @include desktop {
+      margin: 0 30px;
+    }
   }
 
   a.about {
     margin-left: auto;
-  }
-
-  p.mentor {
   }
 
   a.browse {
@@ -52,6 +66,13 @@
 .navbar.scroll {
   background: #FFFFFF;
   box-shadow: 0px 4px 4px -5px rgba(0,0,0,0.9);
+
+  div.bars {
+    .fa-bars {
+      color: $black;
+    }  
+  }
+
 
   a {
     color: #000000;

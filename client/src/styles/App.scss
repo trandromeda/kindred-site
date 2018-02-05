@@ -6,6 +6,12 @@
 
 @import 'utilities/variables';
 
+/*
+NOTE ABOUT RESPONSIVENESS:
+All dimensions are by default in responsive units e.g. vw, vh, %, em
+Use the desktop mixin to override these for wider screen ie desktop settings
+*/
+
 /* ORDER OF ATTRIBUTES 
 1. Width + Height
 2. Padding + Margin
@@ -22,13 +28,25 @@ body {
 
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 40px;
+  @include font-size(2em, 40px);
   font-weight: normal;
+
+  &.title {
+    text-align: center;
+  }
+}
+
+
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  @include font-size(1.6em, 32px);
+  font-weight: normal;  
 }
 
 p {
   font-family: 'Open Sans Light', sans-serif;
-  font-size: 24px;
+  @include font-size(1.4em, 24px);
   font-weight: lighter;
 }
 
@@ -67,16 +85,22 @@ span.yellow {
   }
 
   .landing-scrim {
-    width: $scrim-width;
+    width: 100%;
     margin: auto;
-    padding: 25px;
+    padding: 3vh $mobile-horizontal-padding;
     position: absolute;
-    bottom: $bar-height;
-    left: calc(50% - 275px);
+    bottom: $bar-height-mobile;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 5px 5px 0 0;
     box-sizing: border-box;
     z-index: 900;
+
+    @include desktop {
+      width: $scrim-width;
+      padding: 25px;
+      bottom: $bar-height-desktop;
+      left: calc(50% - 275px);
+    }
 
     h1, p {
       color: #FFFFFF;
@@ -93,51 +117,78 @@ span.yellow {
 }
 
 .flickity-prev-next-button {
-  width: 100px;
-  height: 100px;
-  background: transparent;
+  display: none;
+  
+
+  @include desktop {
+    width: 100px;
+    height: 100px;
+    display: block;
+    background: transparent;
+  }
 }
 
-div.preview {
+div.preview-container {
+  padding: 1vh 4vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   background: #FAFAFA;
 
+  @include desktop {
+    padding: 0 50px;
+  }
+
   h1 {
     width: 100%;
-    margin: 0 auto;
-    padding-top: 20px;
-    display: block;
-    text-align: center;
   }
 }
 
 div.lesson-container {
-  padding: 25px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   box-sizing: border-box;
-  flex: 1.6 1 0;
+  box-sizing: border-box;
+  // flex: 1.6 1;
 
   @media (min-width: 1520px) {
     justify-content: flex-start;
   }
 
-  @media (max-width: 942px) {
-    width: 15vw;
+  @include desktop {
+    width: 65%;
+    padding: 25px;
   }
+
+  @media (max-width: 838px) {
+    width: 100%;
+  }   
 }
 
 div.preview-description {
-  padding-right: 50px;
-  flex: 1 1 0;
-  // align-self: center;
+  padding: 4vw;
+  width: 100%;
+
+  @include desktop {
+    width: auto;
+    padding: 0;
+    padding: 0;
+    flex: 1 1 0;
+  }
+
+  @media (max-width: 838px) {
+    width: 100%;
+    flex: 1 1 auto;
+  } 
 }
 
 %main {
-  padding: 0 100px;
+  padding: 0 5vw;
+
+  @include desktop {
+    padding: 0 100px;
+  }
 }
 
 div.about {
@@ -147,17 +198,89 @@ div.about {
   position: relative;
   box-sizing: border-box;
 
-  h1 {
-    text-align: center;
-  }
-
   li {
     font-family: 'Open Sans Light', sans-serif;
-    font-size: 24px;
+    @include font-size(1.3em, 24px);
     font-weight: lighter;    
   }
 }
 
 div.coming-soon {
   @extend %main;
+}
+
+div.trio-benefits {
+  width: 100%;
+  margin: 5vw 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  h2, p {
+    margin: 1vh 0;
+  }
+
+  svg[class*='fa'] {
+    @include font-size(4em, 50px);
+  }
+
+  div.benefit {
+    margin: 1vh 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop {
+      width: 25vw;
+      padding: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+}
+
+div.how-it-works {
+  padding: 0 25px;
+  width: 100%;
+  // height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-sizing: border-box;
+
+  h1.title {
+    width: 100%;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  div.step {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include desktop {
+      width: 25%;
+    }
+
+    img {
+      width: 65%;
+    }
+  }
 }
