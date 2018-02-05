@@ -100,7 +100,7 @@
 // }
 
 .email-bar {
-  @include email-bar-template($green, $yellow);
+  @include email-bar-template($yellow, $blue);
 }
 
 .landing {
