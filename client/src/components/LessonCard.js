@@ -12,6 +12,7 @@ class LessonCard extends Component {
               {
                 backgroundImage: 'url('+image+')',
                 backgroundSize: 'cover',
+                backgroundPosition: '50% 50%',
                 overflow: 'hidden'
               }
             }
@@ -19,10 +20,10 @@ class LessonCard extends Component {
           </div>
 
           <h3>{this.props.data.name}</h3>
-          <p className="teacher-name">by {this.props.data.teacher}</p>
-          <p className="blurb">{this.props.data.desc}</p>
+          <p className="teacher-name smaller">with {this.props.data.teacher}</p>
+          <p className="blurb smaller">{this.props.data.desc}</p>
           <div className="figures">
-            <p>
+            <p className="smallest">
             ${this.props.data.cost} | {this.props.data.duration} minutes | 21 
             </p>
           </div>

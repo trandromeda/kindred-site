@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300|Playfair+Display:400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400|Playfair+Display:400,700");
 /* NOTE: The menu transform has a different breakpoint, 900px */
 .email-bar, .email-bar .left, .email-bar .right, .navbar {
   height: 15vh; }
@@ -83,44 +83,43 @@
       height: 80px; } }
 
 div.card-container {
-  width: 67vw;
+  width: 42vw;
   height: auto;
   margin: 1vh 1vw;
   position: relative;
   display: flex;
   flex-direction: column; }
-  @media (min-width: 376px) {
+  @media (max-width: 375px) {
     div.card-container {
-      width: 41vw; } }
+      width: 42vw; } }
   @media (min-width: 600px) {
     div.card-container {
       width: 30%;
       margin: 10px; } }
-  div.card-container h3 {
-    margin: 0; }
-  div.card-container p {
-    font-size: 1.2em; }
-    @media (min-width: 600px) {
-      div.card-container p {
-        font-size: 14px; } }
+  @media (min-width: 600px) and (max-width: 799px) {
+    div.card-container {
+      width: 45%; } }
   div.card-container p.teacher-name {
-    margin: 0; }
+    font-weight: 400;
+    color: #32DBC4; }
   div.card-container p.blurb {
-    width: 80%;
-    padding-bottom: 15px; }
+    padding-bottom: 25px; }
+    @media (min-width: 600px) {
+      div.card-container p.blurb {
+        width: 90%; } }
   div.card-container div.photo {
-    width: 40vw;
+    width: 100%;
     height: 18vh;
+    margin-bottom: 10px;
     position: relative;
     display: flex;
     background: white; }
     @media (min-width: 600px) {
       div.card-container div.photo {
-        width: 100%;
         height: 188px; } }
-    div.card-container div.photo img {
-      max-width: 100%;
-      object-fit: cover; }
+    @media (max-width: 375px) {
+      div.card-container div.photo {
+        height: 16vh; } }
   div.card-container div.figures {
     position: absolute;
     bottom: 0;
@@ -128,8 +127,6 @@ div.card-container {
     @media (min-width: 600px) {
       div.card-container div.figures {
         font-size: 14px; } }
-    div.card-container div.figures p {
-      margin: 0; }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
 .email-bar, .email-bar .left, .email-bar .right, .navbar {
@@ -177,8 +174,11 @@ div.card-container {
     margin: 17px auto;
     background: black; }
   .footer p.copyright {
-    text-align: center;
-    font-size: 1em; }
+    font-size: 0.8em;
+    text-align: center; }
+    @media (min-width: 600px) {
+      .footer p.copyright {
+        font-size: 14px; } }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
 .email-bar, .email-bar .left, .email-bar .right, .navbar {
@@ -260,6 +260,10 @@ Use the desktop mixin to override these for wider screen ie desktop settings
 5. Fonts
 6. Colours
 */
+/* FONT SIZES
+Desktop: 40px, 32px, 24px, 16px, 14px;
+Mobile: 2em, 1.6em, 1.4em, 1em;
+*/
 body {
   background: #FAFAFA; }
 
@@ -276,7 +280,8 @@ h1 {
 h2 {
   font-family: 'Playfair Display', serif;
   font-size: 1.6em;
-  font-weight: normal; }
+  font-weight: normal;
+  margin: 0; }
   @media (min-width: 600px) {
     h2 {
       font-size: 32px; } }
@@ -284,7 +289,8 @@ h2 {
 h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.4em;
-  font-weight: 700; }
+  font-weight: 700;
+  margin: 0; }
   @media (min-width: 600px) {
     h3 {
       font-size: 16px; } }
@@ -292,14 +298,33 @@ h3 {
 p {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.4em;
-  font-weight: 300; }
+  font-weight: 300;
+  margin: 0; }
   @media (min-width: 600px) {
     p {
       font-size: 24px; } }
+  p.smaller {
+    font-size: 1em; }
+    @media (min-width: 600px) {
+      p.smaller {
+        font-size: 16px; } }
+  p.smallest {
+    font-size: 1em; }
+    @media (min-width: 600px) {
+      p.smallest {
+        font-size: 14px; } }
 
 a {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300; }
+
+li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3em;
+  font-weight: 300; }
+  @media (min-width: 600px) {
+    li {
+      font-size: 24px; } }
 
 span.yellow {
   color: #F2DC5D; }
@@ -374,7 +399,7 @@ div.lesson-container {
   box-sizing: border-box; }
   @media (min-width: 600px) {
     div.lesson-container {
-      width: 80%;
+      width: 85%;
       order: 2; } }
 
 div.preview-description {
@@ -404,13 +429,6 @@ div.about {
   margin-bottom: 50px;
   position: relative;
   box-sizing: border-box; }
-  div.about li {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.3em;
-    font-weight: 300; }
-    @media (min-width: 600px) {
-      div.about li {
-        font-size: 24px; } }
 
 div.trio-benefits {
   width: 100%;
@@ -449,22 +467,44 @@ div.how-it-works {
   padding: 0 25px;
   width: 100%;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
   box-sizing: border-box; }
   div.how-it-works h1.title {
     width: 100%; }
-  div.how-it-works h2 {
-    margin: 0; }
+  div.how-it-works div.cta {
+    margin: 2vh 0; }
+    @media (min-width: 600px) {
+      div.how-it-works div.cta {
+        width: 80%;
+        margin: 25px 0; } }
   div.how-it-works div.step {
     width: 100%;
-    padding: 0 10px;
+    margin: 2vh 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; }
+    align-items: center; }
     @media (min-width: 600px) {
       div.how-it-works div.step {
-        width: 25%; } }
-    div.how-it-works div.step img {
-      width: 65%; }
+        width: 80%;
+        flex-direction: row; } }
+    div.how-it-works div.step div.icon {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      @media (min-width: 600px) {
+        div.how-it-works div.step div.icon {
+          width: 40%; } }
+      div.how-it-works div.step div.icon img {
+        width: 50%; }
+    div.how-it-works div.step div.step-description {
+      width: 100%; }
+      @media (min-width: 600px) {
+        div.how-it-works div.step div.step-description {
+          width: 60%; } }
+      div.how-it-works div.step div.step-description p {
+        width: 100%;
+        display: block; }

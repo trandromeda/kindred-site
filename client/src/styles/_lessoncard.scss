@@ -3,16 +3,16 @@
 $card-width: 250px;
 
 div.card-container {
-  width: 67vw;
+  width: 42vw;
   height: auto;
   margin: 1vh 1vw;
   position: relative;
   display: flex;
   flex-direction: column;
 
-  // for 2 column
-  @media (min-width: 376px) {
-    width: 41vw;
+  // for small mobile
+  @media (max-width: 375px) {
+    width: 42vw;
   }
 
   @include desktop {
@@ -20,38 +20,38 @@ div.card-container {
     margin: 10px;
   }
 
-  h3 {
-    margin: 0;
-  }
-
-  p {
-    @include font-size(1.2em, 14px);
-  }
+  // twilight zone
+  @media (min-width: 600px) and (max-width: 799px) {
+    width: 45%;
+  }  
 
   p.teacher-name {
-    margin: 0;
+    font-weight: 400;
+    color: $green;
   }
 
   p.blurb {
-    width: 80%;
-    padding-bottom: 15px;
+    padding-bottom: 25px;
+
+    @include desktop {
+      width: 90%;
+    }
   }
 
   div.photo {
-    width: 40vw;
+    width: 100%;
     height: 18vh;
+    margin-bottom: 10px;
     position: relative;
     display: flex;
     background: white;;
 
     @include desktop {
-      width: 100%;
       height: 188px;
     }
 
-    img {
-      max-width: 100%;
-      object-fit: cover;
+    @media (max-width: 375px) {
+      height: 16vh;
     }
   }
 
@@ -59,10 +59,6 @@ div.card-container {
     position: absolute;
     bottom: 0;
     @include font-size(0.75em, 14px);
-
-    p {
-      margin: 0;
-    }
   }
 
 }

@@ -39,7 +39,6 @@
 
     a {
       margin: 2px 0;
-      // @include font-size(1.5em, 24px);
       text-decoration: none;
       color: $black;
     }
@@ -61,8 +60,8 @@
   }
 
   p.copyright {
+    @include font-size(0.8em, 14px);
     text-align: center;
-    font-size: 1em;
   }
 
 }
