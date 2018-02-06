@@ -85,7 +85,7 @@
 div.card-container {
   width: 67vw;
   height: auto;
-  margin: 1vh 0;
+  margin: 1vh 1vw;
   position: relative;
   display: flex;
   flex-direction: column; }
@@ -94,7 +94,7 @@ div.card-container {
       width: 41vw; } }
   @media (min-width: 600px) {
     div.card-container {
-      width: 250px;
+      width: 30%;
       margin: 10px; } }
   div.card-container h3 {
     margin: 0; }
@@ -109,32 +109,18 @@ div.card-container {
     width: 80%;
     padding-bottom: 15px; }
   div.card-container div.photo {
-    width: 100%;
-    height: auto;
+    width: 40vw;
+    height: 18vh;
     position: relative;
     display: flex;
     background: white; }
     @media (min-width: 600px) {
       div.card-container div.photo {
-        width: 250px;
-        height: auto; } }
+        width: 100%;
+        height: 188px; } }
     div.card-container div.photo img {
       max-width: 100%;
       object-fit: cover; }
-    div.card-container div.photo div.caption {
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      align-self: flex-end;
-      background: rgba(0, 0, 0, 0.4); }
-      @media (min-width: 600px) {
-        div.card-container div.photo div.caption {
-          width: 100%; } }
-      div.card-container div.photo div.caption p {
-        padding: 5px;
-        margin: 0;
-        text-align: right;
-        color: #FFFFFF; }
   div.card-container div.figures {
     position: absolute;
     bottom: 0;
@@ -297,7 +283,7 @@ h2 {
 
 h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-weight: 700; }
   @media (min-width: 600px) {
     h3 {
@@ -384,20 +370,22 @@ div.lesson-container {
   order: 1;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   box-sizing: border-box; }
   @media (min-width: 600px) {
     div.lesson-container {
-      width: 80%; } }
+      width: 80%;
+      order: 2; } }
 
 div.preview-description {
-  width: 100%;
+  width: 90%;
   padding: 4vw;
   order: 2; }
   @media (min-width: 600px) {
     div.preview-description {
       padding: 0;
-      padding-left: 25px; }
+      padding-left: 25px;
+      order: 1; }
       div.preview-description p {
         margin-top: 0; } }
   @media (max-width: 838px) {

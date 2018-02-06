@@ -9,7 +9,11 @@ class LessonCard extends Component {
           <div 
             className="photo"
             style={
-              {backgroundImage: 'url('+image+')'}
+              {
+                backgroundImage: 'url('+image+')',
+                backgroundSize: 'cover',
+                overflow: 'hidden'
+              }
             }
             >
           </div>
@@ -29,4 +33,3 @@ class LessonCard extends Component {
 }
 
 export default LessonCard;
-            {/*<img src={image} alt={this.props.data.name} />*/}

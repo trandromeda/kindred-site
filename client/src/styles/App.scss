@@ -44,7 +44,7 @@ h2 {
 
 h3 {
   font-family: 'Playfair Display', serif;
-  @include font-size(1.6em, 16px);
+  @include font-size(1.4em, 16px);
   font-weight: 700;    
 }
 
@@ -154,22 +154,24 @@ div.lesson-container {
   order: 1;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   box-sizing: border-box;
 
   @include desktop {
     width: 80%;
+    order: 2;
   }
 }
 
 div.preview-description {
-  width: 100%;
+  width: 90%;
   padding: 4vw;
   order: 2;
 
   @include desktop {
     padding: 0;
     padding-left: 25px;
+    order: 1;
 
     p {
       margin-top: 0;
