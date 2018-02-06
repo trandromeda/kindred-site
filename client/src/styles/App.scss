@@ -36,12 +36,16 @@ h1 {
   }
 }
 
-
-
 h2 {
   font-family: 'Playfair Display', serif;
   @include font-size(1.6em, 32px);
   font-weight: normal;  
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  @include font-size(1.6em, 16px);
+  font-weight: 700;    
 }
 
 p {
@@ -131,12 +135,13 @@ span.yellow {
 div.preview-container {
   padding: 1vh 4vw;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   background: #FAFAFA;
 
   @include desktop {
-    padding: 0 50px;
+    padding: 25px;
   }
 
   h1 {
@@ -145,36 +150,30 @@ div.preview-container {
 }
 
 div.lesson-container {
+  width: 100%;
+  order: 1;
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: flex-start;
   box-sizing: border-box;
-  box-sizing: border-box;
-  // flex: 1.6 1;
-
-  @media (min-width: 1520px) {
-    justify-content: flex-start;
-  }
 
   @include desktop {
-    width: 65%;
-    padding: 25px;
+    width: 80%;
   }
-
-  @media (max-width: 838px) {
-    width: 100%;
-  }   
 }
 
 div.preview-description {
-  padding: 4vw;
   width: 100%;
+  padding: 4vw;
+  order: 2;
 
   @include desktop {
-    width: auto;
     padding: 0;
-    padding: 0;
-    flex: 1 1 0;
+    padding-left: 25px;
+
+    p {
+      margin-top: 0;
+    }
   }
 
   @media (max-width: 838px) {
@@ -199,9 +198,9 @@ div.about {
   box-sizing: border-box;
 
   li {
-    font-family: 'Open Sans Light', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     @include font-size(1.3em, 24px);
-    font-weight: lighter;    
+    font-weight: 300;    
   }
 }
 

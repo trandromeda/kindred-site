@@ -42,8 +42,8 @@
         padding-left: 20px;
         background: transparent;
         border: none;
-        font-family: 'Open Sans Light', sans-serif;
-        font-weight: lighter;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
         font-size: 24px;
         line-height: 100%;
         color: #FFFFFF; }
@@ -83,46 +83,67 @@
       height: 80px; } }
 
 div.card-container {
-  width: 44vw;
+  width: 67vw;
   height: auto;
+  margin: 1vh 0;
   position: relative;
   display: flex;
   flex-direction: column; }
+  @media (min-width: 376px) {
+    div.card-container {
+      width: 41vw; } }
   @media (min-width: 600px) {
     div.card-container {
-      width: 195px;
-      margin: 0 10px; } }
+      width: 250px;
+      margin: 10px; } }
+  div.card-container h3 {
+    margin: 0; }
+  div.card-container p {
+    font-size: 1.2em; }
+    @media (min-width: 600px) {
+      div.card-container p {
+        font-size: 14px; } }
+  div.card-container p.teacher-name {
+    margin: 0; }
+  div.card-container p.blurb {
+    width: 80%;
+    padding-bottom: 15px; }
   div.card-container div.photo {
     width: 100%;
-    height: 20vh;
+    height: auto;
+    position: relative;
     display: flex;
     background: white; }
     @media (min-width: 600px) {
       div.card-container div.photo {
-        width: 195px;
-        height: 130px; } }
+        width: 250px;
+        height: auto; } }
+    div.card-container div.photo img {
+      max-width: 100%;
+      object-fit: cover; }
     div.card-container div.photo div.caption {
       width: 100%;
+      position: absolute;
+      bottom: 0;
       align-self: flex-end;
       background: rgba(0, 0, 0, 0.4); }
+      @media (min-width: 600px) {
+        div.card-container div.photo div.caption {
+          width: 100%; } }
       div.card-container div.photo div.caption p {
         padding: 5px;
         margin: 0;
-        font-size: 1em;
         text-align: right;
         color: #FFFFFF; }
-  div.card-container div.description {
-    width: 100%; }
+  div.card-container div.figures {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.75em; }
     @media (min-width: 600px) {
-      div.card-container div.description {
-        width: 195px;
-        padding: 5px; } }
-    div.card-container div.description p {
-      font-size: 1em; }
-    div.card-container div.description div.figures {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75em; }
+      div.card-container div.figures {
+        font-size: 14px; } }
+    div.card-container div.figures p {
+      margin: 0; }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
 .email-bar, .email-bar .left, .email-bar .right, .navbar {
@@ -274,6 +295,14 @@ h2 {
     h2 {
       font-size: 32px; } }
 
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6em;
+  font-weight: 700; }
+  @media (min-width: 600px) {
+    h3 {
+      font-size: 16px; } }
+
 p {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.4em;
@@ -340,41 +369,37 @@ span.yellow {
 div.preview-container {
   padding: 1vh 4vw;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   background: #FAFAFA; }
   @media (min-width: 600px) {
     div.preview-container {
-      padding: 0 50px; } }
+      padding: 25px; } }
   div.preview-container h1 {
     width: 100%; }
 
 div.lesson-container {
+  width: 100%;
+  order: 1;
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-  box-sizing: border-box;
+  justify-content: flex-start;
   box-sizing: border-box; }
-  @media (min-width: 1520px) {
-    div.lesson-container {
-      justify-content: flex-start; } }
   @media (min-width: 600px) {
     div.lesson-container {
-      width: 65%;
-      padding: 25px; } }
-  @media (max-width: 838px) {
-    div.lesson-container {
-      width: 100%; } }
+      width: 80%; } }
 
 div.preview-description {
+  width: 100%;
   padding: 4vw;
-  width: 100%; }
+  order: 2; }
   @media (min-width: 600px) {
     div.preview-description {
-      width: auto;
       padding: 0;
-      padding: 0;
-      flex: 1 1 0; } }
+      padding-left: 25px; }
+      div.preview-description p {
+        margin-top: 0; } }
   @media (max-width: 838px) {
     div.preview-description {
       width: 100%;
@@ -392,9 +417,9 @@ div.about {
   position: relative;
   box-sizing: border-box; }
   div.about li {
-    font-family: 'Open Sans Light', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.3em;
-    font-weight: lighter; }
+    font-weight: 300; }
     @media (min-width: 600px) {
       div.about li {
         font-size: 24px; } }

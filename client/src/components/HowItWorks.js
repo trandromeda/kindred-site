@@ -10,17 +10,17 @@ class HowItWorks extends Component {
           <h1 className='title'>How It'll Work</h1>
           <div className='step'>
             <h2>Setup</h2>
-            <img src={SignupSVG} />
+            <img src={SignupSVG} alt='Monitor' />
             <p>Quickly build your profile with our guided walkthrough</p>
           </div>
           <div className='step'>
             <h2>Browse lessons</h2>
-            <img src={SearchSVG} />
+            <img src={SearchSVG} alt='Search Bar' />
             <p>Can't find what you're looking for? Kindred will create a Lesson Request, bringing in potential teachers</p>
           </div>
           <div className='step'>
             <h2>Learn</h2>
-            <img src={MeetUpSVG} />
+            <img src={MeetUpSVG} alt='People meeting in person' />
             <p>After getting approved, meet new people for an interactive learning experience</p>
           </div>
           <div>

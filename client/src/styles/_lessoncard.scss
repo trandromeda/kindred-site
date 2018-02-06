@@ -1,60 +1,88 @@
 @import 'utilities/variables';
 
+$card-width: 250px;
+
 div.card-container {
-  width: 44vw;
+  width: 67vw;
   height: auto;
+  margin: 1vh 0;
   position: relative;
   display: flex;
   flex-direction: column;
 
+  // for 2 column
+  @media (min-width: 376px) {
+    width: 41vw;
+  }
+
   @include desktop {
-    width: 195px;
-    margin: 0 10px;
+    width: $card-width;
+    margin: 10px;
+    // border: 2px solid $blue;
+    // box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.25);
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    @include font-size(1.2em, 14px);
+  }
+
+  p.teacher-name {
+    margin: 0;
+  }
+
+  p.blurb {
+    width: 80%;
+    padding-bottom: 15px;
   }
 
   div.photo {
     width: 100%;
-    // height is temporary
-    height: 20vh;
+    height: auto;
+    position: relative;
     display: flex;
     background: white;;
 
     @include desktop {
-      width: 195px;
-      height: 130px;
+      width: $card-width;
+      height: auto;
+    }
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
     }
 
     div.caption {
       width: 100%;
+      position: absolute;
+      bottom: 0;
       align-self: flex-end;
       background: rgba(0, 0, 0, 0.4);
+
+      @include desktop {
+        width: 100%;
+      }
 
       p {
         padding: 5px;
         margin: 0;
-        font-size: 1em;
         text-align: right;
         color: #FFFFFF;
       }
     }
   }
 
-  div.description {
-    width: 100%;
-    
-    @include desktop {
-      width: 195px;
-      padding: 5px;
-    }
+  div.figures {
+    position: absolute;
+    bottom: 0;
+    @include font-size(0.75em, 14px);
 
     p {
-      font-size: 1em;
-    }
-
-    div.figures {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75em;
+      margin: 0;
     }
   }
 
