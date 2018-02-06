@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400|Playfair+Display:400,700");
 /* NOTE: The menu transform has a different breakpoint, 900px */
 .email-bar, .email-bar .left, .email-bar .right, .navbar {
   height: 15vh; }
@@ -42,8 +42,8 @@
         padding-left: 20px;
         background: transparent;
         border: none;
-        font-family: 'Open Sans Light', sans-serif;
-        font-weight: lighter;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
         font-size: 24px;
         line-height: 100%;
         color: #FFFFFF; }
@@ -83,46 +83,50 @@
       height: 80px; } }
 
 div.card-container {
-  width: 44vw;
+  width: 42vw;
   height: auto;
+  margin: 1vh 1vw;
   position: relative;
   display: flex;
   flex-direction: column; }
+  @media (max-width: 375px) {
+    div.card-container {
+      width: 42vw; } }
   @media (min-width: 600px) {
     div.card-container {
-      width: 195px;
-      margin: 0 10px; } }
+      width: 30%;
+      margin: 10px; } }
+  @media (min-width: 600px) and (max-width: 799px) {
+    div.card-container {
+      width: 45%; } }
+  div.card-container p.teacher-name {
+    font-weight: 400;
+    color: #32DBC4; }
+  div.card-container p.blurb {
+    padding-bottom: 25px; }
+    @media (min-width: 600px) {
+      div.card-container p.blurb {
+        width: 90%; } }
   div.card-container div.photo {
     width: 100%;
-    height: 20vh;
+    height: 18vh;
+    margin-bottom: 10px;
+    position: relative;
     display: flex;
     background: white; }
     @media (min-width: 600px) {
       div.card-container div.photo {
-        width: 195px;
-        height: 130px; } }
-    div.card-container div.photo div.caption {
-      width: 100%;
-      align-self: flex-end;
-      background: rgba(0, 0, 0, 0.4); }
-      div.card-container div.photo div.caption p {
-        padding: 5px;
-        margin: 0;
-        font-size: 1em;
-        text-align: right;
-        color: #FFFFFF; }
-  div.card-container div.description {
-    width: 100%; }
+        height: 188px; } }
+    @media (max-width: 375px) {
+      div.card-container div.photo {
+        height: 16vh; } }
+  div.card-container div.figures {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.75em; }
     @media (min-width: 600px) {
-      div.card-container div.description {
-        width: 195px;
-        padding: 5px; } }
-    div.card-container div.description p {
-      font-size: 1em; }
-    div.card-container div.description div.figures {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75em; }
+      div.card-container div.figures {
+        font-size: 14px; } }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
 .email-bar, .email-bar .left, .email-bar .right, .navbar {
@@ -149,7 +153,6 @@ div.card-container {
     margin-top: 0px;
     display: inline-block;
     text-align: center;
-    font-weight: bold;
     color: #14080E; }
     @media (min-width: 600px) {
       .footer h1 {
@@ -171,8 +174,11 @@ div.card-container {
     margin: 17px auto;
     background: black; }
   .footer p.copyright {
-    text-align: center;
-    font-size: 1em; }
+    font-size: 0.8em;
+    text-align: center; }
+    @media (min-width: 600px) {
+      .footer p.copyright {
+        font-size: 14px; } }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
 .email-bar, .email-bar .left, .email-bar .right, .navbar {
@@ -193,8 +199,7 @@ div.card-container {
   .navbar h1.logo {
     padding-left: 4vw;
     order: 1;
-    color: #32DBC4;
-    font-weight: bold; }
+    color: #32DBC4; }
     @media (min-width: 600px) {
       .navbar h1.logo {
         padding-left: 25px; } }
@@ -255,6 +260,10 @@ Use the desktop mixin to override these for wider screen ie desktop settings
 5. Fonts
 6. Colours
 */
+/* FONT SIZES
+Desktop: 40px, 32px, 24px, 16px, 14px;
+Mobile: 2em, 1.6em, 1.4em, 1em;
+*/
 body {
   background: #FAFAFA; }
 
@@ -271,33 +280,62 @@ h1 {
 h2 {
   font-family: 'Playfair Display', serif;
   font-size: 1.6em;
-  font-weight: normal; }
+  font-weight: normal;
+  margin: 0; }
   @media (min-width: 600px) {
     h2 {
       font-size: 32px; } }
 
-p {
-  font-family: 'Open Sans Light', sans-serif;
+h3 {
+  font-family: 'Playfair Display', serif;
   font-size: 1.4em;
-  font-weight: lighter; }
+  font-weight: 700;
+  margin: 0; }
+  @media (min-width: 600px) {
+    h3 {
+      font-size: 16px; } }
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4em;
+  font-weight: 300;
+  margin: 0; }
   @media (min-width: 600px) {
     p {
       font-size: 24px; } }
+  p.smaller {
+    font-size: 1em; }
+    @media (min-width: 600px) {
+      p.smaller {
+        font-size: 16px; } }
+  p.smallest {
+    font-size: 1em; }
+    @media (min-width: 600px) {
+      p.smallest {
+        font-size: 14px; } }
 
 a {
-  font-family: 'Open Sans Light+', sans-serif;
-  font-weight: lighter; }
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300; }
+
+li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3em;
+  font-weight: 300; }
+  @media (min-width: 600px) {
+    li {
+      font-size: 24px; } }
 
 span.yellow {
   color: #F2DC5D; }
 
 .landing {
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   position: relative; }
   .landing .carousel-cell {
     width: 100%;
-    height: 90vh; }
+    height: 100vh; }
   .landing .first {
     background-image: url("../images/painting.jpg");
     background-size: cover; }
@@ -342,41 +380,39 @@ span.yellow {
 div.preview-container {
   padding: 1vh 4vw;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   background: #FAFAFA; }
   @media (min-width: 600px) {
     div.preview-container {
-      padding: 0 50px; } }
+      padding: 25px; } }
   div.preview-container h1 {
     width: 100%; }
 
 div.lesson-container {
+  width: 100%;
+  order: 1;
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-  box-sizing: border-box;
+  justify-content: center;
   box-sizing: border-box; }
-  @media (min-width: 1520px) {
-    div.lesson-container {
-      justify-content: flex-start; } }
   @media (min-width: 600px) {
     div.lesson-container {
-      width: 65%;
-      padding: 25px; } }
-  @media (max-width: 838px) {
-    div.lesson-container {
-      width: 100%; } }
+      width: 85%;
+      order: 2; } }
 
 div.preview-description {
+  width: 90%;
   padding: 4vw;
-  width: 100%; }
+  order: 2; }
   @media (min-width: 600px) {
     div.preview-description {
-      width: auto;
       padding: 0;
-      padding: 0;
-      flex: 1 1 0; } }
+      padding-left: 25px;
+      order: 1; }
+      div.preview-description p {
+        margin-top: 0; } }
   @media (max-width: 838px) {
     div.preview-description {
       width: 100%;
@@ -393,13 +429,6 @@ div.about {
   margin-bottom: 50px;
   position: relative;
   box-sizing: border-box; }
-  div.about li {
-    font-family: 'Open Sans Light', sans-serif;
-    font-size: 1.3em;
-    font-weight: lighter; }
-    @media (min-width: 600px) {
-      div.about li {
-        font-size: 24px; } }
 
 div.trio-benefits {
   width: 100%;
@@ -438,22 +467,44 @@ div.how-it-works {
   padding: 0 25px;
   width: 100%;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
   box-sizing: border-box; }
   div.how-it-works h1.title {
     width: 100%; }
-  div.how-it-works h2 {
-    margin: 0; }
+  div.how-it-works div.cta {
+    margin: 2vh 0; }
+    @media (min-width: 600px) {
+      div.how-it-works div.cta {
+        width: 80%;
+        margin: 25px 0; } }
   div.how-it-works div.step {
     width: 100%;
-    padding: 0 10px;
+    margin: 2vh 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; }
+    align-items: center; }
     @media (min-width: 600px) {
       div.how-it-works div.step {
-        width: 25%; } }
-    div.how-it-works div.step img {
-      width: 65%; }
+        width: 80%;
+        flex-direction: row; } }
+    div.how-it-works div.step div.icon {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      @media (min-width: 600px) {
+        div.how-it-works div.step div.icon {
+          width: 40%; } }
+      div.how-it-works div.step div.icon img {
+        width: 50%; }
+    div.how-it-works div.step div.step-description {
+      width: 100%; }
+      @media (min-width: 600px) {
+        div.how-it-works div.step div.step-description {
+          width: 60%; } }
+      div.how-it-works div.step div.step-description p {
+        width: 100%;
+        display: block; }

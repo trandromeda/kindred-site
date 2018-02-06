@@ -7,24 +7,48 @@ class HowItWorks extends Component {
   render() {
     return (
         <div className='how-it-works'>
-          <h1 className='title'>How It Works</h1>
+          <h1 className='title'>How It'll Work</h1>
           <div className='step'>
-            <h2>Setup</h2>
-            <img src={SignupSVG} />
-            <p>Quickly build your profile with our guided walkthrough</p>
+            <div className="icon">
+              <h2>Setup</h2>
+              <img src={SignupSVG} alt='Monitor' />
+            </div>
+            <div className="step-description">
+              <p>Quickly build your profile with our guided walkthrough</p>
+              <ul>
+                <li>Tip 1</li>
+                <li>Tip 2</li>
+              </ul>
+            </div>
           </div>
           <div className='step'>
-            <h2>Browse lessons</h2>
-            <img src={SearchSVG} />
-            <p>Can't find what you're looking for? Kindred will create a Lesson Request, bringing in potential teachers</p>
+            <div className="icon">
+              <h2>Connect</h2>
+              <img src={SearchSVG} alt='Search Bar' />
+            </div>
+            <div className="step-description">
+              <p>Can't find what you're looking for? Kindred will create a Lesson Request, bringing in potential teachers</p>
+              <ul>
+                <li>Tip 1</li>
+                <li>Tip 2</li>
+              </ul>
+            </div>
           </div>
           <div className='step'>
-            <h2>Learn</h2>
-            <img src={MeetUpSVG} />
-            <p>After getting approved, meet new people for an interactive learning experience</p>
+            <div className="icon">
+              <h2>Learn</h2>
+              <img src={MeetUpSVG} alt='People meeting in person' />
+            </div>
+            <div className="step-description">
+              <p>After getting approved, meet new people for an interactive learning experience</p>
+              <ul>
+                <li>Tip 1</li>
+                <li>Tip 2</li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <p>We are building out the Kindred prototype to better show you how the learning marketplace works. Sign up for our mailing list to be notified it comes out!</p>
+          <div className="cta">
+            <p>We are building out the Kindred prototype to better show you how the platform works. Sign up for our mailing list to be notified it comes out!</p>
           </div>                 
         </div>
       )

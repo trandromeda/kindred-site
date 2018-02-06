@@ -1,61 +1,64 @@
 @import 'utilities/variables';
 
+$card-width: 250px;
+
 div.card-container {
-  width: 44vw;
+  width: 42vw;
   height: auto;
+  margin: 1vh 1vw;
   position: relative;
   display: flex;
   flex-direction: column;
 
+  // for small mobile
+  @media (max-width: 375px) {
+    width: 42vw;
+  }
+
   @include desktop {
-    width: 195px;
-    margin: 0 10px;
+    width: 30%;
+    margin: 10px;
+  }
+
+  // twilight zone
+  @media (min-width: 600px) and (max-width: 799px) {
+    width: 45%;
+  }  
+
+  p.teacher-name {
+    font-weight: 400;
+    color: $green;
+  }
+
+  p.blurb {
+    padding-bottom: 25px;
+
+    @include desktop {
+      width: 90%;
+    }
   }
 
   div.photo {
     width: 100%;
-    // height is temporary
-    height: 20vh;
+    height: 18vh;
+    margin-bottom: 10px;
+    position: relative;
     display: flex;
     background: white;;
 
     @include desktop {
-      width: 195px;
-      height: 130px;
+      height: 188px;
     }
 
-    div.caption {
-      width: 100%;
-      align-self: flex-end;
-      background: rgba(0, 0, 0, 0.4);
-
-      p {
-        padding: 5px;
-        margin: 0;
-        font-size: 1em;
-        text-align: right;
-        color: #FFFFFF;
-      }
+    @media (max-width: 375px) {
+      height: 16vh;
     }
   }
 
-  div.description {
-    width: 100%;
-    
-    @include desktop {
-      width: 195px;
-      padding: 5px;
-    }
-
-    p {
-      font-size: 1em;
-    }
-
-    div.figures {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.75em;
-    }
+  div.figures {
+    position: absolute;
+    bottom: 0;
+    @include font-size(0.75em, 14px);
   }
 
 }
