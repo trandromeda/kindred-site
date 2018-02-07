@@ -40,6 +40,10 @@ h1 {
   &.title {
     text-align: center;
     margin-bottom: 25px;
+
+    @include desktop {
+      margin-bottom: 5vh;
+    }
   }
 }
 
@@ -48,6 +52,15 @@ h2 {
   @include font-size(1.6em, 32px);
   font-weight: normal;
   margin: 0;
+
+  &.title {
+    text-align: center;
+    margin-bottom: 25px;
+
+    @include desktop {
+      margin-bottom: 5vh;
+    }
+  }
 }
 
 h3 {
@@ -246,16 +259,8 @@ div.preview-description {
 %page-layout {
   padding: 5vh 5vw;
 
-  h1, h2 {
-    margin-bottom: 5vh;
-  }
-
   @include desktop {
     padding: 25px 50px;
-
-    h1, h2 {
-      margin-bottom: 25px;
-    }  
   }
 }
 
@@ -281,6 +286,53 @@ div.mentor-container {
       p {
         padding-left: 5vw;
       }
+    }
+  }
+}
+
+div.team-container {
+  @extend %page-layout;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  h1 {
+    width: 100%;
+  }
+
+  div.team-member {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop {
+      width: 25%;
+    }
+
+    img {
+      width: auto;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    p.title {
+      margin-bottom: 2vh;
+      @include font-size(1.2em, 20px);
+      font-weight: 400;
+
+      @include desktop {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .section-group {
+    width: 100%;
+    margin: 5vh 0;
+
+    @include desktop {
+      margin: 25px 0;
     }
   }
 }

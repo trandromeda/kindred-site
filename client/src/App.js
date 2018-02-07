@@ -8,8 +8,8 @@ import Home from './components/Home';
 import About from './components/About';
 import Mentor from './components/Mentor';
 import Footer from './components/Footer';
-import ComingSoon from './components/ComingSoon';
 import Contact from './components/Contact';
+import Team from './components/Team';
 
 class App extends Component {
 
@@ -33,7 +33,8 @@ class App extends Component {
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/mentor" component={Mentor} />
-        <Route path="/coming-soon" component={Contact} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/team" component={Team} />
 
         <Footer />
       </div>
