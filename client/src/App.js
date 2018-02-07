@@ -12,6 +12,12 @@ import Contact from './components/Contact';
 import Team from './components/Team';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      emailInputLevel: 1
+    }
+  }
 
   componentDidMount() {
     const nav = document.getElementById("navbar");
@@ -28,7 +34,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-        <Landing />
+        <Landing emailInputLevel={this.state.emailInputLevel} />
 
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />

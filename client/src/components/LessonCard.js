@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-class LessonCard extends Component {
-  render() {
-    const image = require("../images/lessons/" + this.props.data.img);
+const LessonCard = (props) => {
+    const {img, name, teacher, desc, cost, duration} = props.data;
+    const image = require("../images/lessons/" + img);
     return (
         <div className="card-container">
 
@@ -19,18 +19,17 @@ class LessonCard extends Component {
             >
           </div>
 
-          <h3>{this.props.data.name}</h3>
-          <p className="teacher-name smaller">with {this.props.data.teacher}</p>
-          <p className="blurb smaller">{this.props.data.desc}</p>
+          <h3>{name}</h3>
+          <p className="teacher-name smaller">with {teacher}</p>
+          <p className="blurb smaller">{desc}</p>
           <div className="figures">
             <p className="smallest">
-            ${this.props.data.cost} | {this.props.data.duration} minutes | 21 
+            ${cost} | {duration} minutes | 21 
             </p>
           </div>
 
         </div>
       )
-  }
 }
 
 export default LessonCard;
