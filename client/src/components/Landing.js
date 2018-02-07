@@ -34,7 +34,7 @@ class Landing extends Component {
           </div>
 
 
-        <EmailBar />
+        <EmailBar {...this.props} />
         </div>
       )
   }

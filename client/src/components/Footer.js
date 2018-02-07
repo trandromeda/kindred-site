@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
         </div>
 
         <div className="column-2">
-          <a href="https://medium.com/getkindred" target="_blank">Blog</a>
+          <a href="https://medium.com/getkindred" target="_blank" rel="noopener noreferrer">Blog</a>
           <Link to="/contact">Contact us</Link>
         </div>
 

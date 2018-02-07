@@ -15,7 +15,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      emailInputLevel: 1
+      emailInputStage: 1,
+      email: '',
+      firstname: '',
+      lastname: ''      
     }
   }
 
@@ -30,13 +33,77 @@ class App extends Component {
     }
   }
 
+  handleEmailChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  }
+
+  handleEmailSubmit = (event) => {
+    event.preventDefault();
+
+    //~ Increment inputLevel, this will control which input we display ~//    
+    this.setState((prevState, props) => {
+      if (prevState.emailInputStage < 4) {
+        return {emailInputStage: prevState.emailInputStage + 1};
+      }
+    });
+
+    const data = {
+      email: this.state.email,
+      firstname: this.state.firstname,
+      lastname: this.state.lastname
+    }
+
+    if (!!data.lastname) {
+      this.subscribe(data);
+    }    
+  }
+
+  subscribe = (data) => {
+    fetch('/api/subscribe', {
+      method: 'post',
+      body: JSON.stringify(data),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(function(response) {
+      console.log(response);
+      if (response.status >= 200 && response.status < 300) {
+        return response
+      } else {
+        var error = new Error(response.statusText)
+        error.response = response
+        throw error
+      }      
+    })
+    .catch((err) => {
+      console.log("error", err);
+    });    
+  }
+
   render() {
+    const emailProps = {...this.state};
+    console.log(emailProps);
     return (
       <div className="App">
         <NavBar />
-        <Landing emailInputLevel={this.state.emailInputLevel} />
+        <Landing 
+          handleChange={this.handleEmailChange}
+          handleSubmit={this.handleEmailSubmit}         
+          {...emailProps} 
+        />
 
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" render={(props) =>
+          <Home
+          handleChange={this.handleEmailChange}
+          handleSubmit={this.handleEmailSubmit} 
+          {...props}
+          {...emailProps}
+          />
+        }/>
         <Route path="/about" component={About} />
         <Route path="/mentor" component={Mentor} />
         <Route path="/contact" component={Contact} />
