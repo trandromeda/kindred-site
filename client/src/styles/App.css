@@ -347,6 +347,9 @@ h1 {
   h1.title {
     text-align: center;
     margin-bottom: 25px; }
+    @media (min-width: 600px) {
+      h1.title {
+        margin-bottom: 5vh; } }
 
 h2 {
   font-family: 'Playfair Display', serif;
@@ -356,6 +359,12 @@ h2 {
   @media (min-width: 600px) {
     h2 {
       font-size: 32px; } }
+  h2.title {
+    text-align: center;
+    margin-bottom: 25px; }
+    @media (min-width: 600px) {
+      h2.title {
+        margin-bottom: 5vh; } }
 
 h3 {
   font-family: 'Playfair Display', serif;
@@ -511,15 +520,11 @@ div.preview-description {
       padding-left: 25px;
       order: 1; } }
 
-div.preview-container, div.about-container, div.mentor-container, div.coming-soon, div.how-it-works {
+div.preview-container, div.about-container, div.mentor-container, div.team-container, div.coming-soon, div.how-it-works {
   padding: 5vh 5vw; }
-  div.preview-container h1, div.about-container h1, div.mentor-container h1, div.coming-soon h1, div.how-it-works h1, div.preview-container h2, div.about-container h2, div.mentor-container h2, div.coming-soon h2, div.how-it-works h2 {
-    margin-bottom: 5vh; }
   @media (min-width: 600px) {
-    div.preview-container, div.about-container, div.mentor-container, div.coming-soon, div.how-it-works {
-      padding: 25px 50px; }
-      div.preview-container h1, div.about-container h1, div.mentor-container h1, div.coming-soon h1, div.how-it-works h1, div.preview-container h2, div.about-container h2, div.mentor-container h2, div.coming-soon h2, div.how-it-works h2 {
-        margin-bottom: 25px; } }
+    div.preview-container, div.about-container, div.mentor-container, div.team-container, div.coming-soon, div.how-it-works {
+      padding: 25px 50px; } }
 
 div.about-container {
   width: 100vw;
@@ -533,6 +538,41 @@ div.mentor-container div.section {
     width: 30%; }
   div.mentor-container div.section:nth-child(3) p {
     padding-left: 5vw; }
+
+div.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  div.team-container h1 {
+    width: 100%; }
+  div.team-container div.team-member {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    @media (min-width: 600px) {
+      div.team-container div.team-member {
+        width: 25%; } }
+    div.team-container div.team-member img {
+      width: auto;
+      height: 250px;
+      object-fit: cover; }
+    div.team-container div.team-member p.title {
+      margin-bottom: 2vh;
+      font-size: 1.2em;
+      font-weight: 400; }
+      @media (min-width: 600px) {
+        div.team-container div.team-member p.title {
+          font-size: 20px; } }
+      @media (min-width: 600px) {
+        div.team-container div.team-member p.title {
+          margin-bottom: 10px; } }
+  div.team-container .section-group {
+    width: 100%;
+    margin: 5vh 0; }
+    @media (min-width: 600px) {
+      div.team-container .section-group {
+        margin: 25px 0; } }
 
 div.trio-benefits {
   width: 100%;
