@@ -60,7 +60,10 @@
     display: flex;
     align-items: center;
 
-  
+    .about, .mentor, .contact {
+      padding: 25px 40px;
+      box-sizing: border-box;
+    }
   }
 
   div.nav-element.link:hover {
@@ -73,10 +76,6 @@
     text-decoration: none;
     color: white;
     font-weight: 400;
-
-    @include desktop {
-      margin: 0 30px;
-    }
   }
 }
 

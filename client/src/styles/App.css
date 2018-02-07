@@ -272,6 +272,9 @@ div.card-container {
   .navbar div.nav-element {
     display: flex;
     align-items: center; }
+    .navbar div.nav-element .about, .navbar div.nav-element .mentor, .navbar div.nav-element .contact {
+      padding: 25px 40px;
+      box-sizing: border-box; }
   .navbar div.nav-element.link:hover {
     background: #32DBC4; }
   .navbar a {
@@ -283,9 +286,6 @@ div.card-container {
     @media (min-width: 600px) {
       .navbar a {
         font-size: 24px; } }
-    @media (min-width: 600px) {
-      .navbar a {
-        margin: 0 30px; } }
 
 .navbar.scroll {
   background: #FFFFFF;
