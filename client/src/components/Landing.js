@@ -9,7 +9,7 @@ class Landing extends Component {
       cellAlign: 'left',
       contain: true,
       cellSelector: '.carousel-cell',
-      autoPlay: 6500,
+      autoPlay: 7000,
       pauseAutoPlayOnHover: false,
       wrapAround: true,
       pageDots: false,

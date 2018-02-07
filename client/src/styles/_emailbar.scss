@@ -4,9 +4,9 @@
   width: 100vw;
   @extend %bar-height;
   display: flex;
-  background: rgba(0, 0, 0, 0.5);
   z-index: 900;
   box-shadow: 0px 4px 4px -5px rgba(0,0,0,0.9);
+  @extend %frosted;
 
   .left {
     width: calc((100vw - 550px) / 2);

@@ -81,11 +81,7 @@ li {
   font-weight: 300;    
 }
 
-span.yellow {
-  color: $yellow;
-}
-
-.landing {
+div.landing {
   width: 100vw;
   height: $landing-height;
   position: relative;
@@ -93,6 +89,7 @@ span.yellow {
   .carousel-cell {
     width: 100%;
     height: $landing-height;
+    position: relative;
   }
 
   .first {
@@ -116,10 +113,11 @@ span.yellow {
     padding: 3vh $mobile-horizontal-padding;
     position: absolute;
     bottom: $bar-height-mobile;
-    background: rgba(0, 0, 0, 0.4);
     border-radius: 5px 5px 0 0;
     box-sizing: border-box;
     z-index: 900;
+    overflow: hidden;
+    @extend %frosted;
 
     @include desktop {
       width: $scrim-width;
@@ -213,12 +211,16 @@ div.preview-description {
   }
 }
 
-div.about {
+div.about-container {
   @extend %main;
   width: 100vw;
   margin-bottom: 50px;
   position: relative;
   box-sizing: border-box;
+}
+
+div.mentor-container {
+  @extend %main;
 }
 
 div.coming-soon {

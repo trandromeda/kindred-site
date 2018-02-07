@@ -114,13 +114,17 @@ class EmailBar extends Component {
   }
 
   render() {
+    const divStyle = this.props.fill ? {backgroundColor: '#32DBC4'} : {backgroundColor: 'transparent'};
     return (
         <div className="email-bar" id="email-bar" onClick={this.focusTextInput}>
           <div className="left"></div>
 
           <div className="mid-section">
             <div className="middle-top"></div>
-              <div className="middle-middle">
+              <div 
+              className="middle-middle"
+              style={divStyle}
+              >
                 <form className="input-box" onSubmit={this.handleSubmit}>
                     {this.renderInput(this.state.inputLevel)}                         
                     <input 

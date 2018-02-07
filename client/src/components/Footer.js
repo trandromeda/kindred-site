@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Footer extends Component {
   render() {
     return (
-        <div className="footer">
+        <div className="footer-container">
           <h1>Kindred</h1>
 
           <div className="column-1">
