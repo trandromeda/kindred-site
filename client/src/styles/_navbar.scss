@@ -5,11 +5,11 @@
   @extend %bar-height;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   position: fixed;
   z-index: 1000;
   box-sizing: border-box;
-  background: linear-gradient(rgba(0,0,0,0.30) 40%, rgba(0,0,0,0.20) 60%, transparent);
+  background: linear-gradient(rgba(0,0,0,0.25) 30%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.15) 70%, transparent);
   // background: rgba(0, 0, 0, 0.15);
   transition: background 300ms;
 
@@ -51,31 +51,30 @@
 
   div.links {
     margin-left: auto;
+    display: flex;
+  }
+
+  div.nav-element {
+    display: flex;
+    align-items: center;
+
+  
+  }
+
+  div.nav-element.link:hover {
+    background: $green;
   }
 
   a {
-    display: inline-block;
     @include font-size(1.6em, 24px);
     font-family: 'Playfair Display', serif;
     text-decoration: none;
     color: white;
-    vertical-align: middle;
     font-weight: 400;
 
     @include desktop {
       margin: 0 30px;
     }
-  }
-
-  a.about {
-    margin-left: auto;
-  }
-
-  a.browse {
-    padding: 7px 12px;
-    background: $blue;
-    box-sizing: border-box;
-    border-radius: 2px;
   }
 }
 
@@ -103,9 +102,5 @@
 
   a {
     color: #000000;
-  }
-
-  a.browse {
-    color: white;
   }
 }

@@ -222,11 +222,11 @@ div.card-container {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   position: fixed;
   z-index: 1000;
   box-sizing: border-box;
-  background: linear-gradient(rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.2) 60%, transparent);
+  background: linear-gradient(rgba(0, 0, 0, 0.25) 30%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.15) 70%, transparent);
   transition: background 300ms; }
   .navbar h1.logo {
     padding-left: 4vw;
@@ -254,14 +254,18 @@ div.card-container {
     left: 5%;
     background: rgba(255, 255, 255, 0.5); }
   .navbar div.links {
-    margin-left: auto; }
+    margin-left: auto;
+    display: flex; }
+  .navbar div.nav-element {
+    display: flex;
+    align-items: center; }
+  .navbar div.nav-element.link:hover {
+    background: #32DBC4; }
   .navbar a {
-    display: inline-block;
     font-size: 1.6em;
     font-family: 'Playfair Display', serif;
     text-decoration: none;
     color: white;
-    vertical-align: middle;
     font-weight: 400; }
     @media (min-width: 600px) {
       .navbar a {
@@ -269,13 +273,6 @@ div.card-container {
     @media (min-width: 600px) {
       .navbar a {
         margin: 0 30px; } }
-  .navbar a.about {
-    margin-left: auto; }
-  .navbar a.browse {
-    padding: 7px 12px;
-    background: #70D6FF;
-    box-sizing: border-box;
-    border-radius: 2px; }
 
 .navbar.scroll {
   background: #FFFFFF;
@@ -290,8 +287,6 @@ div.card-container {
     display: none; }
   .navbar.scroll a {
     color: #000000; }
-  .navbar.scroll a.browse {
-    color: white; }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
 .email-bar, .email-bar .left, .email-bar .right, .navbar {
@@ -331,12 +326,14 @@ body {
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 2em;
-  font-weight: normal; }
+  font-weight: normal;
+  margin: 0; }
   @media (min-width: 600px) {
     h1 {
       font-size: 40px; } }
   h1.title {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 25px; }
 
 h2 {
   font-family: 'Playfair Display', serif;
@@ -437,7 +434,6 @@ div.landing {
       background: transparent; } }
 
 div.preview-container {
-  padding: 1vh 4vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -477,11 +473,11 @@ div.preview-description {
       width: 100%;
       flex: 1 1 auto; } }
 
-div.about-container, div.mentor-container, div.coming-soon {
-  padding: 0 5vw; }
+div.preview-container, div.about-container, div.mentor-container, div.coming-soon, div.how-it-works {
+  padding: 5vh 5vw; }
   @media (min-width: 600px) {
-    div.about-container, div.mentor-container, div.coming-soon {
-      padding: 0 100px; } }
+    div.preview-container, div.about-container, div.mentor-container, div.coming-soon, div.how-it-works {
+      padding: 25px 50px; } }
 
 div.about-container {
   width: 100vw;
@@ -523,7 +519,6 @@ div.trio-benefits {
       text-align: center; }
 
 div.how-it-works {
-  padding: 0 25px;
   width: 100%;
   display: flex;
   flex-direction: column;

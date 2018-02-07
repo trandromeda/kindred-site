@@ -35,9 +35,11 @@ h1 {
   font-family: 'Playfair Display', serif;
   @include font-size(2em, 40px);
   font-weight: normal;
+  margin: 0;
 
   &.title {
     text-align: center;
+    margin-bottom: 25px;
   }
 }
 
@@ -152,7 +154,7 @@ div.landing {
 }
 
 div.preview-container {
-  padding: 1vh 4vw;
+  @extend %page-layout;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -203,16 +205,16 @@ div.preview-description {
   } 
 }
 
-%main {
-  padding: 0 5vw;
+%page-layout {
+  padding: 5vh 5vw;
 
   @include desktop {
-    padding: 0 100px;
+    padding: 25px 50px;
   }
 }
 
 div.about-container {
-  @extend %main;
+  @extend %page-layout;
   width: 100vw;
   margin-bottom: 50px;
   position: relative;
@@ -220,11 +222,11 @@ div.about-container {
 }
 
 div.mentor-container {
-  @extend %main;
+  @extend %page-layout;
 }
 
 div.coming-soon {
-  @extend %main;
+  @extend %page-layout;
 }
 
 div.trio-benefits {
@@ -269,7 +271,7 @@ div.trio-benefits {
 }
 
 div.how-it-works {
-  padding: 0 25px;
+  @extend %page-layout;
   width: 100%;
   display: flex;
   flex-direction: column;
