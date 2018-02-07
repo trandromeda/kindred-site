@@ -23,7 +23,7 @@ class NavBar extends Component {
                   <Link to="/mentor" className="mentor">Mentor</Link>
                 </div>
                 <div className="nav-element link">
-                  <Link to="/coming-soon" className="browse">Browse Lessons</Link>
+                  <Link to="/coming-soon" className="browse">Contact</Link>
                 </div>
               </div>
             ) : (

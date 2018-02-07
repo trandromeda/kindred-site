@@ -208,8 +208,24 @@ div.preview-description {
 %page-layout {
   padding: 5vh 5vw;
 
+  h1, h2 {
+    margin-bottom: 5vh;
+  }
+
+  p {
+    margin: 5vh 0;
+  }
+
   @include desktop {
     padding: 25px 50px;
+
+    h1, h2 {
+      margin-bottom: 25px;
+    }
+
+    p {
+      margin: 25px 0;
+    }    
   }
 }
 
@@ -219,14 +235,6 @@ div.about-container {
   margin-bottom: 50px;
   position: relative;
   box-sizing: border-box;
-
-  h1 {
-    margin-bottom: 25px;
-  }
-
-  p {
-    margin: 25px 0;
-  }
 }
 
 div.mentor-container {

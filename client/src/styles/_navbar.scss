@@ -29,6 +29,8 @@
 
   div.bars {
     margin-left: auto;
+    display: flex;
+    align-items: center;
 
     .fa-bars {
       display: block;

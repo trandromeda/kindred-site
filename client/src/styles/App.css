@@ -238,7 +238,9 @@ div.card-container {
   .navbar span.ed {
     color: #FFFFFF; }
   .navbar div.bars {
-    margin-left: auto; }
+    margin-left: auto;
+    display: flex;
+    align-items: center; }
     .navbar div.bars .fa-bars {
       display: block;
       margin-left: auto;
@@ -475,19 +477,23 @@ div.preview-description {
 
 div.preview-container, div.about-container, div.mentor-container, div.coming-soon, div.how-it-works {
   padding: 5vh 5vw; }
+  div.preview-container h1, div.about-container h1, div.mentor-container h1, div.coming-soon h1, div.how-it-works h1, div.preview-container h2, div.about-container h2, div.mentor-container h2, div.coming-soon h2, div.how-it-works h2 {
+    margin-bottom: 5vh; }
+  div.preview-container p, div.about-container p, div.mentor-container p, div.coming-soon p, div.how-it-works p {
+    margin: 5vh 0; }
   @media (min-width: 600px) {
     div.preview-container, div.about-container, div.mentor-container, div.coming-soon, div.how-it-works {
-      padding: 25px 50px; } }
+      padding: 25px 50px; }
+      div.preview-container h1, div.about-container h1, div.mentor-container h1, div.coming-soon h1, div.how-it-works h1, div.preview-container h2, div.about-container h2, div.mentor-container h2, div.coming-soon h2, div.how-it-works h2 {
+        margin-bottom: 25px; }
+      div.preview-container p, div.about-container p, div.mentor-container p, div.coming-soon p, div.how-it-works p {
+        margin: 25px 0; } }
 
 div.about-container {
   width: 100vw;
   margin-bottom: 50px;
   position: relative;
   box-sizing: border-box; }
-  div.about-container h1 {
-    margin-bottom: 25px; }
-  div.about-container p {
-    margin: 25px 0; }
 
 div.trio-benefits {
   width: 100%;
