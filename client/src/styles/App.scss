@@ -70,6 +70,14 @@ p {
   &.smallest {
     @include font-size(1em, 14px);
   }
+
+  &.verbose {
+    margin: 4vh 0;
+
+    @include desktop {
+      margin: 25px 0;
+    }
+  }
 }
 
 a {
@@ -109,6 +117,40 @@ div.landing {
     background-size: cover;    
   }
 
+// The following chunk is some CSS trickery to create a 'frosted glass' look for landing-scrim
+// Create an element that is nearly identical to .landing-scrim but just a bit smaller, then apply a box-shadow and blur
+  .glass {
+    width: 100%;
+    margin: auto;
+    padding: 3vh $mobile-horizontal-padding;
+    position: absolute;
+    bottom: $bar-height-mobile;
+    border-radius: 5px 5px 0 0;
+    box-sizing: border-box;
+    z-index: 1;
+    overflow: hidden;  
+    filter: blur(25px);
+    background: rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 40px 65px rgba(128,128,128, 0.8);
+
+    h1, p {
+      visibility: hidden;
+    }
+
+    @include desktop {
+      width: $scrim-width - 60px;
+      padding: 25px;
+      bottom: $bar-height-desktop - 20px;
+      left: calc(50% - 245px);      
+    }     
+  }
+
+  @supports ((-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))) {
+    .glass {
+      display: none;
+    }
+  }
+
   .landing-scrim {
     width: 100%;
     margin: auto;
@@ -140,6 +182,11 @@ div.landing {
       margin-bottom: 0;
     }
   }
+
+  .landing-scrim::before {
+    filter: blur(25px);
+  }
+
 }
 
 .flickity-prev-next-button {
@@ -193,15 +240,6 @@ div.preview-description {
     padding: 0;
     padding-left: 25px;
     order: 1;
-
-    p {
-      margin-top: 0;
-    }
-  }
-
-  @media (max-width: 838px) {
-    width: 100%;
-    flex: 1 1 auto;
   } 
 }
 
@@ -212,20 +250,12 @@ div.preview-description {
     margin-bottom: 5vh;
   }
 
-  p {
-    margin: 5vh 0;
-  }
-
   @include desktop {
     padding: 25px 50px;
 
     h1, h2 {
       margin-bottom: 25px;
-    }
-
-    p {
-      margin: 25px 0;
-    }    
+    }  
   }
 }
 
@@ -300,11 +330,8 @@ div.how-it-works {
   }
   
   div.cta {
-    margin: 2vh 0;
-
     @include desktop {
       width: 80%;
-      margin: 25px 0;
     }
   }
 

@@ -48,7 +48,7 @@ class HowItWorks extends Component {
             </div>
           </div>
           <div className="cta">
-            <p>We are building out the Kindred prototype to better show you how the platform works. Sign up for our mailing list to be notified it comes out!</p>
+            <p className="verbose">We are building out the Kindred prototype to better show you how the platform works. Sign up for our mailing list to be notified it comes out!</p>
           </div>                 
         </div>
       )

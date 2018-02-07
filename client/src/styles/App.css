@@ -7,7 +7,7 @@
       height: 80px; } }
 
 .email-bar, div.landing .landing-scrim {
-  background: rgba(50, 219, 196, 0.8); }
+  background: rgba(50, 219, 196, 0.7); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
     .email-bar, div.landing .landing-scrim {
       background-color: rgba(50, 219, 196, 0.5);
@@ -90,7 +90,7 @@
       height: 80px; } }
 
 .email-bar, div.landing .landing-scrim {
-  background: rgba(50, 219, 196, 0.8); }
+  background: rgba(50, 219, 196, 0.7); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
     .email-bar, div.landing .landing-scrim {
       background-color: rgba(50, 219, 196, 0.5);
@@ -115,12 +115,16 @@ div.card-container {
     div.card-container {
       width: 45%; } }
   div.card-container p.teacher-name {
+    margin: 0;
     font-weight: 400;
     color: #32DBC4; }
   div.card-container p.blurb {
-    padding-bottom: 25px; }
+    margin: 1vh 0;
+    padding-bottom: 5vh; }
     @media (min-width: 600px) {
       div.card-container p.blurb {
+        padding-bottom: 50px;
+        margin-top: 10px;
         width: 90%; } }
   div.card-container div.photo {
     width: 100%;
@@ -142,6 +146,8 @@ div.card-container {
     @media (min-width: 600px) {
       div.card-container div.figures {
         font-size: 14px; } }
+    div.card-container div.figures p {
+      margin: 0; }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
 .email-bar, .email-bar .left, .email-bar .right, .navbar {
@@ -151,7 +157,7 @@ div.card-container {
       height: 80px; } }
 
 .email-bar, div.landing .landing-scrim {
-  background: rgba(50, 219, 196, 0.8); }
+  background: rgba(50, 219, 196, 0.7); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
     .email-bar, div.landing .landing-scrim {
       background-color: rgba(50, 219, 196, 0.5);
@@ -211,7 +217,7 @@ div.card-container {
       height: 80px; } }
 
 .email-bar, div.landing .landing-scrim {
-  background: rgba(50, 219, 196, 0.8); }
+  background: rgba(50, 219, 196, 0.7); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
     .email-bar, div.landing .landing-scrim {
       background-color: rgba(50, 219, 196, 0.5);
@@ -298,7 +304,7 @@ div.card-container {
       height: 80px; } }
 
 .email-bar, div.landing .landing-scrim {
-  background: rgba(50, 219, 196, 0.8); }
+  background: rgba(50, 219, 196, 0.7); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
     .email-bar, div.landing .landing-scrim {
       background-color: rgba(50, 219, 196, 0.5);
@@ -373,6 +379,11 @@ p {
     @media (min-width: 600px) {
       p.smallest {
         font-size: 14px; } }
+  p.verbose {
+    margin: 4vh 0; }
+    @media (min-width: 600px) {
+      p.verbose {
+        margin: 25px 0; } }
 
 a {
   font-family: 'Open Sans', sans-serif;
@@ -403,6 +414,30 @@ div.landing {
   div.landing .third {
     background-image: url("../images/terrarium.jpg");
     background-size: cover; }
+  div.landing .glass {
+    width: 100%;
+    margin: auto;
+    padding: 3vh 4vw;
+    position: absolute;
+    bottom: 15vh;
+    border-radius: 5px 5px 0 0;
+    box-sizing: border-box;
+    z-index: 1;
+    overflow: hidden;
+    filter: blur(25px);
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 40px 65px rgba(128, 128, 128, 0.8); }
+    div.landing .glass h1, div.landing .glass p {
+      visibility: hidden; }
+    @media (min-width: 600px) {
+      div.landing .glass {
+        width: 490px;
+        padding: 25px;
+        bottom: 60px;
+        left: calc(50% - 245px); } }
+  @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
+    div.landing .glass {
+      display: none; } }
   div.landing .landing-scrim {
     width: 100%;
     margin: auto;
@@ -425,6 +460,8 @@ div.landing {
       margin-top: 0px; }
     div.landing .landing-scrim p {
       margin-bottom: 0; }
+  div.landing .landing-scrim::before {
+    filter: blur(25px); }
 
 .flickity-prev-next-button {
   display: none; }
@@ -467,27 +504,17 @@ div.preview-description {
     div.preview-description {
       padding: 0;
       padding-left: 25px;
-      order: 1; }
-      div.preview-description p {
-        margin-top: 0; } }
-  @media (max-width: 838px) {
-    div.preview-description {
-      width: 100%;
-      flex: 1 1 auto; } }
+      order: 1; } }
 
 div.preview-container, div.about-container, div.mentor-container, div.coming-soon, div.how-it-works {
   padding: 5vh 5vw; }
   div.preview-container h1, div.about-container h1, div.mentor-container h1, div.coming-soon h1, div.how-it-works h1, div.preview-container h2, div.about-container h2, div.mentor-container h2, div.coming-soon h2, div.how-it-works h2 {
     margin-bottom: 5vh; }
-  div.preview-container p, div.about-container p, div.mentor-container p, div.coming-soon p, div.how-it-works p {
-    margin: 5vh 0; }
   @media (min-width: 600px) {
     div.preview-container, div.about-container, div.mentor-container, div.coming-soon, div.how-it-works {
       padding: 25px 50px; }
       div.preview-container h1, div.about-container h1, div.mentor-container h1, div.coming-soon h1, div.how-it-works h1, div.preview-container h2, div.about-container h2, div.mentor-container h2, div.coming-soon h2, div.how-it-works h2 {
-        margin-bottom: 25px; }
-      div.preview-container p, div.about-container p, div.mentor-container p, div.coming-soon p, div.how-it-works p {
-        margin: 25px 0; } }
+        margin-bottom: 25px; } }
 
 div.about-container {
   width: 100vw;
@@ -537,12 +564,9 @@ div.how-it-works {
   box-sizing: border-box; }
   div.how-it-works h1.title {
     width: 100%; }
-  div.how-it-works div.cta {
-    margin: 2vh 0; }
-    @media (min-width: 600px) {
-      div.how-it-works div.cta {
-        width: 80%;
-        margin: 25px 0; } }
+  @media (min-width: 600px) {
+    div.how-it-works div.cta {
+      width: 80%; } }
   div.how-it-works div.step {
     width: 100%;
     margin: 2vh 0;

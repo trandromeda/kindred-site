@@ -24,10 +24,15 @@ class Landing extends Component {
           <div className="carousel-cell second"></div>
           <div className="carousel-cell third"></div>
         
+          <div className="glass">
+            <h2>Learn from your neighbour</h2>
+            <p>Whether it’s making Maria’s secret spaghetti sauce, practicing Hubert’s six easy steps to tie a tie, or packing colourful bento boxes with Hisami.</p>
+          </div>
           <div className="landing-scrim">
             <h1>Learn from your neighbour</h1>
             <p>Whether it’s making Maria’s secret spaghetti sauce, practicing Hubert’s six easy steps to tie a tie, or packing colourful bento boxes with Hisami.</p>
           </div>
+
 
         <EmailBar />
         </div>
