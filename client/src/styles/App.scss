@@ -219,6 +219,14 @@ div.about-container {
   margin-bottom: 50px;
   position: relative;
   box-sizing: border-box;
+
+  h1 {
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin: 25px 0;
+  }
 }
 
 div.mentor-container {
@@ -231,7 +239,6 @@ div.coming-soon {
 
 div.trio-benefits {
   width: 100%;
-  margin: 5vw 0;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
