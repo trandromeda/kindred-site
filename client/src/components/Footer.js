@@ -13,7 +13,7 @@ class Footer extends Component {
           </div>
 
           <div className="column-2">
-            <a href="/">Blog</a>
+            <a href="https://medium.com/getkindred" target="_blank">Blog</a>
             <a href="/">Contact us</a>
           </div>
 
