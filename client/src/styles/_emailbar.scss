@@ -11,6 +11,7 @@
   .left {
     width: calc((100vw - 550px) / 2);
     @extend %bar-height;
+    position: relative;
     order: 1;
     background: $colour;
   }
@@ -60,6 +61,7 @@
       }
 
       input::placeholder {
+        @include font-size(0.9em, 25px);
         color: white;
       }
 

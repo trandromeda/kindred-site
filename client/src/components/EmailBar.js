@@ -5,16 +5,11 @@ class EmailBar extends Component {
     super(props);
     this.state = {
       inputLevel: 1,
-      submitText: 'Enter',
+      submitText: 'Ok!',
       email: '',
       firstname: '',
       lastname: ''
     }
-  }
-
-  focusTextInput = () => {
-    // Explicitly focus the text input using the raw DOM API
-    this.textInput.focus();
   }
 
   // componentDidMount() {
@@ -81,7 +76,7 @@ class EmailBar extends Component {
           name="email"
           value={this.state.email}
           onChange={this.handleChange}
-          placeholder=" Your email"
+          placeholder="Enter your email to get updates"
           ref={(input) => { this.textInput = input; }}
         />   
       case 2:
@@ -91,7 +86,7 @@ class EmailBar extends Component {
           className="first-name"
           value={this.state.firstname}
           onChange={this.handleChange}
-          placeholder=" What's your first name?"
+          placeholder="What's your first name?"
         />
       case 3:
         return <input 
@@ -100,7 +95,7 @@ class EmailBar extends Component {
           className="last-name"
           value={this.state.lastname}
           onChange={this.handleChange}
-          placeholder=" And last name?"
+          placeholder="And last name?"
         />         
       default:
         return <input 
@@ -108,15 +103,16 @@ class EmailBar extends Component {
           name="done"
           value=''
           onChange={this.handleChange}
-          placeholder=" Thank you!"
+          placeholder="Thank you!"
         /> 
     }
   }
 
   render() {
     const divStyle = this.props.fill ? {backgroundColor: '#32DBC4'} : {backgroundColor: 'transparent'};
+    const submitText = this.state.inputLevel === 1 ? 'Ok!' : 'Enter';
     return (
-        <div className="email-bar" id="email-bar" onClick={this.focusTextInput}>
+        <div className="email-bar" id="email-bar">
           <div className="left"></div>
 
           <div className="mid-section">
@@ -129,7 +125,7 @@ class EmailBar extends Component {
                     {this.renderInput(this.state.inputLevel)}                         
                     <input 
                       type="submit" 
-                      value={this.state.submitText}
+                      value={submitText}
                       className="signup-button" 
                     />
                 </form>
