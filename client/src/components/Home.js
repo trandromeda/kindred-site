@@ -17,12 +17,12 @@ class Home extends Component {
               {lessons}        
             </div>
             <div className="preview-description">
-              <p>
+              <p className="verbose">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et ligula ligula. Nullam pharetra sapien eget magna semper accumsan. Pellentesque lobortis tincidunt gravida. Integer iaculis velit in augue pellentesque, vitae cursus nunc laoreet.
               </p>
             </div>
           </div>
-          <EmailBar />
+          <EmailBar fill={true} />
 
           <HowItWorks />
         </div>

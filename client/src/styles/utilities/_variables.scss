@@ -8,6 +8,7 @@ $yellow: #F2DC5D;
 $blue: #70D6FF;
 $green: #32DBC4;
 $black: #14080E;
+$transparent-background: rgba(50, 219, 196, 0.7);
 
 $left-margin: 25px;
 $mobile-horizontal-padding: 4vw;
@@ -32,5 +33,15 @@ $mobile-horizontal-padding: 4vw;
 
   @include desktop {
     height: $bar-height-desktop;
+  }
+}
+
+%frosted {
+  background: $transparent-background;
+
+  @supports ((-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px))) {
+    background-color: rgba(50, 219, 196, 0.5);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
   }
 }

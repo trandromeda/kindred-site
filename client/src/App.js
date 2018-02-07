@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import Landing from './components/Landing';
 import Home from './components/Home';
 import About from './components/About';
+import Mentor from './components/Mentor';
 import Footer from './components/Footer';
 import ComingSoon from './components/ComingSoon';
 import Contact from './components/Contact';
@@ -31,6 +32,7 @@ class App extends Component {
 
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/mentor" component={Mentor} />
         <Route path="/coming-soon" component={Contact} />
 
         <Footer />

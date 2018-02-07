@@ -6,14 +6,25 @@ class NavBar extends Component {
   render() {
     return (
         <div className="navbar" id="navbar">
-          <Link to="/"><h1 className="logo">Kindr<span className="yellow">ed</span></h1></Link>
+          <div className="nav-element">
+            <Link to="/">
+                <h1 className="logo">Kindr<span className="ed">ed</span></h1>
+            </Link>
+          </div>
+
           <Media query="(min-width: 900px)">
           {matches =>
             matches ? (
               <div className="links">
-                <Link to="/about" className="about">About</Link>
-                <Link to="/coming-soon" className="mentor">Mentor</Link>
-                <Link to="/coming-soon" className="browse">Browse Lessons</Link>
+                <div className="nav-element link">
+                  <Link to="/about" className="about">About</Link>
+                </div>
+                <div className="nav-element link">
+                  <Link to="/mentor" className="mentor">Mentor</Link>
+                </div>
+                <div className="nav-element link">
+                  <Link to="/coming-soon" className="browse">Contact</Link>
+                </div>
               </div>
             ) : (
               <div className='bars'>
@@ -22,6 +33,7 @@ class NavBar extends Component {
             )
           }
           </Media>
+          <div className="divider"></div>          
         </div>
     )
   }
