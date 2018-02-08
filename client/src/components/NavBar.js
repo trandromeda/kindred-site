@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import Media from 'react-media';
+import { slide as Menu } from 'react-burger-menu'
+import BurgerMenu from './Menu';
 
 class NavBar extends Component {
+
   render() {
     return (
         <div className="navbar" id="navbar">
@@ -27,9 +30,7 @@ class NavBar extends Component {
                 </div>
               </div>
             ) : (
-              <div className='bars'>
-              <i className="fas fa-bars"></i>
-              </div>
+              <BurgerMenu />
             )
           }
           </Media>
@@ -40,3 +41,5 @@ class NavBar extends Component {
 }
 
 export default NavBar;
+{/*              <i className="fas fa-bars"></i>
+*/}

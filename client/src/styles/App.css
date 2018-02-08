@@ -238,7 +238,14 @@ div.card-container {
   z-index: 1000;
   box-sizing: border-box;
   background: linear-gradient(rgba(0, 0, 0, 0.25) 30%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.15) 70%, transparent);
-  transition: background 300ms; }
+  transition: background 300ms;
+  /* Position and sizing of burger button */
+  /* Color/shape of burger icon bars */
+  /* Position and sizing of clickable cross button */
+  /* General sidebar styles */
+  /* Morph shape necessary with bubble or elastic */
+  /* Wrapper for item list */
+  /* Styling of overlay */ }
   @media (min-width: 600px) {
     .navbar {
       padding: 0 5vw; } }
@@ -289,6 +296,36 @@ div.card-container {
     @media (min-width: 600px) {
       .navbar a {
         font-size: 24px; } }
+  .navbar .bm-burger-button {
+    position: absolute;
+    width: 36px;
+    height: 30px;
+    right: 36px;
+    top: 35%; }
+  .navbar .bm-burger-bars {
+    background: #FFFFFF; }
+  .navbar .bm-cross-button {
+    height: 10vh !important;
+    width: 10vw !important;
+    top: 1.5vh !important;
+    right: 36px !important; }
+  .navbar .bm-menu {
+    background: rgba(50, 219, 196, 0.97);
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+    box-sizing: border-box !important; }
+  .navbar .bm-morph-shape {
+    fill: #373a47; }
+  .navbar .bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+    box-sizing: border-box !important; }
+    .navbar .bm-item-list a {
+      padding: 3vh 0;
+      color: #FFFFFF; }
+  .navbar .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    left: 0; }
 
 .navbar.scroll {
   background: #FFFFFF;
@@ -303,6 +340,10 @@ div.card-container {
     display: none; }
   .navbar.scroll a {
     color: #000000; }
+  .navbar.scroll .bm-burger-bars {
+    background: #14080E; }
+  .navbar.scroll .bm-item-list a {
+    color: #FFFFFF; }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
 .email-bar, .email-bar .left, .email-bar .right, .navbar {
