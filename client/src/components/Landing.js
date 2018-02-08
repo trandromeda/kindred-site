@@ -2,27 +2,57 @@ import React, { Component } from 'react';
 import EmailBar from './EmailBar';
 import Flickity from 'flickity';
 
+import Painting from '../images/painting.jpg';
+import Lesson from '../images/max_lesson.jpg';
+import Terrarium from '../images/terrarium.jpg';
 
 class Landing extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0,
+      images: [
+        {Painting},
+        {Lesson},
+        {Terrarium}
+      ]
+    }
+  }
+
   componentDidMount() {
-    this.flkty = new Flickity('.landing', {
-      cellAlign: 'left',
-      contain: true,
-      cellSelector: '.carousel-cell',
-      autoPlay: 7000,
-      pauseAutoPlayOnHover: false,
-      wrapAround: true,
-      pageDots: false,
-      fiction: 0.25
+    const self = this;
+    setInterval(function() {
+      self.handleSwitch();
+    }, 6500)
+  };
+
+  componentWillUnmount() {
+    clearInterval();
+  }
+
+  handleSwitch = () => {
+    this.setState((prevState, props) => {
+      if (prevState.count < 2) {
+        return {count: prevState.count + 1};
+      } else {
+        return {count: prevState.count = 0};
+      }
     })
   }
 
   render() {
+    const image = this.state.images[this.state.count];
+    const imageUrl = Object.values(image)[0]
+    const divStyle = {
+      backgroundImage: 'url('+imageUrl+')'
+    }
     return (
         <div className="landing">
-          <div className="carousel-cell first"></div>
-          <div className="carousel-cell second"></div>
-          <div className="carousel-cell third"></div>
+          <div 
+          className="cell"
+          style={divStyle}
+          >
+          </div>
         
           <div className="glass">
             <h2>Learn from your neighbour</h2>
