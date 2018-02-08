@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import EmailBar from './EmailBar';
-import Flickity from 'flickity';
 
 import Painting from '../images/painting.jpg';
 import Lesson from '../images/max_lesson.jpg';
@@ -19,26 +18,37 @@ class Landing extends Component {
     }
   }
 
+  componentWillMount() {
+    this.preloadImages();
+  }
+
   componentDidMount() {
     const self = this;
     setInterval(function() {
       self.handleSwitch();
-    }, 6500)
+    }, 3500)
   };
 
   componentWillUnmount() {
     clearInterval();
   }
 
+  preloadImages = () => {
+    for (let image of this.state.images) {
+      const testImage = new Image(500, 500);
+      testImage.src = Object.values(image)[0];
+    }
+  }
+
   handleSwitch = () => {
     this.setState((prevState, props) => {
-      if (prevState.count < 2) {
+      if (prevState.count < prevState.images.length - 1) {
         return {count: prevState.count + 1};
       } else {
         return {count: prevState.count = 0};
       }
-    })
-  }
+    }
+  )}
 
   render() {
     const image = this.state.images[this.state.count];

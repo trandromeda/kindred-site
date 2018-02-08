@@ -115,6 +115,7 @@ div.landing {
     height: $landing-height;
     position: relative;
     background: 45% 5% / cover no-repeat fixed;
+    background-blend-mode: darken;
     transition: 2.5s;
   }
 

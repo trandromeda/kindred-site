@@ -421,6 +421,7 @@ div.landing {
     height: 100vh;
     position: relative;
     background: 45% 5% / cover no-repeat fixed;
+    background-blend-mode: darken;
     transition: 2.5s; }
   div.landing .glass {
     width: 100%;
