@@ -4,11 +4,7 @@ class EmailBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputLevel: 1,
-      submitText: 'Ok!',
-      email: '',
-      firstname: '',
-      lastname: ''
+      submitText: 'Ok!'
     }
   }
 
@@ -16,56 +12,56 @@ class EmailBar extends Component {
   //   document.getElementById("email").focus();
   // }
 
-  handleChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  }
+  // handleChange = (event) => {
+  //   this.setState({
+  //     [event.target.name]: event.target.value
+  //   });
+  // }
 
-  handleSubmit = (event) => {
-    event.preventDefault();  
+  // handleSubmit = (event) => {
+  //   event.preventDefault();  
 
-    //~ Increment inputLevel, this will control which input we display ~//
-    this.setState((prevState, props) => {
-      if (prevState.inputLevel < 4) {
-        return {inputLevel: prevState.inputLevel + 1};
-      }
-    })
+  //   //~ Increment inputLevel, this will control which input we display ~//
+  //   this.setState((prevState, props) => {
+  //     if (prevprops.emailInputStage < 4) {
+  //       return {inputLevel: prevprops.emailInputStage + 1};
+  //     }
+  //   })
 
-    const data = {
-      email: this.state.email,
-      firstname: this.state.firstname,
-      lastname: this.state.lastname
-    }
+  //   const data = {
+  //     email: this.state.email,
+  //     firstname: this.state.firstname,
+  //     lastname: this.state.lastname
+  //   }
 
-    if (!!data.lastname) {
-      this.subscribe(data);
-    }
-  }
+  //   if (!!data.lastname) {
+  //     this.subscribe(data);
+  //   }
+  // }
 
-  subscribe = (data) => {
-    fetch('/api/subscribe', {
-      method: 'post',
-      body: JSON.stringify(data),
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(function(response) {
-      console.log(response);
-      if (response.status >= 200 && response.status < 300) {
-        return response
-      } else {
-        var error = new Error(response.statusText)
-        error.response = response
-        throw error
-      }      
-    })
-    .catch((err) => {
-      console.log("error", err);
-    });    
-  }
+  // subscribe = (data) => {
+  //   fetch('/api/subscribe', {
+  //     method: 'post',
+  //     body: JSON.stringify(data),
+  //     headers: {
+  //       'Accept': 'application/json',
+  //       'Content-Type': 'application/json'
+  //     }
+  //   })
+  //   .then(function(response) {
+  //     console.log(response);
+  //     if (response.status >= 200 && response.status < 300) {
+  //       return response
+  //     } else {
+  //       var error = new Error(response.statusText)
+  //       error.response = response
+  //       throw error
+  //     }      
+  //   })
+  //   .catch((err) => {
+  //     console.log("error", err);
+  //   });    
+  // }
 
   renderInput = (level) => {
     switch (level) {
@@ -74,8 +70,8 @@ class EmailBar extends Component {
           id="email"
           type="text" 
           name="email"
-          value={this.state.email}
-          onChange={this.handleChange}
+          value={this.props.email}
+          onChange={this.props.handleChange}
           placeholder="Enter your email to get updates"
           ref={(input) => { this.textInput = input; }}
         />   
@@ -84,8 +80,8 @@ class EmailBar extends Component {
           type="text" 
           name="firstname"
           className="first-name"
-          value={this.state.firstname}
-          onChange={this.handleChange}
+          value={this.props.firstname}
+          onChange={this.props.handleChange}
           placeholder="What's your first name?"
         />
       case 3:
@@ -93,8 +89,8 @@ class EmailBar extends Component {
           type="text" 
           name="lastname"
           className="last-name"
-          value={this.state.lastname}
-          onChange={this.handleChange}
+          value={this.props.lastname}
+          onChange={this.props.handleChange}
           placeholder="And last name?"
         />         
       default:
@@ -102,7 +98,7 @@ class EmailBar extends Component {
           type="text" 
           name="done"
           value=''
-          onChange={this.handleChange}
+          onChange={this.props.handleChange}
           placeholder="Thank you!"
         /> 
     }
@@ -110,7 +106,7 @@ class EmailBar extends Component {
 
   render() {
     const divStyle = this.props.fill ? {backgroundColor: '#32DBC4'} : {backgroundColor: 'transparent'};
-    const submitText = this.state.inputLevel === 1 ? 'Ok!' : 'Enter';
+    const submitText = this.props.emailInputStage === 1 ? 'Ok!' : 'Enter';
     return (
         <div className="email-bar" id="email-bar">
           <div className="left"></div>
@@ -121,8 +117,8 @@ class EmailBar extends Component {
               className="middle-middle"
               style={divStyle}
               >
-                <form className="input-box" onSubmit={this.handleSubmit}>
-                    {this.renderInput(this.state.inputLevel)}                         
+                <form className="input-box" onSubmit={this.props.handleSubmit}>
+                    {this.renderInput(this.props.emailInputStage)}                         
                     <input 
                       type="submit" 
                       value={submitText}

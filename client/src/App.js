@@ -86,7 +86,6 @@ class App extends Component {
 
   render() {
     const emailProps = {...this.state};
-    console.log(emailProps);
     return (
       <div className="App">
         <NavBar />
