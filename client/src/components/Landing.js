@@ -1,82 +1,77 @@
 import React, { Component } from 'react';
+import { detect } from 'detect-browser';
 import EmailBar from './EmailBar';
 
 import Painting from '../images/painting.jpg';
 import Lesson from '../images/max_lesson.jpg';
 import Terrarium from '../images/terrarium.jpg';
 
+const browser = detect();
+
 class Landing extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
-      images: [
-        {Painting},
-        {Lesson},
-        {Terrarium}
-      ]
+      count: 0
     }
   }
 
-  componentWillMount() {
-    this.preloadImages();
-  }
-
   componentDidMount() {
-    const self = this;
-    setInterval(function() {
-      self.handleSwitch();
-    }, 3500)
+    console.log(browser.name)
+    if (browser && (
+      browser.name === 'chrome' || 
+      browser.name === 'crios' || 
+      browser.name === 'android')) {
+      const bgImageArrayUrls = [Painting, Lesson, Terrarium], msecs = 6500;
+
+      for (let imgUrl of bgImageArrayUrls) {
+        new Image().src = imgUrl; 
+      }
+      // caches images, avoiding white flash between background replacements
+      // tried using this to fix bug in Safari, doesn't work...      
+
+      const self = this;
+      setInterval(function() {
+        self.transitionBackground(bgImageArrayUrls);
+      }, msecs)
+    }
   };
 
   componentWillUnmount() {
     clearInterval();
   }
 
-  preloadImages = () => {
-    for (let image of this.state.images) {
-      const testImage = new Image(500, 500);
-      testImage.src = Object.values(image)[0];
-    }
-  }
-
-  handleSwitch = () => {
+  transitionBackground = (urls) => {
     this.setState((prevState, props) => {
-      if (prevState.count < prevState.images.length - 1) {
+      if (prevState.count < urls.length - 1) {
         return {count: prevState.count + 1};
       } else {
         return {count: prevState.count = 0};
       }
-    }
-  )}
+    });
+
+    document.documentElement.style.backgroundImage = "url(" + urls[this.state.count] + ")";
+  }
 
   render() {
-    const image = this.state.images[this.state.count];
-    const imageUrl = Object.values(image)[0]
-    const divStyle = {
-      backgroundImage: 'url('+imageUrl+')'
-    }
     return (
-        <div className="landing">
-          <div 
-          className="cell"
-          style={divStyle}
-          >
-          </div>
-        
-          <div className="glass">
-            <h2>Learn from your neighbour</h2>
-            <p>Whether it’s making Maria’s secret spaghetti sauce, practicing Hubert’s six easy steps to tie a tie, or packing colourful bento boxes with Hisami.</p>
-          </div>
-          <div className="landing-scrim">
-            <h1>Learn from your neighbour</h1>
-            <p>Whether it’s making Maria’s secret spaghetti sauce, practicing Hubert’s six easy steps to tie a tie, or packing colourful bento boxes with Hisami.</p>
-          </div>
-
-
-        <EmailBar {...this.props} />
+      <div className="landing">
+        <div className="cell">
         </div>
-      )
+      
+        <div className="glass">
+          <h2>Learn from your neighbour</h2>
+          <p>Whether it’s making Maria’s secret spaghetti sauce, practicing Hubert’s six easy steps to tie a tie, or packing colourful bento boxes with Hisami.</p>
+        </div>
+        <div className="landing-scrim">
+          <h1>Learn from your neighbour</h1>
+          <p>Whether it’s making Maria’s secret spaghetti sauce, practicing Hubert’s six easy steps to tie a tie, or packing colourful bento boxes with Hisami.</p>
+        </div>
+
+
+      <EmailBar {...this.props} />
+      </div>
+    )
   }
 }
 

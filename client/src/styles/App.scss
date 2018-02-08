@@ -26,8 +26,19 @@ Desktop: 40px, 32px, 24px, 16px, 14px;
 Mobile: 2em, 1.6em, 1.4em, 1em;
 */
 
+html {
+  background-image: url('../images/painting.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 45% 5%;
+  background-size: cover;
+  background-blend-mode: darken;
+  -moz-transition: 2.5s;
+  transition: 2.5s;
+}
+
 body {
-  background: #FAFAFA;
+  background: transparent;
 }
 
 
@@ -114,9 +125,10 @@ div.landing {
     width: 100%;
     height: $landing-height;
     position: relative;
-    background: 45% 5% / cover no-repeat fixed;
-    background-blend-mode: darken;
-    transition: 2.5s;
+    background: transparent;
+    // background: 45% 5% / cover no-repeat fixed;
+    // background-blend-mode: darken;
+    // transition: 2.5s;
   }
 
 // The following chunk is some CSS trickery to create a 'frosted glass' look for landing-scrim
@@ -246,6 +258,7 @@ div.preview-description {
 }
 
 %page-layout {
+  background: #FAFAFA;
   padding: 5vh 5vw;
 
   @include desktop {
@@ -256,7 +269,6 @@ div.preview-description {
 div.about-container {
   @extend %page-layout;
   width: 100vw;
-  margin-bottom: 50px;
   position: relative;
   box-sizing: border-box;
 }
@@ -324,6 +336,10 @@ div.team-container {
       margin: 25px 0;
     }
   }
+}
+
+div.contact-container {
+  @extend %page-layout;
 }
 
 div.coming-soon {

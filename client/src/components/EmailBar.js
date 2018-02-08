@@ -50,7 +50,6 @@ class EmailBar extends Component {
   }
 
   render() {
-    const divStyle = this.props.fill ? {backgroundColor: '#32DBC4'} : {backgroundColor: 'transparent'};
     const submitText = this.props.emailInputStage === 1 ? 'Ok!' : 'Enter';
     return (
         <div className="email-bar" id="email-bar">
@@ -58,10 +57,7 @@ class EmailBar extends Component {
 
           <div className="mid-section">
             <div className="middle-top"></div>
-              <div 
-              className="middle-middle"
-              style={divStyle}
-              >
+              <div className="middle-middle">
                 <form className="input-box" onSubmit={this.props.handleSubmit}>
                     {this.renderInput(this.props.emailInputStage)}                         
                     <input 

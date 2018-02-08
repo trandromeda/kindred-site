@@ -22,7 +22,7 @@ class Home extends Component {
               </p>
             </div>
           </div>
-          <EmailBar fill={true} {...this.props} />
+          <EmailBar {...this.props} />
 
           <HowItWorks />
         </div>
