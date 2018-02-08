@@ -113,21 +113,21 @@ div.landing {
     width: 100%;
     height: $landing-height;
     position: relative;
+    background-size: cover;
+    background-position: 50% 0;
   }
 
   .first {
     background-image: url('../images/painting.jpg');
-    background-size: cover;    
+     
   }
 
   .second {
     background-image: url('../images/max_lesson.jpg');
-    background-size: cover;    
   }
 
   .third {
     background-image: url('../images/terrarium.jpg');
-    background-size: cover;    
   }
 
 // The following chunk is some CSS trickery to create a 'frosted glass' look for landing-scrim

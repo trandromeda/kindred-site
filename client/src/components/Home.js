@@ -43,7 +43,7 @@ const mockData = [
     name: 'Italian Cuisine Primer',
     teacher: 'Giorgio I',
     cost: 20,
-    duration: 90,
+    duration: 120,
     desc: 'Make almost any Italian dish from scratch with just these fundamentals',
     img: 'italian.jpg'
   },
@@ -51,7 +51,7 @@ const mockData = [
     name: 'DIY Birthday Cards',
     teacher: 'Andrea N',
     cost: 15,
-    duration: 90,
+    duration: 60,
     desc: 'Hand-made cards will show your loved ones how much you care',
     img: 'card.jpg'
   },
@@ -67,7 +67,7 @@ const mockData = [
     name: 'Budgeting 101',
     teacher: 'Claudia R',
     cost: 10,
-    duration: 90,
+    duration: 60,
     desc: 'Budgeting wisely today will get you closer to your goals in the future',
     img: 'money.jpg'
   },

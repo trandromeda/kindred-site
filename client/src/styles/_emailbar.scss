@@ -61,7 +61,7 @@
       }
 
       input::placeholder {
-        @include font-size(0.9em, 25px);
+        @include font-size(0.8em, 25px);
         color: white;
       }
 
@@ -96,7 +96,7 @@
   }
 }
 
-// Absolute, but leaving it for reference for using this technique
+// Absolete, but leaving it for reference for using this technique
 // %email-bar-template-yellow {
 //   @include email-bar-template($green, $yellow);
 // }
