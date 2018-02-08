@@ -8,61 +8,6 @@ class EmailBar extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   document.getElementById("email").focus();
-  // }
-
-  // handleChange = (event) => {
-  //   this.setState({
-  //     [event.target.name]: event.target.value
-  //   });
-  // }
-
-  // handleSubmit = (event) => {
-  //   event.preventDefault();  
-
-  //   //~ Increment inputLevel, this will control which input we display ~//
-  //   this.setState((prevState, props) => {
-  //     if (prevprops.emailInputStage < 4) {
-  //       return {inputLevel: prevprops.emailInputStage + 1};
-  //     }
-  //   })
-
-  //   const data = {
-  //     email: this.state.email,
-  //     firstname: this.state.firstname,
-  //     lastname: this.state.lastname
-  //   }
-
-  //   if (!!data.lastname) {
-  //     this.subscribe(data);
-  //   }
-  // }
-
-  // subscribe = (data) => {
-  //   fetch('/api/subscribe', {
-  //     method: 'post',
-  //     body: JSON.stringify(data),
-  //     headers: {
-  //       'Accept': 'application/json',
-  //       'Content-Type': 'application/json'
-  //     }
-  //   })
-  //   .then(function(response) {
-  //     console.log(response);
-  //     if (response.status >= 200 && response.status < 300) {
-  //       return response
-  //     } else {
-  //       var error = new Error(response.statusText)
-  //       error.response = response
-  //       throw error
-  //     }      
-  //   })
-  //   .catch((err) => {
-  //     console.log("error", err);
-  //   });    
-  // }
-
   renderInput = (level) => {
     switch (level) {
       case 1:
