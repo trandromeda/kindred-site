@@ -5,7 +5,6 @@
   @extend %bar-height;
   display: flex;
   z-index: 900;
-  box-shadow: 0px 4px 4px -5px rgba(0,0,0,0.9);
   @extend %frosted;
 
   .left {
@@ -54,6 +53,7 @@
         font-size: 24px;
         line-height: 100%;
         color: #FFFFFF;
+        z-index: 9999;
       }
 
       input:focus {
@@ -61,8 +61,10 @@
       }
 
       input::placeholder {
+        vertical-align: middle;
         @include font-size(0.8em, 25px);
-        color: white;
+        color: #FFFFFF;
+        opacity: 1;
       }
 
       input:-webkit-autofill {
@@ -73,6 +75,7 @@
       .signup-button {
         flex: 1 1 auto;
         height: 100%;
+        margin: 0;
         background: $button-color;
         font-family: 'Open Sans Light', sans-serif;
         font-weight: lighter; 

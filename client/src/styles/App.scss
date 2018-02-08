@@ -275,9 +275,15 @@ div.mentor-container {
 
   div.section {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
 
     img {
-      width: 30%;
+      width: 20%;
+    }
+
+    p {
+      width: 60%;
     }
 
     &:nth-child(3) {

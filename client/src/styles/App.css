@@ -17,8 +17,7 @@
 .email-bar {
   width: 100vw;
   display: flex;
-  z-index: 900;
-  box-shadow: 0px 4px 4px -5px rgba(0, 0, 0, 0.9); }
+  z-index: 900; }
   .email-bar .left {
     width: calc((100vw - 550px) / 2);
     position: relative;
@@ -54,12 +53,15 @@
         font-weight: 300;
         font-size: 24px;
         line-height: 100%;
-        color: #FFFFFF; }
+        color: #FFFFFF;
+        z-index: 9999; }
       .email-bar .mid-section .input-box input:focus {
         outline: none; }
       .email-bar .mid-section .input-box input::placeholder {
+        vertical-align: middle;
         font-size: 0.8em;
-        color: white; }
+        color: #FFFFFF;
+        opacity: 1; }
         @media (min-width: 600px) {
           .email-bar .mid-section .input-box input::placeholder {
             font-size: 25px; } }
@@ -69,6 +71,7 @@
       .email-bar .mid-section .input-box .signup-button {
         flex: 1 1 auto;
         height: 100%;
+        margin: 0;
         background: #70D6FF;
         font-family: 'Open Sans Light', sans-serif;
         font-weight: lighter;
@@ -185,12 +188,14 @@ div.card-container {
   .footer-container h1 {
     width: 100%;
     margin-top: 0px;
+    margin-bottom: 3vh;
     display: inline-block;
     text-align: center;
     color: #14080E; }
     @media (min-width: 600px) {
       .footer-container h1 {
         width: auto;
+        margin-bottom: 0;
         flex: 2 1 auto; } }
   .footer-container .column-1, .footer-container .column-2 {
     padding: 0 10px;
@@ -580,9 +585,13 @@ div.about-container {
   box-sizing: border-box; }
 
 div.mentor-container div.section {
-  display: flex; }
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
   div.mentor-container div.section img {
-    width: 30%; }
+    width: 20%; }
+  div.mentor-container div.section p {
+    width: 60%; }
   div.mentor-container div.section:nth-child(3) p {
     padding-left: 5vw; }
 
