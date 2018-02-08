@@ -13,6 +13,10 @@
   // background: rgba(0, 0, 0, 0.15);
   transition: background 300ms;
 
+  @include desktop {
+    padding: 0 5vw;
+  }
+
   h1.logo {
     padding-left: $mobile-horizontal-padding;
     order: 1;

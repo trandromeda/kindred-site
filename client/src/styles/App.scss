@@ -126,9 +126,6 @@ div.landing {
     height: $landing-height;
     position: relative;
     background: transparent;
-    // background: 45% 5% / cover no-repeat fixed;
-    // background-blend-mode: darken;
-    // transition: 2.5s;
   }
 
 // The following chunk is some CSS trickery to create a 'frosted glass' look for landing-scrim
@@ -189,7 +186,7 @@ div.landing {
     }
 
     h1 {
-      margin-top: 0px;
+      margin: 0 0 15px 0;
     }
 
     p {
