@@ -98,18 +98,18 @@
 
   /* Position and sizing of clickable cross button */
   .bm-cross-button {
-    height: 10vh !important;
-    width: 10vw !important;
-    top: 1.5vh !important;
-    right: 36px !important;
+    height: 50px !important;
+    width: 50px !important;
+    top: 15px !important;
+    right: 15px !important;
   }
 
   /* General sidebar styles */
   .bm-menu {
-    background: rgba(50, 219, 196, 0.97);
+    background: rgba(50, 219, 196, 0.9);
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
-    box-sizing: border-box !important;
+    width: 100%;
   }
 
   /* Morph shape necessary with bubble or elastic */

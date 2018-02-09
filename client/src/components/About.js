@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Connect from '../images/tolerance.svg';
+import Share from '../images/chat.svg';
+import Cherish from '../images/photo.svg';
 
 class About extends Component {
   render() {
@@ -12,17 +15,17 @@ class About extends Component {
 
             <div className="trio-benefits">
               <div className="benefit">
-                <i className="fas fa-map"></i>
+                <img src={Connect} alt="Connect" />
                 <h2>Connect</h2>
                 <p>with people from different walks of life</p>
               </div>
               <div className="benefit">
-                <i className="far fa-user-circle"></i>
+                <img src={Share} alt="Connect" />
                 <h2>Share</h2>
                 <p>stories collected gained over a lifetime</p>
               </div>
               <div className="benefit">
-                <i className="far fa-heart"></i>
+                <img src={Cherish} alt="Connect" />
                 <h2>Cherish</h2>
                 <p>new friends, new skills and new memories</p>
               </div>

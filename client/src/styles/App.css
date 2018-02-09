@@ -53,8 +53,7 @@
         font-weight: 300;
         font-size: 24px;
         line-height: 100%;
-        color: #FFFFFF;
-        z-index: 9999; }
+        color: #FFFFFF; }
       .email-bar .mid-section .input-box input:focus {
         outline: none; }
       .email-bar .mid-section .input-box input::placeholder {
@@ -310,15 +309,15 @@ div.card-container {
   .navbar .bm-burger-bars {
     background: #FFFFFF; }
   .navbar .bm-cross-button {
-    height: 10vh !important;
-    width: 10vw !important;
-    top: 1.5vh !important;
-    right: 36px !important; }
+    height: 50px !important;
+    width: 50px !important;
+    top: 15px !important;
+    right: 15px !important; }
   .navbar .bm-menu {
-    background: rgba(50, 219, 196, 0.97);
+    background: rgba(50, 219, 196, 0.9);
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
-    box-sizing: border-box !important; }
+    width: 100%; }
   .navbar .bm-morph-shape {
     fill: #373a47; }
   .navbar .bm-item-list {
@@ -661,6 +660,8 @@ div.trio-benefits {
     div.trio-benefits div.benefit p {
       font-size: 20px;
       text-align: center; }
+    div.trio-benefits div.benefit img {
+      max-width: 70%; }
 
 div.how-it-works {
   width: 100%;
