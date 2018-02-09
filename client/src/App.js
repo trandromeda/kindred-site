@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
-
+import DefaultOGImage from 'images/pans_lesson_og.jpg';
 import './styles/App.css';
 
 import NavBar from 'components/NavBar';
@@ -11,7 +11,6 @@ import Mentor from 'components/Mentor';
 import Footer from 'components/Footer';
 import Contact from 'components/Contact';
 import Team from 'components/Team';
-
 import Helmet from 'components/Helmet';
 
 class App extends Component {
@@ -95,7 +94,7 @@ class App extends Component {
           title="Kindred"
           type="website"
           url="https://getkindred.ca"
-          image=""
+          image={DefaultOGImage}
           description="Kindred is a community for people to learn valuable life skills from retirees through small, in-person group lessons."
         />
 
