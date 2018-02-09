@@ -81,6 +81,10 @@
         font-size: 24px;
         color: white;
         border: none;
+
+        &:hover {
+          opacity: 0.9;
+        }
       }
     }
 

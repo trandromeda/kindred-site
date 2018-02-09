@@ -77,6 +77,8 @@
         font-size: 24px;
         color: white;
         border: none; }
+        .email-bar .mid-section .input-box .signup-button:hover {
+          opacity: 0.9; }
     .email-bar .mid-section .middle-bottom {
       flex-grow: 1;
       background: #F2DC5D; }
