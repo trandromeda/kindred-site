@@ -382,7 +382,7 @@ Desktop: 40px, 32px, 24px, 16px, 14px;
 Mobile: 2em, 1.6em, 1.4em, 1em;
 */
 html {
-  background-image: url("../images/painting.jpg");
+  background-image: url("../images/backgrounds/painting.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 45% 5%;
@@ -586,13 +586,35 @@ div.about-container {
 div.mentor-container div.section {
   display: flex;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  flex-direction: column; }
+  @media (min-width: 600px) {
+    div.mentor-container div.section {
+      flex-direction: row; } }
   div.mentor-container div.section img {
-    width: 20%; }
+    width: 80%; }
+    @media (min-width: 600px) {
+      div.mentor-container div.section img {
+        width: 20%; } }
   div.mentor-container div.section p {
-    width: 60%; }
+    width: 100%; }
+    @media (min-width: 600px) {
+      div.mentor-container div.section p {
+        width: 60%; } }
   div.mentor-container div.section:nth-child(3) p {
     padding-left: 5vw; }
+
+div.mentor-container div.section-two img {
+  order: 2; }
+  @media (min-width: 600px) {
+    div.mentor-container div.section-two img {
+      order: 1; } }
+
+div.mentor-container div.section-two p {
+  order: 1; }
+  @media (min-width: 600px) {
+    div.mentor-container div.section-two p {
+      order: 2; } }
 
 div.team-container {
   display: flex;

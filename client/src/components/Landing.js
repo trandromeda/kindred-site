@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { detect } from 'detect-browser';
 import EmailBar from './EmailBar';
 
-import Painting from '../images/painting.jpg';
-import Lesson from '../images/max_lesson.jpg';
-import Terrarium from '../images/terrarium.jpg';
+import Painting from '../images/backgrounds/painting.jpg';
+import Lesson from '../images/backgrounds/max_lesson.jpg';
+import Terrarium from '../images/backgrounds/terrarium.jpg';
 
 const browser = detect();
 

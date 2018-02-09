@@ -17,7 +17,7 @@ class BurgerMenu extends Component {
 
   render() {
     return (
-      <Menu right isOpen={this.state.visible} customCrossIcon={ <img src={Close} /> } width={ '45%' }>
+      <Menu right isOpen={this.state.visible} customCrossIcon={ <img src={Close} alt="Close" /> } width={ '45%' }>
         <Link to="/" className="home">Home</Link>
         <Link to="/about" className="about">About</Link>
         <Link to="/mentor" className="mentor">Mentor</Link>

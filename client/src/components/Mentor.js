@@ -15,7 +15,7 @@ class Mentor extends Component {
             <img src={MeetingSVG} alt="" />
           </div>
 
-          <div className="section">
+          <div className="section section-two">
             <img src={CookingSVG} alt="" />
             <p className="verbose">We're building tools that will help you set up and plan lessons in a painless and enjoyable way, so that you can spend more time teaching and less time on admin.</p>
           </div>
