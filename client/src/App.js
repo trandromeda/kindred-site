@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
+
 import './styles/App.css';
 
 import NavBar from './components/NavBar';
@@ -10,6 +11,8 @@ import Mentor from './components/Mentor';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
 import Team from './components/Team';
+
+import Helmet from './components/Helmet';
 
 class App extends Component {
   constructor() {
@@ -88,6 +91,14 @@ class App extends Component {
     const emailProps = {...this.state};
     return (
       <div className="App">
+        <Helmet 
+          title="Kindred"
+          type="website"
+          url="https://getkindred.ca"
+          image=""
+          description="Kindred is a community for people to learn valuable life skills from retirees through small, in-person group lessons."
+        />
+
         <NavBar />
         <Landing 
           handleChange={this.handleEmailChange}
