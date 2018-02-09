@@ -311,21 +311,20 @@ div.card-container {
   .navbar .bm-cross-button {
     height: 50px !important;
     width: 50px !important;
-    top: 15px !important;
-    right: 15px !important; }
+    top: 25px !important;
+    right: 28px !important; }
   .navbar .bm-menu {
     background: rgba(50, 219, 196, 0.9);
-    padding: 2.5em 1.5em 0;
+    padding: 5em 1.5em 0;
     font-size: 1.15em;
     width: 100%; }
   .navbar .bm-morph-shape {
     fill: #373a47; }
   .navbar .bm-item-list {
     color: #b8b7ad;
-    padding: 0.8em;
     box-sizing: border-box !important; }
     .navbar .bm-item-list a {
-      padding: 3vh 0;
+      padding: 4vh 0;
       color: #FFFFFF; }
   .navbar .bm-overlay {
     background: rgba(0, 0, 0, 0.3);
@@ -382,6 +381,8 @@ Desktop: 40px, 32px, 24px, 16px, 14px;
 Mobile: 2em, 1.6em, 1.4em, 1em;
 */
 html {
+  width: 100%;
+  height: 100%;
   background-image: url("../images/backgrounds/painting.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;

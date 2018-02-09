@@ -25,7 +25,7 @@ class Mentor extends Component {
             <img src={MoneySVG} alt="" />
           </div>
 
-          <p className="verbose">Join our mailing list to learn when Kindred is open to the public. Wanna be an early adopter? <Link to="/coming-soon" className="browse">Contact us</Link>, we'd love to work with you to build the best learning experiences possible.</p>
+          <p className="verbose">Join our mailing list to learn when Kindred is open to the public. Wanna be an early adopter? <Link to="/contact" className="browse">Contact us</Link>, we'd love to work with you to build the best learning experiences possible.</p>
         </div>
       )
   }
