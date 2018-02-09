@@ -9,8 +9,8 @@
   position: fixed;
   z-index: 1000;
   box-sizing: border-box;
-  background: linear-gradient(rgba(0,0,0,0.25) 30%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.15) 70%, transparent);
-  // background: rgba(0, 0, 0, 0.15);
+  // background: linear-gradient(rgba(0,0,0,0.25) 30%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.15) 70%, transparent);
+  background: rgba(0, 0, 0, 0.15);
   transition: background 300ms;
 
   @include desktop {
@@ -46,13 +46,14 @@
   }
 
   div.divider {
-    width: 90%;
-    height: 1px;
+    width: 100vw;
+    height: 2px;
     margin: auto;
     position: absolute;
     bottom: 0;
-    left: 5%;
-    background: rgba(255,255,255,0.5)
+    left: 0;
+    background: transparent;
+    // background: linear-gradient(90deg, rgba(50, 219, 196, 0.6), rgba(242,220,93,0.6));
   }
 
   div.links {

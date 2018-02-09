@@ -17,7 +17,6 @@ class Landing extends Component {
   }
 
   componentDidMount() {
-    console.log(browser.name)
     if (browser && (
       browser.name === 'chrome' || 
       browser.name === 'crios' || 

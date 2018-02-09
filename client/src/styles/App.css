@@ -241,7 +241,7 @@ div.card-container {
   position: fixed;
   z-index: 1000;
   box-sizing: border-box;
-  background: linear-gradient(rgba(0, 0, 0, 0.25) 30%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.15) 70%, transparent);
+  background: rgba(0, 0, 0, 0.15);
   transition: background 300ms;
   /* Position and sizing of burger button */
   /* Color/shape of burger icon bars */
@@ -273,13 +273,13 @@ div.card-container {
       font-size: 2em;
       color: white; }
   .navbar div.divider {
-    width: 90%;
-    height: 1px;
+    width: 100vw;
+    height: 2px;
     margin: auto;
     position: absolute;
     bottom: 0;
-    left: 5%;
-    background: rgba(255, 255, 255, 0.5); }
+    left: 0;
+    background: transparent; }
   .navbar div.links {
     margin-left: auto;
     display: flex; }
