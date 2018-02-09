@@ -3,16 +3,16 @@ import { Route } from 'react-router-dom'
 
 import './styles/App.css';
 
-import NavBar from './components/NavBar';
-import Landing from './components/Landing';
-import Home from './components/Home';
-import About from './components/About';
-import Mentor from './components/Mentor';
-import Footer from './components/Footer';
-import Contact from './components/Contact';
-import Team from './components/Team';
+import NavBar from 'components/NavBar';
+import Landing from 'components/Landing';
+import Home from 'components/Home';
+import About from 'components/About';
+import Mentor from 'components/Mentor';
+import Footer from 'components/Footer';
+import Contact from 'components/Contact';
+import Team from 'components/Team';
 
-import Helmet from './components/Helmet';
+import Helmet from 'components/Helmet';
 
 class App extends Component {
   constructor() {
