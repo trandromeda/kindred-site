@@ -60,7 +60,7 @@ class EmailBar extends Component {
   render() {
     const submitText = this.props.emailInputStage === 1 ? 'Ok!' : 'Enter';
     return (
-        <div className="email-bar" id="email-bar">
+        <div className="email-bar">
           <div className="left"></div>
 
           <div className="mid-section">

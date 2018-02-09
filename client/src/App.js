@@ -4,7 +4,7 @@ import DefaultOGImage from 'images/pans_lesson_og.jpg';
 import './styles/App.css';
 
 import NavBar from 'components/NavBar';
-import Landing from 'components/Landing';
+import Feature from 'components/Feature';
 import Home from 'components/Home';
 import About from 'components/About';
 import Mentor from 'components/Mentor';
@@ -99,7 +99,7 @@ class App extends Component {
         />
 
         <NavBar />
-        <Landing 
+        <Feature 
           handleChange={this.handleEmailChange}
           handleSubmit={this.handleEmailSubmit}         
           {...emailProps} 

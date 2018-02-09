@@ -8,7 +8,7 @@ import Terrarium from '../images/backgrounds/terrarium.jpg';
 
 const browser = detect();
 
-class Landing extends Component {
+class Feature extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -54,7 +54,7 @@ class Landing extends Component {
 
   render() {
     return (
-      <div className="landing">
+      <div className="feature">
         <div className="cell">
         </div>
       
@@ -62,7 +62,7 @@ class Landing extends Component {
           <h2>Learn from your neighbour</h2>
           <p>Whether it’s making Maria’s secret spaghetti sauce, practicing Hubert’s six easy steps to tie a tie, or packing colourful bento boxes with Hisami.</p>
         </div>
-        <div className="landing-scrim">
+        <div className="feature-scrim">
           <h1>Learn from your neighbour</h1>
           <p>Whether it’s making Maria’s secret spaghetti sauce, practicing Hubert’s six easy steps to tie a tie, or packing colourful bento boxes with Hisami.</p>
         </div>
@@ -74,4 +74,4 @@ class Landing extends Component {
   }
 }
 
-export default Landing;
+export default Feature;

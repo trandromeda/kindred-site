@@ -117,7 +117,16 @@ li {
   font-weight: 300;    
 }
 
-div.landing {
+%page-layout {
+  background: #FAFAFA;
+  padding: 5vh 5vw;
+
+  @include desktop {
+    padding: 25px 50px;
+  }
+}
+
+div.feature {
   width: 100vw;
   height: $landing-height;
   position: relative;
@@ -130,8 +139,8 @@ div.landing {
     background: transparent;
   }
 
-// The following chunk is some CSS trickery to create a 'frosted glass' look for landing-scrim
-// Create an element that is nearly identical to .landing-scrim but just a bit smaller, then apply a box-shadow and blur
+// The following chunk is some CSS trickery to create a 'frosted glass' look for feature-scrim
+// Create an element that is nearly identical to .feature-scrim but just a bit smaller, then apply a box-shadow and blur
   .glass {
     width: 100%;
     margin: auto;
@@ -164,7 +173,7 @@ div.landing {
     }
   }
 
-  .landing-scrim {
+  .feature-scrim {
     width: 100%;
     margin: auto;
     padding: 3vh $mobile-horizontal-padding;
@@ -196,7 +205,7 @@ div.landing {
     }
   }
 
-  .landing-scrim::before {
+  .feature-scrim::before {
     filter: blur(25px);
   }
 
@@ -228,6 +237,18 @@ div.preview-container {
   h1 {
     width: 100%;
   }
+
+  div.preview-description {
+    width: 90%;
+    padding: 4vw;
+    order: 2;
+
+    @include desktop {
+      padding: 0;
+      padding-left: 25px;
+      order: 1;
+    } 
+  }  
 }
 
 div.lesson-container {
@@ -244,32 +265,55 @@ div.lesson-container {
   }
 }
 
-div.preview-description {
-  width: 90%;
-  padding: 4vw;
-  order: 2;
-
-  @include desktop {
-    padding: 0;
-    padding-left: 25px;
-    order: 1;
-  } 
-}
-
-%page-layout {
-  background: #FAFAFA;
-  padding: 5vh 5vw;
-
-  @include desktop {
-    padding: 25px 50px;
-  }
-}
-
 div.about-container {
   @extend %page-layout;
   width: 100vw;
   position: relative;
   box-sizing: border-box;
+
+  div.trio-benefits {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop {
+      flex-wrap: nowrap;
+      flex-direction: row;
+    }
+
+    h2, p {
+      margin: 1vh 0;
+    }
+
+    svg[class*='fa'] {
+      @include font-size(4em, 50px);
+    }
+
+    div.benefit {
+      margin: 1vh 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include desktop {
+        width: 25vw;
+        padding: 20px;
+      }
+
+      p {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      img {
+        max-width: 70%;
+      }
+    }
+  }
 }
 
 div.mentor-container {
@@ -376,54 +420,6 @@ div.team-container {
 
 div.contact-container {
   @extend %page-layout;
-}
-
-div.coming-soon {
-  @extend %page-layout;
-}
-
-div.trio-benefits {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-
-  @include desktop {
-    flex-wrap: nowrap;
-    flex-direction: row;
-  }
-
-  h2, p {
-    margin: 1vh 0;
-  }
-
-  svg[class*='fa'] {
-    @include font-size(4em, 50px);
-  }
-
-  div.benefit {
-    margin: 1vh 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @include desktop {
-      width: 25vw;
-      padding: 20px;
-    }
-
-    p {
-      font-size: 20px;
-      text-align: center;
-    }
-
-    img {
-      max-width: 70%;
-    }
-  }
 }
 
 div.how-it-works {
