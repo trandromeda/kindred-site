@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import SignupSVG from '../images/monitor.svg';
 import SearchSVG from '../images/search-inverse.svg';
@@ -47,10 +46,7 @@ const HowItWorks = () => {
               <li>Lessons may take place at the mentor’s home. We’re working on finding community partners to provide venues!</li>
             </ul>
           </div>
-        </div>
-        <div className="cta">
-          <p className="verbose">We’re working behind the scenes to create the best possible community for you. Our anticipated launch will be in mid to late 2018. Sign up for our newsletter to get an invite to our open beta, or <Link to="/contact">write to us</Link> with your questions and ideas!</p>
-        </div>                 
+        </div>              
       </div>
     )
 }

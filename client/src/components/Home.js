@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import LessonCard from 'components/LessonCard';
 import EmailBar from 'components/EmailBar';
 import HowItWorks from 'components/HowItWorks';
 import withMockData from './mockDataHOC';
-
-import GroupPhoto from 'images/pho_group_square.jpg';
 
 class Home extends Component {
   render() {
@@ -38,6 +37,15 @@ class Home extends Component {
 
           {/* THIRD SECTION */}
           <HowItWorks />
+
+          {/* SECTION DIVIDER */}
+          <div className="section-divider">
+            <h2 className="title">Open beta beginning summer 2018</h2>
+          </div>         
+
+          <div className="cta">
+            <p className="verbose">We’re working behind the scenes to create the best possible community for you. Sign up for our newsletter to get an invite to our open beta, or <Link to="/contact">write to us</Link> with your questions and ideas!</p>
+          </div>   
 
           <EmailBar {...this.props} />
         </div>
@@ -108,5 +116,3 @@ const HomeWithMockData = withMockData(
 );
 
 export default HomeWithMockData;
-
-{/*<img src={GroupPhoto} alt="Kindred group learning how to cook pho" />*/}

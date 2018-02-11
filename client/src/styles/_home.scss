@@ -94,17 +94,6 @@ div.home-container {
       padding-top: 25px;
       background: #FAFAFA;
     }
-    
-    div.cta {
-      width: 100vw;
-      padding: 2vh 4vw;
-      background: #FAFAFA;
-      box-sizing: border-box;
-
-      @include desktop {
-        padding: 0 50px;
-      }
-    }
 
     div.step {
       width: 100vw;
@@ -167,4 +156,27 @@ div.home-container {
       }
     }
   } // end of how-it-works
+  
+  div.cta {
+    height: 100%;
+    width: 100vw;
+    padding: 2vh 4vw;
+    background: #FAFAFA;
+    box-sizing: border-box;
+
+    @include desktop {
+      padding: 0 50px;
+    }
+
+    p {
+      margin: 0;
+      padding: 5vh 4vw;
+      text-align: center;
+
+      @include desktop {
+        padding: 50px 25px;
+      }
+    }
+  }
+
 }
