@@ -16,7 +16,7 @@ div.home-container {
 
     h2 {
       margin: 0;
-      padding: 5vh 0;
+      padding: 5vh 2vw;
       color: $black;
 
       @include desktop {
@@ -64,6 +64,7 @@ div.home-container {
 
   div.lesson-container {
     width: 100%;
+    padding: 0 0 4vh 0;
     order: 1;
     display: flex;
     flex-wrap: wrap;

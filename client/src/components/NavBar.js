@@ -22,7 +22,7 @@ class NavBar extends Component {
                   <Link to="/about" className="about">About</Link>
                 </div>
                 <div className="nav-element link">
-                  <Link to="/mentor" className="mentor">Mentor</Link>
+                  <Link to="/mentor" className="mentor">Be a mentor</Link>
                 </div>
                 <div className="nav-element link">
                   <Link to="/contact" className="contact">Contact</Link>

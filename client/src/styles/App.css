@@ -14,7 +14,7 @@ div.about-container, div.mentor-container, div.team-container, div.contact-conta
       padding: 25px 50px; } }
 
 .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
-  background: rgba(50, 219, 196, 0.7); }
+  background: rgba(50, 219, 196, 0.8); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
     .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
       background-color: rgba(50, 219, 196, 0.5);
@@ -109,7 +109,7 @@ div.about-container, div.mentor-container, div.team-container, div.contact-conta
       padding: 25px 50px; } }
 
 .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
-  background: rgba(50, 219, 196, 0.7); }
+  background: rgba(50, 219, 196, 0.8); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
     .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
       background-color: rgba(50, 219, 196, 0.5);
@@ -190,7 +190,7 @@ div.about-container, div.mentor-container, div.team-container, div.contact-conta
       padding: 25px 50px; } }
 
 .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
-  background: rgba(50, 219, 196, 0.7); }
+  background: rgba(50, 219, 196, 0.8); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
     .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
       background-color: rgba(50, 219, 196, 0.5);
@@ -259,7 +259,7 @@ div.about-container, div.mentor-container, div.team-container, div.contact-conta
       padding: 25px 50px; } }
 
 .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
-  background: rgba(50, 219, 196, 0.7); }
+  background: rgba(50, 219, 196, 0.8); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
     .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
       background-color: rgba(50, 219, 196, 0.5);
@@ -323,6 +323,8 @@ div.about-container, div.mentor-container, div.team-container, div.contact-conta
       box-sizing: border-box; }
   .navbar div.nav-element.link:hover {
     background: #32DBC4; }
+    .navbar div.nav-element.link:hover a {
+      color: #FFFFFF; }
   .navbar a {
     font-size: 1.6em;
     font-family: 'Playfair Display', serif;
@@ -391,7 +393,7 @@ div.about-container, div.mentor-container, div.team-container, div.contact-conta
       padding: 25px 50px; } }
 
 .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
-  background: rgba(50, 219, 196, 0.7); }
+  background: rgba(50, 219, 196, 0.8); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
     .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
       background-color: rgba(50, 219, 196, 0.5);
@@ -409,7 +411,7 @@ div.home-container div.section-divider {
   border-bottom: 5px solid #F2DC5D; }
   div.home-container div.section-divider h2 {
     margin: 0;
-    padding: 5vh 0;
+    padding: 5vh 2vw;
     color: #14080E; }
     @media (min-width: 600px) {
       div.home-container div.section-divider h2 {
@@ -439,6 +441,7 @@ div.home-container div.intro-container {
 
 div.home-container div.lesson-container {
   width: 100%;
+  padding: 0 0 4vh 0;
   order: 1;
   display: flex;
   flex-wrap: wrap;
@@ -529,7 +532,7 @@ div.about-container, div.mentor-container, div.team-container, div.contact-conta
       padding: 25px 50px; } }
 
 .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
-  background: rgba(50, 219, 196, 0.7); }
+  background: rgba(50, 219, 196, 0.8); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
     .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
       background-color: rgba(50, 219, 196, 0.5);
@@ -633,7 +636,11 @@ p {
 
 a {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300; }
+  font-weight: 400;
+  color: #70D6FF;
+  cursor: pointer; }
+  a:hover {
+    color: #32DBC4; }
 
 li {
   font-family: 'Open Sans', sans-serif;

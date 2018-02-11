@@ -73,6 +73,10 @@
 
   div.nav-element.link:hover {
     background: $green;
+
+    a {
+      color: #FFFFFF;
+    }
   }
 
   a {

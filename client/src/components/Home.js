@@ -22,7 +22,7 @@ class Home extends Component {
               Joining Kindred means you can learn from someone who’s passionate about their craft.<br />
               Every interaction is face-to-face, different, and tailored to you.
               </p>
-              <p className="sneak-peek-description">Here’s a sneak peek at what you can find on the platform once we launch:</p>
+              <p className="sneak-peek-description">Here’s a sneak peek at what you can find once we launch:</p>
             </div>
           </div>
 
