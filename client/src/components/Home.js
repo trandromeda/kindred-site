@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
-import LessonCard from './LessonCard';
-import EmailBar from './EmailBar';
-import HowItWorks from './HowItWorks';
+import LessonCard from 'components/LessonCard';
+import EmailBar from 'components/EmailBar';
+import HowItWorks from 'components/HowItWorks';
 import withMockData from './mockDataHOC';
+
+import GroupPhoto from 'images/pho_group_square.jpg';
 
 class Home extends Component {
   render() {
@@ -11,20 +13,33 @@ class Home extends Component {
       <LessonCard key={i} data={lesson} />
       )
     return (
-        <div className="home">
-          <div className="preview-container">
-            <div className="lesson-container">
-              {lessons}        
-            </div>
-            <div className="preview-description">
+        <div className="home-container">
+          {/* FIRST SECTION */}
+          <div className="intro-container">
+            <div className="intro-description">
+              <h2 className="title">Returning authenticity to the way people connect</h2>
               <p className="verbose">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et ligula ligula. Nullam pharetra sapien eget magna semper accumsan. Pellentesque lobortis tincidunt gravida. Integer iaculis velit in augue pellentesque, vitae cursus nunc laoreet.
+              Joining Kindred means you can learn from someone who’s passionate about their craft.<br />
+              Every interaction is face-to-face, different, and tailored to you.
               </p>
+              <p className="sneak-peek-description">Here’s a sneak peek at what you can find on the platform once we launch:</p>
             </div>
           </div>
-          <EmailBar {...this.props} />
 
+          {/* SECOND SECTION */}
+          <div className="lesson-container">
+            {lessons}        
+          </div>
+
+          {/* SECTION DIVIDER */}
+          <div className="section-divider">
+            <h2 className="title">Every connection through Kindred is a unique learning experience</h2>
+          </div>
+
+          {/* THIRD SECTION */}
           <HowItWorks />
+
+          <EmailBar {...this.props} />
         </div>
       )
   }
@@ -33,6 +48,7 @@ class Home extends Component {
 const mockData = [
   {
     name: 'Sushi Rolling',
+    category: 'Food',
     teacher: 'Hisami K',
     cost: 15,
     duration: 90,
@@ -40,7 +56,17 @@ const mockData = [
     img: 'sushi.jpg'
   },
   {
+    name: 'Budgeting 101',
+    category: 'Finance',
+    teacher: 'Claudia R',
+    cost: 10,
+    duration: 60,
+    desc: 'Budgeting wisely today will get you closer to your goals in the future',
+    img: 'money.jpg'
+  },  
+  {
     name: 'Italian Cuisine Primer',
+    category: 'Food',
     teacher: 'Giorgio I',
     cost: 20,
     duration: 120,
@@ -49,6 +75,7 @@ const mockData = [
   },
   {
     name: 'DIY Birthday Cards',
+    category: 'Arts & Crafts',
     teacher: 'Andrea N',
     cost: 15,
     duration: 60,
@@ -57,6 +84,7 @@ const mockData = [
   },
   {
     name: 'Meal Prep like a Pro',
+    category: 'Food',
     teacher: 'Pan D',
     cost: 15,
     duration: 90,
@@ -64,15 +92,8 @@ const mockData = [
     img: 'meal_prep.jpg'
   },
   {
-    name: 'Budgeting 101',
-    teacher: 'Claudia R',
-    cost: 10,
-    duration: 60,
-    desc: 'Budgeting wisely today will get you closer to your goals in the future',
-    img: 'money.jpg'
-  },
-  {
     name: 'As-tu parler le francais?',
+    category: 'Language',
     teacher: 'Hubert D',
     cost: 10,
     duration: 90,
@@ -87,3 +108,5 @@ const HomeWithMockData = withMockData(
 );
 
 export default HomeWithMockData;
+
+{/*<img src={GroupPhoto} alt="Kindred group learning how to cook pho" />*/}

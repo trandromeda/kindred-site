@@ -22,7 +22,7 @@ class About extends Component {
               <div className="benefit">
                 <img src={Share} alt="Connect" />
                 <h2>Share</h2>
-                <p>stories collected gained over a lifetime</p>
+                <p>stories gained over a lifetime</p>
               </div>
               <div className="benefit">
                 <img src={Cherish} alt="Connect" />

@@ -110,10 +110,3 @@
 .email-bar {
   @include email-bar-template($yellow, $blue);
 }
-
-.landing {
-  .email-bar {
-    position: absolute;
-    bottom: 0;
-  }
-}

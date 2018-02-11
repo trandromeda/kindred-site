@@ -1,35 +1,35 @@
 import React from 'react';
 import SignupSVG from '../images/monitor.svg';
-import SearchSVG from '../images/search.svg';
+import SearchSVG from '../images/search-inverse.svg';
 import MeetUpSVG from '../images/talking.svg';
 
 const HowItWorks = () => {
   return (
       <div className='how-it-works'>
-        <h1 className='title'>How It'll Work</h1>
+        <h1 className='title'>How It Works</h1>
         <div className='step'>
           <div className="icon">
             <h2>Setup</h2>
             <img src={SignupSVG} alt='Monitor' />
           </div>
           <div className="step-description">
-            <p>Quickly build your profile with our guided walkthrough</p>
+            <p>Quickly create your profile with our guided walkthrough</p>
             <ul>
-              <li>Tip 1</li>
-              <li>Tip 2</li>
+              <li>You’ll be able to connect using Facebook or Google for easy one-click signup</li>
+              <li>Everyone joining Kindred will be verified, so you can feel comfortable meeting new people</li>
             </ul>
           </div>
         </div>
-        <div className='step'>
+        <div className='step connect'>
           <div className="icon">
             <h2>Connect</h2>
             <img src={SearchSVG} alt='Search Bar' />
           </div>
           <div className="step-description">
-            <p>Can't find what you're looking for? Kindred will create a Lesson Request, bringing in potential teachers</p>
+            <p>Search or browse lessons online, then sign up for a class you like. If you’ve used Airbnb, it’s a similar process</p>
             <ul>
-              <li>Tip 1</li>
-              <li>Tip 2</li>
+              <li>Don’t find what you’re looking for? Kindred automatically creates an 'Ask’ based on your search query</li>
+              <li>Mentors can view all Asks and see where demand is greatest</li>
             </ul>
           </div>
         </div>
@@ -39,10 +39,10 @@ const HowItWorks = () => {
             <img src={MeetUpSVG} alt='People meeting in person' />
           </div>
           <div className="step-description">
-            <p>After getting approved, meet new people for an interactive learning experience</p>
+            <p>After a mentor confirms your request, meet in person on the scheduled date</p>
             <ul>
-              <li>Tip 1</li>
-              <li>Tip 2</li>
+              <li>You’ll be joined by fellow learners in a cozy group setting</li>
+              <li>Lessons may take place at the mentor’s home. We’re working on finding community partners to provide venues!</li>
             </ul>
           </div>
         </div>

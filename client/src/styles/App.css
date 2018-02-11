@@ -6,10 +6,17 @@
     .email-bar, .email-bar .left, .email-bar .right, .navbar {
       height: 80px; } }
 
-.email-bar, div.feature .feature-scrim {
+div.about-container, div.mentor-container, div.team-container, div.contact-container {
+  background: #FAFAFA;
+  padding: 5vh 5vw; }
+  @media (min-width: 600px) {
+    div.about-container, div.mentor-container, div.team-container, div.contact-container {
+      padding: 25px 50px; } }
+
+.email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
   background: rgba(50, 219, 196, 0.7); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
-    .email-bar, div.feature .feature-scrim {
+    .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
       background-color: rgba(50, 219, 196, 0.5);
       -webkit-backdrop-filter: blur(15px);
       backdrop-filter: blur(15px); } }
@@ -87,10 +94,6 @@
     order: 3;
     background: #F2DC5D; }
 
-.landing .email-bar {
-  position: absolute;
-  bottom: 0; }
-
 /* NOTE: The menu transform has a different breakpoint, 900px */
 .email-bar, .email-bar .left, .email-bar .right, .navbar {
   height: 15vh; }
@@ -98,10 +101,17 @@
     .email-bar, .email-bar .left, .email-bar .right, .navbar {
       height: 80px; } }
 
-.email-bar, div.feature .feature-scrim {
+div.about-container, div.mentor-container, div.team-container, div.contact-container {
+  background: #FAFAFA;
+  padding: 5vh 5vw; }
+  @media (min-width: 600px) {
+    div.about-container, div.mentor-container, div.team-container, div.contact-container {
+      padding: 25px 50px; } }
+
+.email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
   background: rgba(50, 219, 196, 0.7); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
-    .email-bar, div.feature .feature-scrim {
+    .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
       background-color: rgba(50, 219, 196, 0.5);
       -webkit-backdrop-filter: blur(15px);
       backdrop-filter: blur(15px); } }
@@ -123,6 +133,13 @@ div.card-container {
   @media (min-width: 600px) and (max-width: 799px) {
     div.card-container {
       width: 45%; } }
+  div.card-container p.category {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600; }
+    @media (min-width: 600px) {
+      div.card-container p.category {
+        font-size: 14px; } }
   div.card-container p.teacher-name {
     margin: 0;
     font-weight: 400;
@@ -165,10 +182,17 @@ div.card-container {
     .email-bar, .email-bar .left, .email-bar .right, .navbar {
       height: 80px; } }
 
-.email-bar, div.feature .feature-scrim {
+div.about-container, div.mentor-container, div.team-container, div.contact-container {
+  background: #FAFAFA;
+  padding: 5vh 5vw; }
+  @media (min-width: 600px) {
+    div.about-container, div.mentor-container, div.team-container, div.contact-container {
+      padding: 25px 50px; } }
+
+.email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
   background: rgba(50, 219, 196, 0.7); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
-    .email-bar, div.feature .feature-scrim {
+    .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
       background-color: rgba(50, 219, 196, 0.5);
       -webkit-backdrop-filter: blur(15px);
       backdrop-filter: blur(15px); } }
@@ -227,10 +251,17 @@ div.card-container {
     .email-bar, .email-bar .left, .email-bar .right, .navbar {
       height: 80px; } }
 
-.email-bar, div.feature .feature-scrim {
+div.about-container, div.mentor-container, div.team-container, div.contact-container {
+  background: #FAFAFA;
+  padding: 5vh 5vw; }
+  @media (min-width: 600px) {
+    div.about-container, div.mentor-container, div.team-container, div.contact-container {
+      padding: 25px 50px; } }
+
+.email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
   background: rgba(50, 219, 196, 0.7); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
-    .email-bar, div.feature .feature-scrim {
+    .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
       background-color: rgba(50, 219, 196, 0.5);
       -webkit-backdrop-filter: blur(15px);
       backdrop-filter: blur(15px); } }
@@ -258,12 +289,12 @@ div.card-container {
   .navbar h1.logo {
     padding-left: 4vw;
     order: 1;
-    color: #FFFFFF; }
+    color: #32DBC4; }
     @media (min-width: 600px) {
       .navbar h1.logo {
         padding-left: 25px; } }
   .navbar span.ed {
-    color: #FFFFFF; }
+    color: #F2DC5D; }
   .navbar div.bars {
     margin-left: auto;
     display: flex;
@@ -275,13 +306,12 @@ div.card-container {
       font-size: 2em;
       color: white; }
   .navbar div.divider {
-    width: 100vw;
+    width: 90%;
     height: 2px;
     margin: auto;
     position: absolute;
     bottom: 0;
-    left: 0;
-    background: transparent; }
+    left: %; }
   .navbar div.links {
     margin-left: auto;
     display: flex; }
@@ -335,10 +365,6 @@ div.card-container {
 .navbar.scroll {
   background: #FFFFFF;
   box-shadow: 0px 4px 4px -5px rgba(0, 0, 0, 0.9); }
-  .navbar.scroll h1.logo {
-    color: #32DBC4; }
-    .navbar.scroll h1.logo span.ed {
-      color: #F2DC5D; }
   .navbar.scroll div.bars .fa-bars {
     color: #14080E; }
   .navbar.scroll div.divider {
@@ -357,10 +383,155 @@ div.card-container {
     .email-bar, .email-bar .left, .email-bar .right, .navbar {
       height: 80px; } }
 
-.email-bar, div.feature .feature-scrim {
+div.about-container, div.mentor-container, div.team-container, div.contact-container {
+  background: #FAFAFA;
+  padding: 5vh 5vw; }
+  @media (min-width: 600px) {
+    div.about-container, div.mentor-container, div.team-container, div.contact-container {
+      padding: 25px 50px; } }
+
+.email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
   background: rgba(50, 219, 196, 0.7); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
-    .email-bar, div.feature .feature-scrim {
+    .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
+      background-color: rgba(50, 219, 196, 0.5);
+      -webkit-backdrop-filter: blur(15px);
+      backdrop-filter: blur(15px); } }
+
+div.home-container div.section-divider {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  background: white;
+  border-top: 5px solid #32DBC4;
+  border-bottom: 5px solid #F2DC5D; }
+  div.home-container div.section-divider h2 {
+    margin: 0;
+    padding: 5vh 0;
+    color: #14080E; }
+    @media (min-width: 600px) {
+      div.home-container div.section-divider h2 {
+        padding: 30px 0; } }
+
+div.home-container div.intro-container {
+  padding: 35px 0 10px 0;
+  display: flex;
+  justify-content: center;
+  background: #FAFAFA; }
+  div.home-container div.intro-container h2 {
+    width: 100%; }
+  div.home-container div.intro-container img {
+    object-fit: cover;
+    width: 30%;
+    height: 30%; }
+  div.home-container div.intro-container p {
+    text-align: center; }
+  div.home-container div.intro-container p.sneak-peek-description {
+    font-weight: 400;
+    color: #32DBC4; }
+  div.home-container div.intro-container div.intro-description {
+    width: 90%; }
+    @media (min-width: 600px) {
+      div.home-container div.intro-container div.intro-description {
+        padding: 0; } }
+
+div.home-container div.lesson-container {
+  width: 100%;
+  order: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #FAFAFA; }
+  @media (min-width: 600px) {
+    div.home-container div.lesson-container {
+      padding: 0 25px 25px 25px; } }
+
+div.home-container div.how-it-works {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background: transparent;
+  box-sizing: border-box; }
+  div.home-container div.how-it-works h1.title {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    padding-top: 25px;
+    background: #FAFAFA; }
+  div.home-container div.how-it-works div.cta {
+    width: 100vw;
+    padding: 2vh 4vw;
+    background: #FAFAFA;
+    box-sizing: border-box; }
+    @media (min-width: 600px) {
+      div.home-container div.how-it-works div.cta {
+        padding: 0 50px; } }
+  div.home-container div.how-it-works div.step {
+    width: 100vw;
+    padding: 2vh 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FAFAFA;
+    box-sizing: border-box; }
+    @media (min-width: 600px) {
+      div.home-container div.how-it-works div.step {
+        padding: 25px 50px;
+        flex-direction: row; } }
+    div.home-container div.how-it-works div.step div.icon {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      @media (min-width: 600px) {
+        div.home-container div.how-it-works div.step div.icon {
+          width: 40%; } }
+      div.home-container div.how-it-works div.step div.icon h2 {
+        margin-bottom: 15px; }
+      div.home-container div.how-it-works div.step div.icon img {
+        width: 50%; }
+    div.home-container div.how-it-works div.step div.step-description {
+      width: 100%;
+      margin-top: 2vh; }
+      @media (min-width: 600px) {
+        div.home-container div.how-it-works div.step div.step-description {
+          width: 60%;
+          margin-top: 0; } }
+      div.home-container div.how-it-works div.step div.step-description p {
+        width: 100%;
+        display: block; }
+      div.home-container div.how-it-works div.step div.step-description li {
+        font-size: 1.2em; }
+        @media (min-width: 600px) {
+          div.home-container div.how-it-works div.step div.step-description li {
+            font-size: 20px; } }
+  div.home-container div.how-it-works div.step.connect h2, div.home-container div.how-it-works div.step.connect p, div.home-container div.how-it-works div.step.connect li {
+    color: #FFFFFF; }
+
+/* NOTE: The menu transform has a different breakpoint, 900px */
+.email-bar, .email-bar .left, .email-bar .right, .navbar {
+  height: 15vh; }
+  @media (min-width: 600px) {
+    .email-bar, .email-bar .left, .email-bar .right, .navbar {
+      height: 80px; } }
+
+div.about-container, div.mentor-container, div.team-container, div.contact-container {
+  background: #FAFAFA;
+  padding: 5vh 5vw; }
+  @media (min-width: 600px) {
+    div.about-container, div.mentor-container, div.team-container, div.contact-container {
+      padding: 25px 50px; } }
+
+.email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
+  background: rgba(50, 219, 196, 0.7); }
+  @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
+    .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
       background-color: rgba(50, 219, 196, 0.5);
       -webkit-backdrop-filter: blur(15px);
       backdrop-filter: blur(15px); } }
@@ -472,13 +643,6 @@ li {
     li {
       font-size: 24px; } }
 
-div.preview-container, div.about-container, div.mentor-container, div.team-container, div.contact-container, div.how-it-works {
-  background: #FAFAFA;
-  padding: 5vh 5vw; }
-  @media (min-width: 600px) {
-    div.preview-container, div.about-container, div.mentor-container, div.team-container, div.contact-container, div.how-it-works {
-      padding: 25px 50px; } }
-
 div.feature {
   width: 100vw;
   height: 100vh;
@@ -537,48 +701,9 @@ div.feature {
       margin-bottom: 0; }
   div.feature .feature-scrim::before {
     filter: blur(25px); }
-
-.flickity-prev-next-button {
-  display: none; }
-  @media (min-width: 600px) {
-    .flickity-prev-next-button {
-      width: 100px;
-      height: 100px;
-      display: block;
-      background: transparent; } }
-
-div.preview-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background: #FAFAFA; }
-  @media (min-width: 600px) {
-    div.preview-container {
-      padding: 25px; } }
-  div.preview-container h1 {
-    width: 100%; }
-  div.preview-container div.preview-description {
-    width: 90%;
-    padding: 4vw;
-    order: 2; }
-    @media (min-width: 600px) {
-      div.preview-container div.preview-description {
-        padding: 0;
-        padding-left: 25px;
-        order: 1; } }
-
-div.lesson-container {
-  width: 100%;
-  order: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  box-sizing: border-box; }
-  @media (min-width: 600px) {
-    div.lesson-container {
-      width: 85%;
-      order: 2; } }
+  div.feature .email-bar {
+    position: absolute;
+    bottom: 0; }
 
 div.about-container {
   width: 100vw;
@@ -685,45 +810,3 @@ div.team-container {
     @media (min-width: 600px) {
       div.team-container .section-group {
         margin: 25px 0; } }
-
-div.how-it-works {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  box-sizing: border-box; }
-  div.how-it-works h1.title {
-    width: 100%; }
-  @media (min-width: 600px) {
-    div.how-it-works div.cta {
-      width: 90%; } }
-  div.how-it-works div.step {
-    width: 100%;
-    margin: 2vh 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    @media (min-width: 600px) {
-      div.how-it-works div.step {
-        width: 80%;
-        flex-direction: row; } }
-    div.how-it-works div.step div.icon {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-      @media (min-width: 600px) {
-        div.how-it-works div.step div.icon {
-          width: 40%; } }
-      div.how-it-works div.step div.icon img {
-        width: 50%; }
-    div.how-it-works div.step div.step-description {
-      width: 100%; }
-      @media (min-width: 600px) {
-        div.how-it-works div.step div.step-description {
-          width: 60%; } }
-      div.how-it-works div.step div.step-description p {
-        width: 100%;
-        display: block; }

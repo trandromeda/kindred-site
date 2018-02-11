@@ -25,6 +25,12 @@ div.card-container {
     width: 45%;
   } 
 
+  p.category {
+    @include font-size(1em, 14px);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
   p.teacher-name {
     margin: 0;
     font-weight: 400;

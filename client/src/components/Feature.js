@@ -60,11 +60,11 @@ class Feature extends Component {
       
         <div className="glass">
           <h2>Learn from your neighbour</h2>
-          <p>Whether it’s making Maria’s secret spaghetti sauce, practicing Hubert’s six easy steps to tie a tie, or packing colourful bento boxes with Hisami.</p>
+          <p>... whether it’s making Maria’s secret spaghetti sauce, practicing Hubert’s six easy steps to tie a tie, or packing colourful bento boxes with Hisami.</p>
         </div>
         <div className="feature-scrim">
           <h1>Learn from your neighbour</h1>
-          <p>Whether it’s making Maria’s secret spaghetti sauce, practicing Hubert’s six easy steps to tie a tie, or packing colourful bento boxes with Hisami.</p>
+          <p>... whether it’s making Maria’s secret spaghetti sauce, practicing Hubert’s six easy steps to tie a tie, or packing colourful bento boxes with Hisami.</p>
         </div>
 
 

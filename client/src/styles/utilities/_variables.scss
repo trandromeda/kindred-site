@@ -29,12 +29,24 @@ $mobile-horizontal-padding: 4vw;
   }
 }
 
+@mixin transparent-background($transparency) {
+  background: rgba(50, 219, 196, $transparency);
+}
 
 %bar-height {
   height: $bar-height-mobile;
 
   @include desktop {
     height: $bar-height-desktop;
+  }
+}
+
+%page-layout {
+  background: #FAFAFA;
+  padding: 5vh 5vw;
+
+  @include desktop {
+    padding: 25px 50px;
   }
 }
 
