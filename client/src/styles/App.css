@@ -6,10 +6,17 @@
     .email-bar, .email-bar .left, .email-bar .right, .navbar {
       height: 80px; } }
 
-.email-bar, div.landing .landing-scrim {
-  background: rgba(50, 219, 196, 0.7); }
+div.about-container, div.mentor-container, div.team-container, div.contact-container {
+  background: #FAFAFA;
+  padding: 5vh 5vw; }
+  @media (min-width: 600px) {
+    div.about-container, div.mentor-container, div.team-container, div.contact-container {
+      padding: 25px 50px; } }
+
+.email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
+  background: rgba(50, 219, 196, 0.8); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
-    .email-bar, div.landing .landing-scrim {
+    .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
       background-color: rgba(50, 219, 196, 0.5);
       -webkit-backdrop-filter: blur(15px);
       backdrop-filter: blur(15px); } }
@@ -17,8 +24,7 @@
 .email-bar {
   width: 100vw;
   display: flex;
-  z-index: 900;
-  box-shadow: 0px 4px 4px -5px rgba(0, 0, 0, 0.9); }
+  z-index: 900; }
   .email-bar .left {
     width: calc((100vw - 550px) / 2);
     position: relative;
@@ -58,8 +64,10 @@
       .email-bar .mid-section .input-box input:focus {
         outline: none; }
       .email-bar .mid-section .input-box input::placeholder {
+        vertical-align: middle;
         font-size: 0.8em;
-        color: white; }
+        color: #FFFFFF;
+        opacity: 1; }
         @media (min-width: 600px) {
           .email-bar .mid-section .input-box input::placeholder {
             font-size: 25px; } }
@@ -69,12 +77,15 @@
       .email-bar .mid-section .input-box .signup-button {
         flex: 1 1 auto;
         height: 100%;
+        margin: 0;
         background: #70D6FF;
         font-family: 'Open Sans Light', sans-serif;
         font-weight: lighter;
         font-size: 24px;
         color: white;
         border: none; }
+        .email-bar .mid-section .input-box .signup-button:hover {
+          opacity: 0.9; }
     .email-bar .mid-section .middle-bottom {
       flex-grow: 1;
       background: #F2DC5D; }
@@ -83,10 +94,6 @@
     order: 3;
     background: #F2DC5D; }
 
-.landing .email-bar {
-  position: absolute;
-  bottom: 0; }
-
 /* NOTE: The menu transform has a different breakpoint, 900px */
 .email-bar, .email-bar .left, .email-bar .right, .navbar {
   height: 15vh; }
@@ -94,10 +101,17 @@
     .email-bar, .email-bar .left, .email-bar .right, .navbar {
       height: 80px; } }
 
-.email-bar, div.landing .landing-scrim {
-  background: rgba(50, 219, 196, 0.7); }
+div.about-container, div.mentor-container, div.team-container, div.contact-container {
+  background: #FAFAFA;
+  padding: 5vh 5vw; }
+  @media (min-width: 600px) {
+    div.about-container, div.mentor-container, div.team-container, div.contact-container {
+      padding: 25px 50px; } }
+
+.email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
+  background: rgba(50, 219, 196, 0.8); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
-    .email-bar, div.landing .landing-scrim {
+    .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
       background-color: rgba(50, 219, 196, 0.5);
       -webkit-backdrop-filter: blur(15px);
       backdrop-filter: blur(15px); } }
@@ -119,6 +133,13 @@ div.card-container {
   @media (min-width: 600px) and (max-width: 799px) {
     div.card-container {
       width: 45%; } }
+  div.card-container p.category {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600; }
+    @media (min-width: 600px) {
+      div.card-container p.category {
+        font-size: 14px; } }
   div.card-container p.teacher-name {
     margin: 0;
     font-weight: 400;
@@ -161,10 +182,17 @@ div.card-container {
     .email-bar, .email-bar .left, .email-bar .right, .navbar {
       height: 80px; } }
 
-.email-bar, div.landing .landing-scrim {
-  background: rgba(50, 219, 196, 0.7); }
+div.about-container, div.mentor-container, div.team-container, div.contact-container {
+  background: #FAFAFA;
+  padding: 5vh 5vw; }
+  @media (min-width: 600px) {
+    div.about-container, div.mentor-container, div.team-container, div.contact-container {
+      padding: 25px 50px; } }
+
+.email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
+  background: rgba(50, 219, 196, 0.8); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
-    .email-bar, div.landing .landing-scrim {
+    .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
       background-color: rgba(50, 219, 196, 0.5);
       -webkit-backdrop-filter: blur(15px);
       backdrop-filter: blur(15px); } }
@@ -185,12 +213,14 @@ div.card-container {
   .footer-container h1 {
     width: 100%;
     margin-top: 0px;
+    margin-bottom: 3vh;
     display: inline-block;
     text-align: center;
     color: #14080E; }
     @media (min-width: 600px) {
       .footer-container h1 {
         width: auto;
+        margin-bottom: 0;
         flex: 2 1 auto; } }
   .footer-container .column-1, .footer-container .column-2 {
     padding: 0 10px;
@@ -221,10 +251,17 @@ div.card-container {
     .email-bar, .email-bar .left, .email-bar .right, .navbar {
       height: 80px; } }
 
-.email-bar, div.landing .landing-scrim {
-  background: rgba(50, 219, 196, 0.7); }
+div.about-container, div.mentor-container, div.team-container, div.contact-container {
+  background: #FAFAFA;
+  padding: 5vh 5vw; }
+  @media (min-width: 600px) {
+    div.about-container, div.mentor-container, div.team-container, div.contact-container {
+      padding: 25px 50px; } }
+
+.email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
+  background: rgba(50, 219, 196, 0.8); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
-    .email-bar, div.landing .landing-scrim {
+    .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
       background-color: rgba(50, 219, 196, 0.5);
       -webkit-backdrop-filter: blur(15px);
       backdrop-filter: blur(15px); } }
@@ -237,17 +274,27 @@ div.card-container {
   position: fixed;
   z-index: 1000;
   box-sizing: border-box;
-  background: linear-gradient(rgba(0, 0, 0, 0.25) 30%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.15) 70%, transparent);
-  transition: background 300ms; }
+  background: rgba(0, 0, 0, 0.15);
+  transition: background 300ms;
+  /* Position and sizing of burger button */
+  /* Color/shape of burger icon bars */
+  /* Position and sizing of clickable cross button */
+  /* General sidebar styles */
+  /* Morph shape necessary with bubble or elastic */
+  /* Wrapper for item list */
+  /* Styling of overlay */ }
+  @media (min-width: 600px) {
+    .navbar {
+      padding: 0 5vw; } }
   .navbar h1.logo {
     padding-left: 4vw;
     order: 1;
-    color: #FFFFFF; }
+    color: #32DBC4; }
     @media (min-width: 600px) {
       .navbar h1.logo {
         padding-left: 25px; } }
   .navbar span.ed {
-    color: #FFFFFF; }
+    color: #F2DC5D; }
   .navbar div.bars {
     margin-left: auto;
     display: flex;
@@ -260,12 +307,11 @@ div.card-container {
       color: white; }
   .navbar div.divider {
     width: 90%;
-    height: 1px;
+    height: 2px;
     margin: auto;
     position: absolute;
     bottom: 0;
-    left: 5%;
-    background: rgba(255, 255, 255, 0.5); }
+    left: %; }
   .navbar div.links {
     margin-left: auto;
     display: flex; }
@@ -277,6 +323,8 @@ div.card-container {
       box-sizing: border-box; }
   .navbar div.nav-element.link:hover {
     background: #32DBC4; }
+    .navbar div.nav-element.link:hover a {
+      color: #FFFFFF; }
   .navbar a {
     font-size: 1.6em;
     font-family: 'Playfair Display', serif;
@@ -286,20 +334,49 @@ div.card-container {
     @media (min-width: 600px) {
       .navbar a {
         font-size: 24px; } }
+  .navbar .bm-burger-button {
+    position: absolute;
+    width: 36px;
+    height: 30px;
+    right: 36px;
+    top: 35%; }
+  .navbar .bm-burger-bars {
+    background: #FFFFFF; }
+  .navbar .bm-cross-button {
+    height: 50px !important;
+    width: 50px !important;
+    top: 25px !important;
+    right: 28px !important; }
+  .navbar .bm-menu {
+    background: rgba(50, 219, 196, 0.9);
+    padding: 5em 1.5em 0;
+    font-size: 1.15em;
+    width: 100%; }
+  .navbar .bm-morph-shape {
+    fill: #373a47; }
+  .navbar .bm-item-list {
+    color: #b8b7ad;
+    box-sizing: border-box !important; }
+    .navbar .bm-item-list a {
+      padding: 4vh 0;
+      color: #FFFFFF; }
+  .navbar .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    left: 0; }
 
 .navbar.scroll {
   background: #FFFFFF;
   box-shadow: 0px 4px 4px -5px rgba(0, 0, 0, 0.9); }
-  .navbar.scroll h1.logo {
-    color: #32DBC4; }
-    .navbar.scroll h1.logo span.ed {
-      color: #F2DC5D; }
   .navbar.scroll div.bars .fa-bars {
     color: #14080E; }
   .navbar.scroll div.divider {
     display: none; }
   .navbar.scroll a {
     color: #000000; }
+  .navbar.scroll .bm-burger-bars {
+    background: #14080E; }
+  .navbar.scroll .bm-item-list a {
+    color: #FFFFFF; }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
 .email-bar, .email-bar .left, .email-bar .right, .navbar {
@@ -308,10 +385,165 @@ div.card-container {
     .email-bar, .email-bar .left, .email-bar .right, .navbar {
       height: 80px; } }
 
-.email-bar, div.landing .landing-scrim {
-  background: rgba(50, 219, 196, 0.7); }
+div.about-container, div.mentor-container, div.team-container, div.contact-container {
+  background: #FAFAFA;
+  padding: 5vh 5vw; }
+  @media (min-width: 600px) {
+    div.about-container, div.mentor-container, div.team-container, div.contact-container {
+      padding: 25px 50px; } }
+
+.email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
+  background: rgba(50, 219, 196, 0.8); }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
-    .email-bar, div.landing .landing-scrim {
+    .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
+      background-color: rgba(50, 219, 196, 0.5);
+      -webkit-backdrop-filter: blur(15px);
+      backdrop-filter: blur(15px); } }
+
+div.home-container div.section-divider {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  background: white;
+  border-top: 5px solid #32DBC4;
+  border-bottom: 5px solid #F2DC5D; }
+  div.home-container div.section-divider h2 {
+    margin: 0;
+    padding: 5vh 2vw;
+    color: #14080E; }
+    @media (min-width: 600px) {
+      div.home-container div.section-divider h2 {
+        padding: 30px 0; } }
+
+div.home-container div.intro-container {
+  padding: 35px 0 10px 0;
+  display: flex;
+  justify-content: center;
+  background: #FAFAFA; }
+  div.home-container div.intro-container h2 {
+    width: 100%; }
+  div.home-container div.intro-container img {
+    object-fit: cover;
+    width: 30%;
+    height: 30%; }
+  div.home-container div.intro-container p {
+    text-align: center; }
+  div.home-container div.intro-container p.sneak-peek-description {
+    font-weight: 400;
+    color: #32DBC4; }
+  div.home-container div.intro-container div.intro-description {
+    width: 90%; }
+    @media (min-width: 600px) {
+      div.home-container div.intro-container div.intro-description {
+        padding: 0; } }
+
+div.home-container div.lesson-container {
+  width: 100%;
+  padding: 0 0 4vh 0;
+  order: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #FAFAFA; }
+  @media (min-width: 600px) {
+    div.home-container div.lesson-container {
+      padding: 0 25px 25px 25px; } }
+
+div.home-container div.how-it-works {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background: transparent;
+  box-sizing: border-box; }
+  div.home-container div.how-it-works h1.title {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    padding-top: 25px;
+    background: #FAFAFA; }
+  div.home-container div.how-it-works div.step {
+    width: 100vw;
+    padding: 3vh 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FAFAFA;
+    box-sizing: border-box; }
+    @media (min-width: 600px) {
+      div.home-container div.how-it-works div.step {
+        padding: 30px 50px;
+        flex-direction: row; } }
+    div.home-container div.how-it-works div.step div.icon {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      @media (min-width: 600px) {
+        div.home-container div.how-it-works div.step div.icon {
+          width: 40%; } }
+      div.home-container div.how-it-works div.step div.icon h2 {
+        margin-bottom: 15px; }
+      div.home-container div.how-it-works div.step div.icon img {
+        width: 50%; }
+    div.home-container div.how-it-works div.step div.step-description {
+      width: 100%;
+      margin-top: 2vh; }
+      @media (min-width: 600px) {
+        div.home-container div.how-it-works div.step div.step-description {
+          width: 60%;
+          margin-top: 0; } }
+      div.home-container div.how-it-works div.step div.step-description p {
+        width: 100%;
+        display: block; }
+      div.home-container div.how-it-works div.step div.step-description li {
+        font-size: 1.2em; }
+        @media (min-width: 600px) {
+          div.home-container div.how-it-works div.step div.step-description li {
+            font-size: 20px; } }
+  div.home-container div.how-it-works div.step.connect h2, div.home-container div.how-it-works div.step.connect p, div.home-container div.how-it-works div.step.connect li {
+    color: #FFFFFF; }
+
+div.home-container div.cta {
+  height: 100%;
+  width: 100vw;
+  padding: 2vh 4vw;
+  background: #FAFAFA;
+  box-sizing: border-box; }
+  @media (min-width: 600px) {
+    div.home-container div.cta {
+      padding: 0 50px; } }
+  div.home-container div.cta p {
+    margin: 0;
+    padding: 5vh 4vw;
+    text-align: center; }
+    @media (min-width: 600px) {
+      div.home-container div.cta p {
+        padding: 50px 25px; } }
+
+/* NOTE: The menu transform has a different breakpoint, 900px */
+.email-bar, .email-bar .left, .email-bar .right, .navbar {
+  height: 15vh; }
+  @media (min-width: 600px) {
+    .email-bar, .email-bar .left, .email-bar .right, .navbar {
+      height: 80px; } }
+
+div.about-container, div.mentor-container, div.team-container, div.contact-container {
+  background: #FAFAFA;
+  padding: 5vh 5vw; }
+  @media (min-width: 600px) {
+    div.about-container, div.mentor-container, div.team-container, div.contact-container {
+      padding: 25px 50px; } }
+
+.email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
+  background: rgba(50, 219, 196, 0.8); }
+  @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
+    .email-bar, div.home-container div.how-it-works div.step.connect, div.feature .feature-scrim {
       background-color: rgba(50, 219, 196, 0.5);
       -webkit-backdrop-filter: blur(15px);
       backdrop-filter: blur(15px); } }
@@ -333,8 +565,20 @@ Use the desktop mixin to override these for wider screen ie desktop settings
 Desktop: 40px, 32px, 24px, 16px, 14px;
 Mobile: 2em, 1.6em, 1.4em, 1em;
 */
+html {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/backgrounds/painting.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 45% 5%;
+  background-size: cover;
+  background-blend-mode: darken;
+  -moz-transition: 2.5s;
+  transition: 2.5s; }
+
 body {
-  background: #FAFAFA; }
+  background: transparent; }
 
 h1 {
   font-family: 'Playfair Display', serif;
@@ -401,7 +645,11 @@ p {
 
 a {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300; }
+  font-weight: 400;
+  color: #70D6FF;
+  cursor: pointer; }
+  a:hover {
+    color: #32DBC4; }
 
 li {
   font-family: 'Open Sans', sans-serif;
@@ -411,23 +659,17 @@ li {
     li {
       font-size: 24px; } }
 
-div.landing {
+div.feature {
   width: 100vw;
   height: 100vh;
   position: relative; }
-  div.landing .carousel-cell {
+  div.feature .cell {
+    margin: 0;
     width: 100%;
     height: 100vh;
     position: relative;
-    background-size: cover;
-    background-position: 50% 0; }
-  div.landing .first {
-    background-image: url("../images/painting.jpg"); }
-  div.landing .second {
-    background-image: url("../images/max_lesson.jpg"); }
-  div.landing .third {
-    background-image: url("../images/terrarium.jpg"); }
-  div.landing .glass {
+    background: transparent; }
+  div.feature .glass {
     width: 100%;
     margin: auto;
     padding: 3vh 4vw;
@@ -440,18 +682,18 @@ div.landing {
     filter: blur(25px);
     background: rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 0 50px 50px rgba(128, 128, 128, 0.8); }
-    div.landing .glass h1, div.landing .glass p {
+    div.feature .glass h1, div.feature .glass p {
       visibility: hidden; }
     @media (min-width: 600px) {
-      div.landing .glass {
+      div.feature .glass {
         width: 490px;
         padding: 25px;
         bottom: 60px;
         left: calc(50% - 245px); } }
   @supports (-webkit-backdrop-filter: blur(15px)) or (backdrop-filter: blur(15px)) {
-    div.landing .glass {
+    div.feature .glass {
       display: none; } }
-  div.landing .landing-scrim {
+  div.feature .feature-scrim {
     width: 100%;
     margin: auto;
     padding: 3vh 4vw;
@@ -462,81 +704,92 @@ div.landing {
     z-index: 900;
     overflow: hidden; }
     @media (min-width: 600px) {
-      div.landing .landing-scrim {
+      div.feature .feature-scrim {
         width: 550px;
         padding: 25px;
         bottom: 80px;
         left: calc(50% - 275px); } }
-    div.landing .landing-scrim h1, div.landing .landing-scrim p {
+    div.feature .feature-scrim h1, div.feature .feature-scrim p {
       color: #FFFFFF; }
-    div.landing .landing-scrim h1 {
-      margin-top: 0px; }
-    div.landing .landing-scrim p {
+    div.feature .feature-scrim h1 {
+      margin: 0 0 15px 0; }
+    div.feature .feature-scrim p {
       margin-bottom: 0; }
-  div.landing .landing-scrim::before {
+  div.feature .feature-scrim::before {
     filter: blur(25px); }
-
-.flickity-prev-next-button {
-  display: none; }
-  @media (min-width: 600px) {
-    .flickity-prev-next-button {
-      width: 100px;
-      height: 100px;
-      display: block;
-      background: transparent; } }
-
-div.preview-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background: #FAFAFA; }
-  @media (min-width: 600px) {
-    div.preview-container {
-      padding: 25px; } }
-  div.preview-container h1 {
-    width: 100%; }
-
-div.lesson-container {
-  width: 100%;
-  order: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  box-sizing: border-box; }
-  @media (min-width: 600px) {
-    div.lesson-container {
-      width: 85%;
-      order: 2; } }
-
-div.preview-description {
-  width: 90%;
-  padding: 4vw;
-  order: 2; }
-  @media (min-width: 600px) {
-    div.preview-description {
-      padding: 0;
-      padding-left: 25px;
-      order: 1; } }
-
-div.preview-container, div.about-container, div.mentor-container, div.team-container, div.coming-soon, div.how-it-works {
-  padding: 5vh 5vw; }
-  @media (min-width: 600px) {
-    div.preview-container, div.about-container, div.mentor-container, div.team-container, div.coming-soon, div.how-it-works {
-      padding: 25px 50px; } }
+  div.feature .email-bar {
+    position: absolute;
+    bottom: 0; }
 
 div.about-container {
   width: 100vw;
-  margin-bottom: 50px;
   position: relative;
   box-sizing: border-box; }
+  div.about-container div.trio-benefits {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center; }
+    @media (min-width: 600px) {
+      div.about-container div.trio-benefits {
+        flex-wrap: nowrap;
+        flex-direction: row; } }
+    div.about-container div.trio-benefits h2, div.about-container div.trio-benefits p {
+      margin: 1vh 0; }
+    div.about-container div.trio-benefits svg[class*='fa'] {
+      font-size: 4em; }
+      @media (min-width: 600px) {
+        div.about-container div.trio-benefits svg[class*='fa'] {
+          font-size: 50px; } }
+    div.about-container div.trio-benefits div.benefit {
+      margin: 1vh 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      @media (min-width: 600px) {
+        div.about-container div.trio-benefits div.benefit {
+          width: 25vw;
+          padding: 20px; } }
+      div.about-container div.trio-benefits div.benefit p {
+        font-size: 20px;
+        text-align: center; }
+      div.about-container div.trio-benefits div.benefit img {
+        max-width: 70%; }
 
 div.mentor-container div.section {
-  display: flex; }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column; }
+  @media (min-width: 600px) {
+    div.mentor-container div.section {
+      flex-direction: row; } }
   div.mentor-container div.section img {
-    width: 30%; }
-  div.mentor-container div.section:nth-child(3) p {
-    padding-left: 5vw; }
+    width: 80%; }
+    @media (min-width: 600px) {
+      div.mentor-container div.section img {
+        flex: 1 4 auto;
+        padding: 0 25px; } }
+  div.mentor-container div.section p {
+    width: 100%; }
+    @media (min-width: 600px) {
+      div.mentor-container div.section p {
+        flex: 4 1 auto; } }
+
+div.mentor-container div.section-two img {
+  order: 2; }
+  @media (min-width: 600px) {
+    div.mentor-container div.section-two img {
+      order: 1; } }
+
+div.mentor-container div.section-two p {
+  order: 1; }
+  @media (min-width: 600px) {
+    div.mentor-container div.section-two p {
+      order: 2; } }
 
 div.team-container {
   display: flex;
@@ -572,77 +825,3 @@ div.team-container {
     @media (min-width: 600px) {
       div.team-container .section-group {
         margin: 25px 0; } }
-
-div.trio-benefits {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center; }
-  @media (min-width: 600px) {
-    div.trio-benefits {
-      flex-wrap: nowrap;
-      flex-direction: row; } }
-  div.trio-benefits h2, div.trio-benefits p {
-    margin: 1vh 0; }
-  div.trio-benefits svg[class*='fa'] {
-    font-size: 4em; }
-    @media (min-width: 600px) {
-      div.trio-benefits svg[class*='fa'] {
-        font-size: 50px; } }
-  div.trio-benefits div.benefit {
-    margin: 1vh 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    @media (min-width: 600px) {
-      div.trio-benefits div.benefit {
-        width: 25vw;
-        padding: 20px; } }
-    div.trio-benefits div.benefit p {
-      font-size: 20px;
-      text-align: center; }
-
-div.how-it-works {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  box-sizing: border-box; }
-  div.how-it-works h1.title {
-    width: 100%; }
-  @media (min-width: 600px) {
-    div.how-it-works div.cta {
-      width: 90%; } }
-  div.how-it-works div.step {
-    width: 100%;
-    margin: 2vh 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    @media (min-width: 600px) {
-      div.how-it-works div.step {
-        width: 80%;
-        flex-direction: row; } }
-    div.how-it-works div.step div.icon {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-      @media (min-width: 600px) {
-        div.how-it-works div.step div.icon {
-          width: 40%; } }
-      div.how-it-works div.step div.icon img {
-        width: 50%; }
-    div.how-it-works div.step div.step-description {
-      width: 100%; }
-      @media (min-width: 600px) {
-        div.how-it-works div.step div.step-description {
-          width: 60%; } }
-      div.how-it-works div.step div.step-description p {
-        width: 100%;
-        display: block; }

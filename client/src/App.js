@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
+import DefaultOGImage from 'images/pans_lesson_og.jpg';
 import './styles/App.css';
 
-import NavBar from './components/NavBar';
-import Landing from './components/Landing';
-import Home from './components/Home';
-import About from './components/About';
-import Mentor from './components/Mentor';
-import Footer from './components/Footer';
-import Contact from './components/Contact';
-import Team from './components/Team';
+import NavBar from 'components/NavBar';
+import Feature from 'components/Feature';
+import Home from 'components/Home';
+import About from 'components/About';
+import Mentor from 'components/Mentor';
+import Footer from 'components/Footer';
+import Contact from 'components/Contact';
+import Team from 'components/Team';
+import CustomHead from 'components/CustomHead';
 
 class App extends Component {
   constructor() {
@@ -88,25 +90,34 @@ class App extends Component {
     const emailProps = {...this.state};
     return (
       <div className="App">
+        <CustomHead
+          type="website"
+          url="https://getkindred.ca"
+          image={DefaultOGImage}
+          description="Kindred is a community for people to learn valuable life skills from retirees through small, in-person group lessons."
+        />
+
         <NavBar />
-        <Landing 
+        <Feature 
           handleChange={this.handleEmailChange}
           handleSubmit={this.handleEmailSubmit}         
           {...emailProps} 
         />
 
-        <Route exact path="/" render={(props) =>
-          <Home
-          handleChange={this.handleEmailChange}
-          handleSubmit={this.handleEmailSubmit} 
-          {...props}
-          {...emailProps}
-          />
-        }/>
-        <Route path="/about" component={About} />
-        <Route path="/mentor" component={Mentor} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/team" component={Team} />
+        <Switch>
+          <Route exact path="/" render={(props) =>
+            <Home
+            handleChange={this.handleEmailChange}
+            handleSubmit={this.handleEmailSubmit} 
+            {...props}
+            {...emailProps}
+            />
+          }/>
+          <Route path="/about" component={About} />
+          <Route path="/mentor" component={Mentor} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/team" component={Team} />
+        </Switch>
 
         <Footer />
       </div>

@@ -9,14 +9,18 @@
   position: fixed;
   z-index: 1000;
   box-sizing: border-box;
-  background: linear-gradient(rgba(0,0,0,0.25) 30%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.15) 70%, transparent);
-  // background: rgba(0, 0, 0, 0.15);
+  // background: linear-gradient(rgba(0,0,0,0.25) 30%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.15) 70%, transparent);
+  background: rgba(0, 0, 0, 0.15);
   transition: background 300ms;
+
+  @include desktop {
+    padding: 0 5vw;
+  }
 
   h1.logo {
     padding-left: $mobile-horizontal-padding;
     order: 1;
-    color: #FFFFFF;
+    color: $green;
 
     @include desktop {
       padding-left: $left-margin;
@@ -24,7 +28,7 @@
   }
 
   span.ed {
-    color: #FFFFFF;
+    color: $yellow;
   }
 
   div.bars {
@@ -43,12 +47,13 @@
 
   div.divider {
     width: 90%;
-    height: 1px;
+    height: 2px;
     margin: auto;
     position: absolute;
     bottom: 0;
-    left: 5%;
-    background: rgba(255,255,255,0.5)
+    left: %;
+    // background: rgba(255, 255, 255, 0.4);;
+    // background: linear-gradient(90deg, rgba(50, 219, 196, 0.6), rgba(242,220,93,0.6));
   }
 
   div.links {
@@ -68,6 +73,10 @@
 
   div.nav-element.link:hover {
     background: $green;
+
+    a {
+      color: #FFFFFF;
+    }
   }
 
   a {
@@ -77,19 +86,63 @@
     color: white;
     font-weight: 400;
   }
+
+  /* Position and sizing of burger button */
+  .bm-burger-button {
+    position: absolute;
+    width: 36px;
+    height: 30px;
+    right: 36px;
+    top: 35%;
+  }
+
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: #FFFFFF;
+  }
+
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 50px !important;
+    width: 50px !important;
+    top: 25px !important;
+    right: 28px !important;
+  }
+
+  /* General sidebar styles */
+  .bm-menu {
+    background: rgba(50, 219, 196, 0.9);
+    padding: 5em 1.5em 0;
+    font-size: 1.15em;
+    width: 100%;
+  }
+
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #373a47;
+  }
+
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    box-sizing: border-box !important;
+
+    a {
+      padding: 4vh 0;
+      color: #FFFFFF;
+    }
+  }
+
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    left: 0;
+  }  
 }
 
 .navbar.scroll {
   background: #FFFFFF;
   box-shadow: 0px 4px 4px -5px rgba(0,0,0,0.9);
-
-  h1.logo {
-    color: $green;
-
-    span.ed {
-      color: $yellow;
-    }    
-  }
 
   div.bars {
     .fa-bars {
@@ -104,4 +157,14 @@
   a {
     color: #000000;
   }
+
+  .bm-burger-bars {
+    background: $black;
+  }  
+
+  .bm-item-list {
+    a {
+      color: #FFFFFF;
+    }
+  }  
 }

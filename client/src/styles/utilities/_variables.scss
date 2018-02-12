@@ -8,7 +8,8 @@ $yellow: #F2DC5D;
 $blue: #70D6FF;
 $green: #32DBC4;
 $black: #14080E;
-$transparent-background: rgba(50, 219, 196, 0.7);
+// this is a green colour
+$transparent-background: rgba(50, 219, 196, 0.8);
 
 $left-margin: 25px;
 $mobile-horizontal-padding: 4vw;
@@ -28,12 +29,24 @@ $mobile-horizontal-padding: 4vw;
   }
 }
 
+@mixin transparent-background($transparency) {
+  background: rgba(50, 219, 196, $transparency);
+}
 
 %bar-height {
   height: $bar-height-mobile;
 
   @include desktop {
     height: $bar-height-desktop;
+  }
+}
+
+%page-layout {
+  background: #FAFAFA;
+  padding: 5vh 5vw;
+
+  @include desktop {
+    padding: 25px 50px;
   }
 }
 

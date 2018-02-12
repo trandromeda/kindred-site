@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import Media from 'react-media';
+import BurgerMenu from './Menu';
 
 class NavBar extends Component {
+
   render() {
     return (
         <div className="navbar" id="navbar">
@@ -20,16 +22,14 @@ class NavBar extends Component {
                   <Link to="/about" className="about">About</Link>
                 </div>
                 <div className="nav-element link">
-                  <Link to="/mentor" className="mentor">Mentor</Link>
+                  <Link to="/mentor" className="mentor">Be a mentor</Link>
                 </div>
                 <div className="nav-element link">
                   <Link to="/contact" className="contact">Contact</Link>
                 </div>
               </div>
             ) : (
-              <div className='bars'>
-              <i className="fas fa-bars"></i>
-              </div>
+              <BurgerMenu />
             )
           }
           </Media>

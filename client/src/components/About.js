@@ -1,54 +1,44 @@
 import React, { Component } from 'react';
+import Connect from '../images/tolerance.svg';
+import Share from '../images/chat.svg';
+import Cherish from '../images/photo.svg';
+
+import CustomHead from 'components/CustomHead';
 
 class About extends Component {
   render() {
     return (
         <div className="about-container">
+            <CustomHead pageTitle="About" />
             <h1 className="title">About</h1>
 
             <p className="verbose">
-            Kindred is a community for people to learn valuable life skills from retirees via small, in-person group lessons. Meet interesting folks, share stories and laughter with friendly faces from your neighbourhood, and come away with unforgettable new memories.
+            Kindred was founded on the belief that everyone has a story worth telling, no matter their age, gender, upbringing, or place of birth. We want to build a happier world where people from all of walks can come together and openly share their knowledge, life lessons, and experiences - free of discrimination and bias.
             </p>
 
             <div className="trio-benefits">
               <div className="benefit">
-                <i className="fas fa-map"></i>
+                <img src={Connect} alt="Connect" />
                 <h2>Connect</h2>
                 <p>with people from different walks of life</p>
               </div>
               <div className="benefit">
-                <i className="far fa-user-circle"></i>
+                <img src={Share} alt="Connect" />
                 <h2>Share</h2>
-                <p>stories collected gained over a lifetime</p>
+                <p>stories gained over a lifetime</p>
               </div>
               <div className="benefit">
-                <i className="far fa-heart"></i>
+                <img src={Cherish} alt="Connect" />
                 <h2>Cherish</h2>
                 <p>new friends, new skills and new memories</p>
               </div>
 
             </div>
 
-            <p className="verbose">
-            Founded in 2017 and based in Toronto, Kindred connects you with individuals from all walks of life to learn from one another while having fun, whether it's making Maria's secret spaghetti sauce, practicing Hubert's six easy steps to tie a tie, or packing colourful bento boxes with Hisami.
-            </p>
-
             <h1>Mission</h1>
             <p className="verbose">
-            Our goal is to enrich the lives of seniors and empower them to be inspiring mentors for young people everywhere. We will do this by creating spaces for fun and personalized learning experiences, highlighting the wealth of knowledge that seniors have to share.
-            </p>
-
-            <p className="verbose">
-            In doing so, we will also strive to:
-            </p>
-
-            <ul>
-              <li>Preserve cultural knowledge that may otherwise be lost to time,</li>
-              <li>Encourage people to do social good,</li>
-              <li>Provide a form of financial gain to seniors, and</li>
-              <li>Tap into the underutilized resources possessed by an entire generation</li>
-
-            </ul>        
+            Our goal is to enrich the lives of seniors and empower them to be role models for young people everywhere. We will achieve this by creating spaces for enjoyable and personalized learning experiences, highlighting the wealth of knowledge that seniors have to share. In doing so, we also hope to inspire society as a whole to do more good.
+            </p>     
 
             <h1>Vision</h1>
             <p className="verbose"> 

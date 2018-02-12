@@ -7,11 +7,15 @@
   },
   "dependencies": {
     "@typeform/embed": "^0.5.2",
+    "detect-browser": "^2.0.0",
     "flickity": "^2.0.10",
     "node-sass-chokidar": "^0.0.3",
     "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
+    "react-burger-menu": "^2.2.3",
     "react-dom": "^16.2.0",
+    "react-ga": "^2.4.1",
+    "react-helmet": "^5.2.0",
     "react-media": "^1.6.1",
     "react-router-dom": "^4.2.2",
     "react-typeform-embed": "git+https://github.com/trandromeda/react-typeform-embed.git"

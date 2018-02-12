@@ -3,6 +3,7 @@
 @import 'lessoncard';
 @import 'footer';
 @import 'navbar';
+@import 'home';
 
 @import 'utilities/variables';
 
@@ -26,8 +27,21 @@ Desktop: 40px, 32px, 24px, 16px, 14px;
 Mobile: 2em, 1.6em, 1.4em, 1em;
 */
 
+html {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/backgrounds/painting.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 45% 5%;
+  background-size: cover;
+  background-blend-mode: darken;
+  -moz-transition: 2.5s;
+  transition: 2.5s;
+}
+
 body {
-  background: #FAFAFA;
+  background: transparent;
 }
 
 
@@ -95,7 +109,13 @@ p {
 
 a {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
+  color: $blue;
+  cursor: pointer;
+
+  &:hover {
+    color: $green;
+  }
 }
 
 li {
@@ -104,34 +124,21 @@ li {
   font-weight: 300;    
 }
 
-div.landing {
+div.feature {
   width: 100vw;
   height: $landing-height;
   position: relative;
 
-  .carousel-cell {
+  .cell {
+    margin: 0;
     width: 100%;
     height: $landing-height;
     position: relative;
-    background-size: cover;
-    background-position: 50% 0;
+    background: transparent;
   }
 
-  .first {
-    background-image: url('../images/painting.jpg');
-     
-  }
-
-  .second {
-    background-image: url('../images/max_lesson.jpg');
-  }
-
-  .third {
-    background-image: url('../images/terrarium.jpg');
-  }
-
-// The following chunk is some CSS trickery to create a 'frosted glass' look for landing-scrim
-// Create an element that is nearly identical to .landing-scrim but just a bit smaller, then apply a box-shadow and blur
+// The following chunk is some CSS trickery to create a 'frosted glass' look for feature-scrim
+// Create an element that is nearly identical to .feature-scrim but just a bit smaller, then apply a box-shadow and blur
   .glass {
     width: 100%;
     margin: auto;
@@ -164,7 +171,7 @@ div.landing {
     }
   }
 
-  .landing-scrim {
+  .feature-scrim {
     width: 100%;
     margin: auto;
     padding: 3vh $mobile-horizontal-padding;
@@ -188,7 +195,7 @@ div.landing {
     }
 
     h1 {
-      margin-top: 0px;
+      margin: 0 0 15px 0;
     }
 
     p {
@@ -196,80 +203,66 @@ div.landing {
     }
   }
 
-  .landing-scrim::before {
+  .feature-scrim::before {
     filter: blur(25px);
   }
-
-}
-
-.flickity-prev-next-button {
-  display: none;
-
-  @include desktop {
-    width: 100px;
-    height: 100px;
-    display: block;
-    background: transparent;
+  
+  .email-bar {
+    position: absolute;
+    bottom: 0;
   }
 }
 
-div.preview-container {
-  @extend %page-layout;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background: #FAFAFA;
-
-  @include desktop {
-    padding: 25px;
-  }
-
-  h1 {
-    width: 100%;
-  }
-}
-
-div.lesson-container {
-  width: 100%;
-  order: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  box-sizing: border-box;
-
-  @include desktop {
-    width: 85%;
-    order: 2;
-  }
-}
-
-div.preview-description {
-  width: 90%;
-  padding: 4vw;
-  order: 2;
-
-  @include desktop {
-    padding: 0;
-    padding-left: 25px;
-    order: 1;
-  } 
-}
-
-%page-layout {
-  padding: 5vh 5vw;
-
-  @include desktop {
-    padding: 25px 50px;
-  }
-}
 
 div.about-container {
   @extend %page-layout;
   width: 100vw;
-  margin-bottom: 50px;
   position: relative;
   box-sizing: border-box;
+
+  div.trio-benefits {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop {
+      flex-wrap: nowrap;
+      flex-direction: row;
+    }
+
+    h2, p {
+      margin: 1vh 0;
+    }
+
+    svg[class*='fa'] {
+      @include font-size(4em, 50px);
+    }
+
+    div.benefit {
+      margin: 1vh 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include desktop {
+        width: 25vw;
+        padding: 20px;
+      }
+
+      p {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      img {
+        max-width: 70%;
+      }
+    }
+  }
 }
 
 div.mentor-container {
@@ -277,14 +270,46 @@ div.mentor-container {
 
   div.section {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 
-    img {
-      width: 30%;
+    @include desktop {
+      flex-direction: row;
     }
 
-    &:nth-child(3) {
-      p {
-        padding-left: 5vw;
+    img {
+      width: 80%;
+
+      @include desktop {
+        flex: 1 4 auto;
+        padding: 0 25px;
+      }
+    }
+
+    p {
+      width: 100%;
+
+      @include desktop {
+        flex: 4 1 auto;
+      }
+    }
+  }
+
+  div.section-two {
+    img {
+      order: 2;
+
+      @include desktop {
+        order: 1;
+      }
+    }
+
+    p {
+      order: 1;
+
+      @include desktop {
+        order: 2;
       }
     }
   }
@@ -337,109 +362,6 @@ div.team-container {
   }
 }
 
-div.coming-soon {
+div.contact-container {
   @extend %page-layout;
-}
-
-div.trio-benefits {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-
-  @include desktop {
-    flex-wrap: nowrap;
-    flex-direction: row;
-  }
-
-  h2, p {
-    margin: 1vh 0;
-  }
-
-  svg[class*='fa'] {
-    @include font-size(4em, 50px);
-  }
-
-  div.benefit {
-    margin: 1vh 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @include desktop {
-      width: 25vw;
-      padding: 20px;
-    }
-
-    p {
-      font-size: 20px;
-      text-align: center;
-    }
-  }
-}
-
-div.how-it-works {
-  @extend %page-layout;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  box-sizing: border-box;
-
-  h1.title {
-    width: 100%;
-  }
-  
-  div.cta {
-    @include desktop {
-      width: 90%;
-    }
-  }
-
-  div.step {
-    width: 100%;
-    margin: 2vh 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @include desktop {
-      width: 80%;
-      flex-direction: row;
-    }
-
-    div.icon {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      @include desktop {
-        width: 40%;
-      }
-
-      img {
-        width: 50%;
-      }
-    }
-
-    div.step-description {
-      width: 100%;
-
-      @include desktop {
-        width: 60%;
-      }
-
-      p {
-        width: 100%;
-        display: block;
-      }      
-    }
-
-  }
 }

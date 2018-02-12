@@ -8,6 +8,12 @@ class EmailBar extends Component {
     }
   }
 
+  respondToSubmit = () => {
+    if (this.props.emailInputStage <= 2) {
+      this.textInput.focus();
+    }
+  }
+
   renderInput = (level) => {
     switch (level) {
       case 1:
@@ -28,6 +34,7 @@ class EmailBar extends Component {
           value={this.props.firstname}
           onChange={this.props.handleChange}
           placeholder="What's your first name?"
+          ref={(input) => { this.textInput = input; }}
         />
       case 3:
         return <input 
@@ -37,6 +44,7 @@ class EmailBar extends Component {
           value={this.props.lastname}
           onChange={this.props.handleChange}
           placeholder="And last name?"
+          ref={(input) => { this.textInput = input; }}
         />         
       default:
         return <input 
@@ -50,7 +58,6 @@ class EmailBar extends Component {
   }
 
   render() {
-    const divStyle = this.props.fill ? {backgroundColor: '#32DBC4'} : {backgroundColor: 'transparent'};
     const submitText = this.props.emailInputStage === 1 ? 'Ok!' : 'Enter';
     return (
         <div className="email-bar" id="email-bar">
@@ -58,16 +65,14 @@ class EmailBar extends Component {
 
           <div className="mid-section">
             <div className="middle-top"></div>
-              <div 
-              className="middle-middle"
-              style={divStyle}
-              >
+              <div className="middle-middle">
                 <form className="input-box" onSubmit={this.props.handleSubmit}>
                     {this.renderInput(this.props.emailInputStage)}                         
                     <input 
                       type="submit" 
                       value={submitText}
-                      className="signup-button" 
+                      className="signup-button"
+                      onClick={this.respondToSubmit} 
                     />
                 </form>
               </div>

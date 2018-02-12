@@ -14,4 +14,4 @@ yarn-error.log*
 server/.env
 .env
 *.css
-client/src/styles/*.css
+src/styles/*.css
