@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import DefaultOGImage from 'images/pans_lesson_og.jpg';
 import './styles/App.css';
 
@@ -104,18 +104,20 @@ class App extends Component {
           {...emailProps} 
         />
 
-        <Route exact path="/" render={(props) =>
-          <Home
-          handleChange={this.handleEmailChange}
-          handleSubmit={this.handleEmailSubmit} 
-          {...props}
-          {...emailProps}
-          />
-        }/>
-        <Route path="/about" component={About} />
-        <Route path="/mentor" component={Mentor} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/team" component={Team} />
+        <Switch>
+          <Route exact path="/" render={(props) =>
+            <Home
+            handleChange={this.handleEmailChange}
+            handleSubmit={this.handleEmailSubmit} 
+            {...props}
+            {...emailProps}
+            />
+          }/>
+          <Route exact path="/about" component={About} />
+          <Route exact path="/mentor" component={Mentor} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/team" component={Team} />
+        </Switch>
 
         <Footer />
       </div>
