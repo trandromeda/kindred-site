@@ -113,10 +113,10 @@ class App extends Component {
             {...emailProps}
             />
           }/>
-          <Route exact path="/about" component={About} />
-          <Route exact path="/mentor" component={Mentor} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/team" component={Team} />
+          <Route path="/about" component={About} />
+          <Route path="/mentor" component={Mentor} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/team" component={Team} />
         </Switch>
 
         <Footer />
