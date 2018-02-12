@@ -43,7 +43,7 @@ const HowItWorks = () => {
             <p>After a mentor confirms your request, meet in person at the scheduled place and time</p>
             <ul>
               <li>You’ll be joined by fellow learners in a cozy group setting</li>
-              <li>Lessons may take place at the mentor’s home. We’re working on finding community partners to provide venues!</li>
+              <li>Lessons may take place at the mentor’s home. We’re looking for community partners to provide venues!</li>
             </ul>
           </div>
         </div>              

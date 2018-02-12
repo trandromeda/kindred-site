@@ -469,7 +469,7 @@ div.home-container div.how-it-works {
     background: #FAFAFA; }
   div.home-container div.how-it-works div.step {
     width: 100vw;
-    padding: 2vh 4vw;
+    padding: 3vh 4vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -477,7 +477,7 @@ div.home-container div.how-it-works {
     box-sizing: border-box; }
     @media (min-width: 600px) {
       div.home-container div.how-it-works div.step {
-        padding: 25px 50px;
+        padding: 30px 50px;
         flex-direction: row; } }
     div.home-container div.how-it-works div.step div.icon {
       width: 100%;
@@ -771,14 +771,13 @@ div.mentor-container div.section {
     width: 80%; }
     @media (min-width: 600px) {
       div.mentor-container div.section img {
-        width: 20%; } }
+        flex: 1 4 auto;
+        padding: 0 25px; } }
   div.mentor-container div.section p {
     width: 100%; }
     @media (min-width: 600px) {
       div.mentor-container div.section p {
-        width: 60%; } }
-  div.mentor-container div.section:nth-child(3) p {
-    padding-left: 5vw; }
+        flex: 4 1 auto; } }
 
 div.mentor-container div.section-two img {
   order: 2; }

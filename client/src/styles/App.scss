@@ -282,7 +282,8 @@ div.mentor-container {
       width: 80%;
 
       @include desktop {
-        width: 20%;
+        flex: 1 4 auto;
+        padding: 0 25px;
       }
     }
 
@@ -290,13 +291,7 @@ div.mentor-container {
       width: 100%;
 
       @include desktop {
-        width: 60%;
-      }
-    }
-
-    &:nth-child(3) {
-      p {
-        padding-left: 5vw;
+        flex: 4 1 auto;
       }
     }
   }
