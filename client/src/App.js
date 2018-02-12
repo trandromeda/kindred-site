@@ -11,7 +11,7 @@ import Mentor from 'components/Mentor';
 import Footer from 'components/Footer';
 import Contact from 'components/Contact';
 import Team from 'components/Team';
-import Helmet from 'components/Helmet';
+import CustomHead from 'components/CustomHead';
 
 class App extends Component {
   constructor() {
@@ -90,8 +90,7 @@ class App extends Component {
     const emailProps = {...this.state};
     return (
       <div className="App">
-        <Helmet 
-          title="Kindred"
+        <CustomHead
           type="website"
           url="https://getkindred.ca"
           image={DefaultOGImage}

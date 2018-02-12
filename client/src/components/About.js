@@ -3,10 +3,13 @@ import Connect from '../images/tolerance.svg';
 import Share from '../images/chat.svg';
 import Cherish from '../images/photo.svg';
 
+import CustomHead from 'components/CustomHead';
+
 class About extends Component {
   render() {
     return (
         <div className="about-container">
+            <CustomHead pageTitle="About" />
             <h1 className="title">About</h1>
 
             <p className="verbose">
