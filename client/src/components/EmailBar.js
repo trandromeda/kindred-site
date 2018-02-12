@@ -52,7 +52,7 @@ class EmailBar extends Component {
           name="done"
           value=''
           onChange={this.props.handleChange}
-          placeholder="Thank you!"
+          placeholder="Thanks! Check your inbox :)"
         /> 
     }
   }

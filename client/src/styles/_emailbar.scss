@@ -1,33 +1,47 @@
 @import 'utilities/variables';
 
 @mixin email-bar-template($colour, $button-color) {
-  width: 100vw;
-  @extend %bar-height;
+  max-width: 100vw;
+  height: 80px;
   display: flex;
   z-index: 900;
   @extend %frosted;
 
   .left {
+    display: none;
     width: calc((100vw - 550px) / 2);
-    @extend %bar-height;
+    height: 80px;
     position: relative;
     order: 1;
     background: $colour;
+
+    @include desktop {
+      display: block;
+    }
   }
 
   .mid-section {
     display: flex;
     order: 2;
-    width: 550px;;
+    width: 100vw;
     flex-direction: column;
 
+    @include desktop {
+      width: 550px;
+    }
+
     .middle-top {
-      flex-grow: 1;
       background: $colour;
+      height: 2px;
+
+      @include desktop {
+        flex-grow: 1;
+      }
     }
 
     .middle-middle {
       height: 50%;
+      margin: 0;
       position: relative;
       background: transparent;
 
@@ -38,9 +52,15 @@
 
     .input-box {
       height: 100%;
+      margin: 0;
       display: flex;
+      flex-wrap: wrap;
       position: relative;
       background: transparent;
+
+      @include desktop {
+        flex-wrap: nowrap;
+      }
 
       input[type=text] {
         flex: 3 1 auto;
@@ -62,17 +82,18 @@
       input::placeholder {
         vertical-align: middle;
         @include font-size(0.8em, 25px);
+        font-weight: 400;
         color: #FFFFFF;
         opacity: 1;
       }
 
       input:-webkit-autofill {
-          -webkit-box-shadow: 0 0 0 30px $black inset;
+          -webkit-box-shadow: 0 0 0 30px rgba(50, 219, 196, 0.8) inset;
           -webkit-text-fill-color: #FFFFFF !important;
       }
 
-      .signup-button {
-        flex: 1 1 auto;
+      input[type=submit].signup-button {
+        width: 100%;
         height: 100%;
         margin: 0;
         background: $button-color;
@@ -82,6 +103,11 @@
         color: white;
         border: none;
 
+        @include desktop {
+          width: auto;
+          flex: 1 1 auto;
+        }
+
         &:hover {
           opacity: 0.9;
         }
@@ -89,16 +115,27 @@
     }
 
     .middle-bottom {
+      visibility: hidden;
+      margin: 0;
       flex-grow: 1;
       background: $colour;
+
+      @include desktop {
+        visibility: initial;
+      }
     }    
   }
 
   .right {
+    display: none;
     width: calc((100vw - 550px) / 2);
-    @extend %bar-height;
+    height: 80px;
     order: 3;
     background: $colour;
+
+    @include desktop {
+      display: block;
+    }
   }
 }
 

@@ -111,7 +111,8 @@ a {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: $blue;
-  cursor: pointer;
+  cursor: pointer !important;
+  z-index: 50;
 
   &:hover {
     color: $green;
@@ -124,17 +125,36 @@ li {
   font-weight: 300;    
 }
 
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
 div.feature {
   width: 100vw;
-  height: $landing-height;
+  height: 90vh;
   position: relative;
+
+  @include desktop {
+    height: $landing-height;
+  }
 
   .cell {
     margin: 0;
     width: 100%;
-    height: $landing-height;
+    height: 90vh;
     position: relative;
     background: transparent;
+
+    @include desktop {
+      height: $landing-height;
+    }
   }
 
 // The following chunk is some CSS trickery to create a 'frosted glass' look for feature-scrim
@@ -174,19 +194,18 @@ div.feature {
   .feature-scrim {
     width: 100%;
     margin: auto;
-    padding: 3vh $mobile-horizontal-padding;
+    padding: 10px $mobile-horizontal-padding;
     position: absolute;
-    bottom: $bar-height-mobile;
+    bottom: 80px;
     border-radius: 5px 5px 0 0;
     box-sizing: border-box;
-    z-index: 900;
+    z-index: 100;
     overflow: hidden;
     @extend %frosted;
 
     @include desktop {
       width: $scrim-width;
       padding: 25px;
-      bottom: $bar-height-desktop;
       left: calc(50% - 275px);
     }
 
@@ -195,7 +214,7 @@ div.feature {
     }
 
     h1 {
-      margin: 0 0 15px 0;
+      margin: 0 0 10px 0;
     }
 
     p {
@@ -327,12 +346,13 @@ div.team-container {
 
   div.team-member {
     width: 100%;
+    padding: 2vh 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @include desktop {
-      width: 25%;
+      width: 30%;
     }
 
     img {

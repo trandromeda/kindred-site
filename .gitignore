@@ -1,7 +1,6 @@
 .idea/
 .vscode/
 node_modules/
-build
 .DS_Store
 *.tgz
 my-app*
@@ -13,5 +12,4 @@ yarn-error.log*
 /.changelog
 server/.env
 .env
-*.css
 src/styles/*.css

@@ -13,7 +13,7 @@ class About extends Component {
             <h1 className="title">About</h1>
 
             <p className="verbose">
-            Kindred was founded on the belief that everyone has a story worth telling, no matter their age, gender, upbringing, or place of birth. We want to build a happier world where people from all of walks can come together and openly share their knowledge, life lessons, and experiences - free of discrimination and bias.
+            Kindred was founded on the belief that everyone has a story worth telling, no matter their age, gender, upbringing, or place of birth. We want to build a happier world where people from all walks of life can come together and openly share their knowledge, life lessons, and experiences - free of discrimination and bias.
             </p>
 
             <div className="trio-benefits">

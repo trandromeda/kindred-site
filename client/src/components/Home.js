@@ -97,7 +97,7 @@ const mockData = [
     cost: 15,
     duration: 90,
     desc: "You'd be hard-pressed to eat out again after you start meal prepping",
-    img: 'meal_prep.jpg'
+    img: 'pans_meal_prep.jpg'
   },
   {
     name: 'As-tu parler le francais?',

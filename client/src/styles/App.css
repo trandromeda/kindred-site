@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400|Playfair+Display:400,700|Gloria+Hallelujah");
 /* NOTE: The menu transform has a different breakpoint, 900px */
-.email-bar, .email-bar .left, .email-bar .right, .navbar {
+.navbar {
   height: 15vh; }
   @media (min-width: 600px) {
-    .email-bar, .email-bar .left, .email-bar .right, .navbar {
+    .navbar {
       height: 80px; } }
 
 div.about-container, div.mentor-container, div.team-container, div.contact-container {
@@ -22,24 +22,37 @@ div.about-container, div.mentor-container, div.team-container, div.contact-conta
       backdrop-filter: blur(15px); } }
 
 .email-bar {
-  width: 100vw;
+  max-width: 100vw;
+  height: 80px;
   display: flex;
   z-index: 900; }
   .email-bar .left {
+    display: none;
     width: calc((100vw - 550px) / 2);
+    height: 80px;
     position: relative;
     order: 1;
     background: #F2DC5D; }
+    @media (min-width: 600px) {
+      .email-bar .left {
+        display: block; } }
   .email-bar .mid-section {
     display: flex;
     order: 2;
-    width: 550px;
+    width: 100vw;
     flex-direction: column; }
+    @media (min-width: 600px) {
+      .email-bar .mid-section {
+        width: 550px; } }
     .email-bar .mid-section .middle-top {
-      flex-grow: 1;
-      background: #F2DC5D; }
+      background: #F2DC5D;
+      height: 2px; }
+      @media (min-width: 600px) {
+        .email-bar .mid-section .middle-top {
+          flex-grow: 1; } }
     .email-bar .mid-section .middle-middle {
       height: 50%;
+      margin: 0;
       position: relative;
       background: transparent; }
       @media (min-width: 600px) {
@@ -47,9 +60,14 @@ div.about-container, div.mentor-container, div.team-container, div.contact-conta
           height: 60%; } }
     .email-bar .mid-section .input-box {
       height: 100%;
+      margin: 0;
       display: flex;
+      flex-wrap: wrap;
       position: relative;
       background: transparent; }
+      @media (min-width: 600px) {
+        .email-bar .mid-section .input-box {
+          flex-wrap: nowrap; } }
       .email-bar .mid-section .input-box input[type=text] {
         flex: 3 1 auto;
         height: 100%;
@@ -66,16 +84,17 @@ div.about-container, div.mentor-container, div.team-container, div.contact-conta
       .email-bar .mid-section .input-box input::placeholder {
         vertical-align: middle;
         font-size: 0.8em;
+        font-weight: 400;
         color: #FFFFFF;
         opacity: 1; }
         @media (min-width: 600px) {
           .email-bar .mid-section .input-box input::placeholder {
             font-size: 25px; } }
       .email-bar .mid-section .input-box input:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0 30px #14080E inset;
+        -webkit-box-shadow: 0 0 0 30px rgba(50, 219, 196, 0.8) inset;
         -webkit-text-fill-color: #FFFFFF !important; }
-      .email-bar .mid-section .input-box .signup-button {
-        flex: 1 1 auto;
+      .email-bar .mid-section .input-box input[type=submit].signup-button {
+        width: 100%;
         height: 100%;
         margin: 0;
         background: #70D6FF;
@@ -84,21 +103,35 @@ div.about-container, div.mentor-container, div.team-container, div.contact-conta
         font-size: 24px;
         color: white;
         border: none; }
-        .email-bar .mid-section .input-box .signup-button:hover {
+        @media (min-width: 600px) {
+          .email-bar .mid-section .input-box input[type=submit].signup-button {
+            width: auto;
+            flex: 1 1 auto; } }
+        .email-bar .mid-section .input-box input[type=submit].signup-button:hover {
           opacity: 0.9; }
     .email-bar .mid-section .middle-bottom {
+      visibility: hidden;
+      margin: 0;
       flex-grow: 1;
       background: #F2DC5D; }
+      @media (min-width: 600px) {
+        .email-bar .mid-section .middle-bottom {
+          visibility: initial; } }
   .email-bar .right {
+    display: none;
     width: calc((100vw - 550px) / 2);
+    height: 80px;
     order: 3;
     background: #F2DC5D; }
+    @media (min-width: 600px) {
+      .email-bar .right {
+        display: block; } }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
-.email-bar, .email-bar .left, .email-bar .right, .navbar {
+.navbar {
   height: 15vh; }
   @media (min-width: 600px) {
-    .email-bar, .email-bar .left, .email-bar .right, .navbar {
+    .navbar {
       height: 80px; } }
 
 div.about-container, div.mentor-container, div.team-container, div.contact-container {
@@ -176,10 +209,10 @@ div.card-container {
       margin: 0; }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
-.email-bar, .email-bar .left, .email-bar .right, .navbar {
+.navbar {
   height: 15vh; }
   @media (min-width: 600px) {
-    .email-bar, .email-bar .left, .email-bar .right, .navbar {
+    .navbar {
       height: 80px; } }
 
 div.about-container, div.mentor-container, div.team-container, div.contact-container {
@@ -245,10 +278,10 @@ div.about-container, div.mentor-container, div.team-container, div.contact-conta
         font-size: 14px; } }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
-.email-bar, .email-bar .left, .email-bar .right, .navbar {
+.navbar {
   height: 15vh; }
   @media (min-width: 600px) {
-    .email-bar, .email-bar .left, .email-bar .right, .navbar {
+    .navbar {
       height: 80px; } }
 
 div.about-container, div.mentor-container, div.team-container, div.contact-container {
@@ -379,10 +412,10 @@ div.about-container, div.mentor-container, div.team-container, div.contact-conta
     color: #FFFFFF; }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
-.email-bar, .email-bar .left, .email-bar .right, .navbar {
+.navbar {
   height: 15vh; }
   @media (min-width: 600px) {
-    .email-bar, .email-bar .left, .email-bar .right, .navbar {
+    .navbar {
       height: 80px; } }
 
 div.about-container, div.mentor-container, div.team-container, div.contact-container {
@@ -527,10 +560,10 @@ div.home-container div.cta {
         padding: 50px 25px; } }
 
 /* NOTE: The menu transform has a different breakpoint, 900px */
-.email-bar, .email-bar .left, .email-bar .right, .navbar {
+.navbar {
   height: 15vh; }
   @media (min-width: 600px) {
-    .email-bar, .email-bar .left, .email-bar .right, .navbar {
+    .navbar {
       height: 80px; } }
 
 div.about-container, div.mentor-container, div.team-container, div.contact-container {
@@ -647,7 +680,8 @@ a {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: #70D6FF;
-  cursor: pointer; }
+  cursor: pointer !important;
+  z-index: 50; }
   a:hover {
     color: #32DBC4; }
 
@@ -659,16 +693,32 @@ li {
     li {
       font-size: 24px; } }
 
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0; }
+
 div.feature {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   position: relative; }
+  @media (min-width: 600px) {
+    div.feature {
+      height: 100vh; } }
   div.feature .cell {
     margin: 0;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     position: relative;
     background: transparent; }
+    @media (min-width: 600px) {
+      div.feature .cell {
+        height: 100vh; } }
   div.feature .glass {
     width: 100%;
     margin: auto;
@@ -696,23 +746,22 @@ div.feature {
   div.feature .feature-scrim {
     width: 100%;
     margin: auto;
-    padding: 3vh 4vw;
+    padding: 10px 4vw;
     position: absolute;
-    bottom: 15vh;
+    bottom: 80px;
     border-radius: 5px 5px 0 0;
     box-sizing: border-box;
-    z-index: 900;
+    z-index: 100;
     overflow: hidden; }
     @media (min-width: 600px) {
       div.feature .feature-scrim {
         width: 550px;
         padding: 25px;
-        bottom: 80px;
         left: calc(50% - 275px); } }
     div.feature .feature-scrim h1, div.feature .feature-scrim p {
       color: #FFFFFF; }
     div.feature .feature-scrim h1 {
-      margin: 0 0 15px 0; }
+      margin: 0 0 10px 0; }
     div.feature .feature-scrim p {
       margin-bottom: 0; }
   div.feature .feature-scrim::before {
@@ -799,12 +848,13 @@ div.team-container {
     width: 100%; }
   div.team-container div.team-member {
     width: 100%;
+    padding: 2vh 0;
     display: flex;
     flex-direction: column;
     align-items: center; }
     @media (min-width: 600px) {
       div.team-container div.team-member {
-        width: 25%; } }
+        width: 30%; } }
     div.team-container div.team-member img {
       width: auto;
       height: 250px;

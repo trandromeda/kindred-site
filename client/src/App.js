@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom'
-import DefaultOGImage from 'images/pans_lesson_og.jpg';
 import './styles/App.css';
 
 import NavBar from 'components/NavBar';
@@ -72,7 +71,6 @@ class App extends Component {
       }
     })
     .then(function(response) {
-      console.log(response);
       if (response.status >= 200 && response.status < 300) {
         return response
       } else {
@@ -90,12 +88,7 @@ class App extends Component {
     const emailProps = {...this.state};
     return (
       <div className="App">
-        <CustomHead
-          type="website"
-          url="https://getkindred.ca"
-          image={DefaultOGImage}
-          description="Kindred is a community for people to learn valuable life skills from retirees through small, in-person group lessons."
-        />
+        <CustomHead />
 
         <NavBar />
         <Feature 

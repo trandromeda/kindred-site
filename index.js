@@ -2,16 +2,19 @@ const express = require('express');
 const Mailchimp = require('mailchimp-api-v3');
 require('dotenv').config();
 const bodyParser = require('body-parser');
+const path = require('path');
 
 var mc_api_key = process.env.MAILCHIMP_API_KEY;
 var list_id = process.env.MAILING_LIST_ID;
 
 const app = express();
 app.use(bodyParser.json());
+app.use(express.static(path.resolve(__dirname, '.', 'build')));
 
 const mailchimp = new Mailchimp(mc_api_key);
 const port = process.env.PORT || 9001;
 
+app.use(express.static(path.resolve(__dirname, '.', 'build')));
 //routes
 app.get('/api/memberList', (req, res) => {
   mailchimp.get(`/lists/${list_id}/members`)
@@ -42,6 +45,9 @@ app.post('/api/subscribe', (req, res) => {
   })
 })
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '.', 'build', 'index.html'));
+});
 
 app.listen(port);
 console.log(`express app listening on port ${port}`);
