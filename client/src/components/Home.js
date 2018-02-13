@@ -26,9 +26,9 @@ class Home extends Component {
           <div className="lesson-container">
             <MockData render={mock => (
               mock.data.map((lesson, i) => 
-              <LessonCard key={i} data={lesson} />
-            )     
-          )} />
+                <LessonCard key={i} data={lesson} />
+              )     
+            )}/>
           </div>
 
           {/* SECTION DIVIDER */}
