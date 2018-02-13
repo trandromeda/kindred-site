@@ -23,7 +23,13 @@ class Home extends Component {
           </div>
 
           {/* SECOND SECTION */}
-          <LessonsWithMockData />   
+          <div className="lesson-container">
+            <MockData render={mock => (
+              mock.data.map((lesson, i) => 
+              <LessonCard key={i} data={lesson} />
+            )     
+          )} />
+          </div>
 
           {/* SECTION DIVIDER */}
           <div className="section-divider">
@@ -47,26 +53,5 @@ class Home extends Component {
       )
   }
 }
-
-
-class LessonsWithMockData extends React.Component {
-  render() {
-    return (
-      <div className="lesson-container">
-        <MockData render={mock => (
-          mock.data.map((lesson, i) => 
-          <LessonCard key={i} data={lesson} />
-          )     
-        )}
-        />
-      </div>
-    )
-  }
-}
-
-// const HomeWithMockData = withMockData(
-//   Home,
-//   mockData
-// );
 
 export default Home;

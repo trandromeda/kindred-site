@@ -1,5 +1,8 @@
 import React from 'react';
 
+// This used to be a HOC, but refactored it to use render props instead. Note 'render' can be named anything
+// The MockData component can be used to supply dummy data to any component through state.data
+
 class MockData extends React.Component {
   constructor(props) {
     super(props);
