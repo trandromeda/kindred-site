@@ -3,7 +3,7 @@ import { detect } from 'detect-browser';
 import EmailBar from './EmailBar';
 
 import Painting from '../images/backgrounds/painting.jpg';
-import Lesson from '../images/backgrounds/max_lesson.jpg';
+import Lesson from '../images/backgrounds/noodles.jpg';
 import Terrarium from '../images/backgrounds/terrarium.jpg';
 
 const browser = detect();

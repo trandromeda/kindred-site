@@ -4,13 +4,10 @@ import { Link } from 'react-router-dom';
 import LessonCard from 'components/LessonCard';
 import EmailBar from 'components/EmailBar';
 import HowItWorks from 'components/HowItWorks';
-import withMockData from './mockDataHOC';
+import MockData from './mockDataHOC';
 
 class Home extends Component {
   render() {
-    const lessons = this.props.data.map((lesson, i) => 
-      <LessonCard key={i} data={lesson} />
-      )
     return (
         <div className="home-container">
           {/* FIRST SECTION */}
@@ -27,7 +24,11 @@ class Home extends Component {
 
           {/* SECOND SECTION */}
           <div className="lesson-container">
-            {lessons}        
+            <MockData render={mock => (
+              mock.data.map((lesson, i) => 
+                <LessonCard key={i} data={lesson} />
+              )     
+            )}/>
           </div>
 
           {/* SECTION DIVIDER */}
@@ -53,66 +54,4 @@ class Home extends Component {
   }
 }
 
-const mockData = [
-  {
-    name: 'Sushi Rolling',
-    category: 'Food',
-    teacher: 'Hisami K',
-    cost: 15,
-    duration: 90,
-    desc: 'Roll three different types of sushi and cook the perfect sushi rice',
-    img: 'sushi.jpg'
-  },
-  {
-    name: 'Budgeting 101',
-    category: 'Finance',
-    teacher: 'Claudia R',
-    cost: 10,
-    duration: 60,
-    desc: 'Budgeting wisely today will get you closer to your goals in the future',
-    img: 'money.jpg'
-  },  
-  {
-    name: 'Italian Cuisine Primer',
-    category: 'Food',
-    teacher: 'Giorgio I',
-    cost: 20,
-    duration: 120,
-    desc: 'Make almost any Italian dish from scratch with just these fundamentals',
-    img: 'italian.jpg'
-  },
-  {
-    name: 'DIY Birthday Cards',
-    category: 'Arts & Crafts',
-    teacher: 'Andrea N',
-    cost: 15,
-    duration: 60,
-    desc: 'Hand-made cards will show your loved ones how much you care',
-    img: 'card.jpg'
-  },
-  {
-    name: 'Meal Prep like a Pro',
-    category: 'Food',
-    teacher: 'Pan D',
-    cost: 15,
-    duration: 90,
-    desc: "You'd be hard-pressed to eat out again after you start meal prepping",
-    img: 'pans_meal_prep.jpg'
-  },
-  {
-    name: 'As-tu parler le francais?',
-    category: 'Language',
-    teacher: 'Hubert D',
-    cost: 10,
-    duration: 90,
-    desc: 'A laid-back language class with a focus on reading and conversation',
-    img: 'french.jpg'
-  },  
-]
-
-const HomeWithMockData = withMockData(
-  Home,
-  mockData
-);
-
-export default HomeWithMockData;
+export default Home;
