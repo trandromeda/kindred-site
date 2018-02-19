@@ -21,7 +21,7 @@ class Feature extends Component {
       browser.name === 'chrome' || 
       browser.name === 'crios' || 
       browser.name === 'android')) {
-      const bgImageArrayUrls = [Painting, Lesson, Terrarium], msecs = 6500;
+      const bgImageArrayUrls = [Terrarium, Lesson, Painting], msecs = 6500;
 
       for (let imgUrl of bgImageArrayUrls) {
         new Image().src = imgUrl; 
